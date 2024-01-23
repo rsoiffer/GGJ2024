@@ -151,21 +151,21 @@ namespace Data
             if (!shiny)
             {
                 followers = AssetDatabase.LoadAllAssetsAtPath($"Assets/DataPack/Graphics/Characters/Followers/{id}.png")
-                    .OfType<Sprite>().ToArray();
+                    .OfType<Sprite>().OrderBy(s => s.name).ToArray();
                 back = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/DataPack/Graphics/Pokemon/Back/{id}.png");
                 front = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/DataPack/Graphics/Pokemon/Front/{id}.png");
                 icons = AssetDatabase.LoadAllAssetsAtPath($"Assets/DataPack/Graphics/Pokemon/Icons/{id}.png")
-                    .OfType<Sprite>().ToArray();
+                    .OfType<Sprite>().OrderBy(s => s.name).ToArray();
             }
             else
             {
                 followers = AssetDatabase
                     .LoadAllAssetsAtPath($"Assets/DataPack/Graphics/Characters/Followers shiny/{id}.png")
-                    .OfType<Sprite>().ToArray();
+                    .OfType<Sprite>().OrderBy(s => s.name).ToArray();
                 back = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/DataPack/Graphics/Pokemon/Back shiny/{id}.png");
                 front = AssetDatabase.LoadAssetAtPath<Sprite>($"Assets/DataPack/Graphics/Pokemon/Front shiny/{id}.png");
                 icons = AssetDatabase.LoadAllAssetsAtPath($"Assets/DataPack/Graphics/Pokemon/Icons shiny/{id}.png")
-                    .OfType<Sprite>().ToArray();
+                    .OfType<Sprite>().OrderBy(s => s.name).ToArray();
             }
         }
     }
