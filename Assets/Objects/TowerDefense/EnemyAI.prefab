@@ -63,6 +63,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
   sprite: {fileID: 1851723600637541978}
+  isFriendly: 0
+  level: 1
+  damageTaken: 0
+  currentStats: 
 --- !u!1 &5120841961919187304
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 785047404, guid: 58f39e85da83e424587a54d653d67b5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

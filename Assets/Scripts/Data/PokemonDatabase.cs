@@ -37,12 +37,7 @@ namespace Data
         public string Name;
         [CanBeNull] public string FormName;
         public Type[] Types;
-        public int BaseHp;
-        public int BaseAtk;
-        public int BaseDef;
-        public int BaseSpeed;
-        public int BaseSpAtk;
-        public int BaseSpDef;
+        public int[] BaseStats;
         public GenderRatio GenderRatio;
         public GrowthRate GrowthRate;
         public int BaseExp;
@@ -81,13 +76,7 @@ namespace Data
                 Name = pbsEntry.Lookup("Name");
                 FormName = pbsEntry.Lookup("FormName");
                 Types = pbsEntry.Lookup("Types")!.Split(",").Select(Enum.Parse<Type>).ToArray();
-                var baseStats = pbsEntry.Lookup("BaseStats")!.Split(",").Select(int.Parse).ToArray();
-                BaseHp = baseStats[0];
-                BaseAtk = baseStats[1];
-                BaseDef = baseStats[2];
-                BaseSpeed = baseStats[3];
-                BaseSpAtk = baseStats[4];
-                BaseSpDef = baseStats[5];
+                BaseStats = pbsEntry.Lookup("BaseStats")!.Split(",").Select(int.Parse).ToArray();
                 GenderRatio = Enum.Parse<GenderRatio>(pbsEntry.Lookup("GenderRatio"));
                 GrowthRate = Enum.Parse<GrowthRate>(pbsEntry.Lookup("GrowthRate"));
                 BaseExp = int.Parse(pbsEntry.Lookup("BaseExp")!);

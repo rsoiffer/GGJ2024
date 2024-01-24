@@ -24,6 +24,16 @@ namespace Data
         QMARKS
     }
 
+    public enum Stat
+    {
+        HP,
+        ATK,
+        DEF,
+        SPEED,
+        SPATK,
+        SPDEF
+    }
+
     public enum GenderRatio
     {
         FemaleOneEighth,
