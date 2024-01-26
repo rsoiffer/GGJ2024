@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 35455762}
   - component: {fileID: 35455763}
   - component: {fileID: 35455764}
+  - component: {fileID: 35455765}
   m_Layer: 0
   m_Name: Controller
   m_TagString: Untagged
@@ -178,10 +179,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5cce91837eac44b9aed37a9f45ec5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridManager: {fileID: 35455763}
+  gridManager: {fileID: 0}
   lanes:
   - {fileID: 1578643701}
   enemyPrefab: {fileID: 3159782871063787935, guid: 2af23cffa96f05c4d977cb13d53d79d8, type: 3}
+--- !u!114 &35455765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35455760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77eae781e7ca4bdc8ffb1d48005c5478, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gridManager: {fileID: 35455763}
+  selected: {fileID: 0}
 --- !u!1 &310165752
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,10 +369,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.2682962
-    y: 0.1460177
-    width: 0.46282902
-    height: 0.7079646
+    x: 0
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
