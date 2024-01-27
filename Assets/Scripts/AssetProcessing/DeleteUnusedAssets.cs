@@ -18,7 +18,7 @@ namespace AssetProcessing
             if (!agree) return;
 
             var allScenes = EditorBuildSettings.scenes.Select(scene => scene.path);
-             
+
             var allDependencies = allScenes
                 .SelectMany(path => AssetDatabase.GetDependencies(path, true))
                 .ToHashSet();

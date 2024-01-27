@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using AssetProcessing;
 using JetBrains.Annotations;
@@ -53,10 +52,10 @@ namespace Data
                 Name = pbsEntry.Lookup("Name");
                 Type = Enum.Parse<Type>(pbsEntry.Lookup("Type"));
                 category = Enum.Parse<MoveCategory>(pbsEntry.Lookup("Category"));
-                Power = int.TryParse( pbsEntry.Lookup("Power"), result: out Power) ? int.Parse(pbsEntry.Lookup(("Power") )) : 0;
-                Accuracy =int.TryParse( pbsEntry.Lookup("Accuracy"), result: out Accuracy) ? int.Parse(pbsEntry.Lookup(("Accuracy") )) : 0;
-
-
+                Power = int.TryParse(pbsEntry.Lookup("Power"), out Power) ? int.Parse(pbsEntry.Lookup("Power")) : 0;
+                Accuracy = int.TryParse(pbsEntry.Lookup("Accuracy"), out Accuracy)
+                    ? int.Parse(pbsEntry.Lookup("Accuracy"))
+                    : 0;
             }
             catch (Exception e)
             {

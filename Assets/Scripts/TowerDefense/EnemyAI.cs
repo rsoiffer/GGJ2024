@@ -5,8 +5,9 @@ namespace TowerDefense
     public class EnemyAI : MonoBehaviour
     {
         public LaneDefinition lane;
+
         public PokemonInstance pokemon;
-		//public Wave[] waves;
+        //public Wave[] waves;
 
         public float laneProgress;
 

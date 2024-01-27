@@ -9,10 +9,7 @@ namespace AssetProcessing
         public static void Run()
         {
             AssetProcessor.IterateOverSelectedAssets(
-                asset =>
-                {
-                    AssetDatabase.ForceReserializeAssets(new[] { asset });
-                }
+                asset => { AssetDatabase.ForceReserializeAssets(new[] { asset }); }
             );
         }
 

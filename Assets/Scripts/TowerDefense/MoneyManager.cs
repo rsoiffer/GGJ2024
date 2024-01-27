@@ -1,27 +1,30 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class MoneyManager : MonoBehaviour
+namespace TowerDefense
 {
-    public Text moneyText;
-
-    public int money = 100;
-
-    // Start is called before the first frame update
-    private void Start()
+    public class MoneyManager : MonoBehaviour
     {
-        if (moneyText != null)
-            moneyText.text = "$" + money;
-    }
+        public Text moneyText;
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
+        public int money = 100;
 
-    public void addMoney(int amount)
-    {
-        money += amount;
-        if (moneyText) moneyText.text = "$" + money;
+        // Start is called before the first frame update
+        private void Start()
+        {
+            if (moneyText != null)
+                moneyText.text = "$" + money;
+        }
+
+        // Update is called once per frame
+        private void Update()
+        {
+        }
+
+        public void addMoney(int amount)
+        {
+            money += amount;
+            if (moneyText) moneyText.text = "$" + money;
+        }
     }
 }
