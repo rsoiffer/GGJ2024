@@ -11,7 +11,7 @@ namespace TowerDefense
 {
     public class PokemonInstance : MonoBehaviour
     {
-        private static readonly HashSet<PokemonInstance> AllPokemon = new();
+        public static readonly HashSet<PokemonInstance> AllPokemon = new();
 
         [Header("References")] public PokemonDatabase database;
         public SpriteController sprite;
