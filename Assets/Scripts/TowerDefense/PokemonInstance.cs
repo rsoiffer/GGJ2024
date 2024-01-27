@@ -116,10 +116,17 @@ namespace TowerDefense
             sprite.Look(direction);
         }
 
-        public void MoveToBox(GameObject slot)
+        public void MoveToSlot(Slot slot)
         {
-            transform.position = slot.transform.position;
-            sprite.SetToIcon();
+            if (slot.isBox)
+            {
+                transform.position = slot.transform.position;
+                sprite.SetToIcon();
+            }
+            else
+            {
+                Move(slot.transform.position);
+            }
         }
     }
 }

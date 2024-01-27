@@ -5,10 +5,9 @@ namespace TowerDefense
 {
     public class SelectionController : MonoBehaviour
     {
-        public GridManager gridManager;
-        public BoxManager boxManager;
+        public float slotSelectionRadius = .5f;
 
-        public PokemonInstance dragging;
+        [CanBeNull] public FriendlyAI dragging;
         public PokemonInstance selected;
 
         public void Update()
@@ -18,32 +17,23 @@ namespace TowerDefense
             if (Input.GetMouseButtonDown(0))
             {
                 SetSelected(PokemonInstance.GetNearest(mousePos, .5f, _ => true));
-                dragging = selected;
+                dragging = selected == null ? null : selected.GetComponent<FriendlyAI>();
             }
 
             if (Input.GetMouseButtonUp(0))
             {
-                if (dragging != null && dragging.isFriendly)
+                if (dragging != null)
                 {
-                    var oldCell = gridManager.ToCell(dragging.transform.position);
-                    var newCell = gridManager.ToCell(mousePos);
+                    var oldSlot = Slot.GetSlot(dragging)!;
+                    var newSlot = Slot.GetSlot(mousePos, slotSelectionRadius, _ => true);
 
-                    var slot = boxManager.GetSlot(mousePos, _ => true);
-                    if (slot != null)
-                    {
-                        if (boxManager.Slots[slot] == null)
+                    if (newSlot != null)
+                        if (newSlot.inSlot == null)
                         {
-                            gridManager.pokemon.Remove(oldCell);
-                            dragging.MoveToBox(slot);
-                            boxManager.Slots[slot] = dragging;
+                            oldSlot.inSlot = null;
+                            dragging.pokemon.MoveToSlot(newSlot);
+                            newSlot.inSlot = dragging;
                         }
-                    }
-                    else if (!gridManager.pokemon.ContainsKey(newCell))
-                    {
-                        gridManager.pokemon.Remove(oldCell);
-                        dragging.Move(gridManager.FromCell(newCell));
-                        gridManager.pokemon.Add(newCell, dragging);
-                    }
                 }
 
                 dragging = null;
