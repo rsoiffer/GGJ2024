@@ -11,7 +11,7 @@ namespace TowerDefense
 {
     public class PokemonInstance : MonoBehaviour
     {
-        private static readonly HashSet<PokemonInstance> AllPokemon = new();
+        public static readonly HashSet<PokemonInstance> AllPokemon = new();
 
         [Header("References")] public PokemonDatabase database;
         public SpriteController sprite;
@@ -89,10 +89,20 @@ namespace TowerDefense
 
         public int GetStat(Stat stat)
         {
-            if (stat == Stat.HP)
-                return Mathf.FloorToInt((level / 100f + 1) * data.BaseStats[(int)stat] + level);
+            var baseStat = data.BaseStats[(int)stat];
 
-            return Mathf.FloorToInt((level / 50f + 1) * data.BaseStats[(int)stat] / 1.5f);
+            if (stat == Stat.HP)
+                return Mathf.FloorToInt(2 * baseStat * level / 100f) + level + 10;
+
+            return Mathf.FloorToInt(2 * baseStat * level / 100f) + 5;
+
+            // Arceus formula
+            /*
+            if (stat == Stat.HP)
+                return Mathf.FloorToInt((level / 100f + 1) * baseStat + level);
+
+            return Mathf.FloorToInt((level / 50f + 1) * baseStat / 1.5f);
+            */
         }
 
         private void Attack(PokemonInstance target, bool isSpecial)
