@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Linq;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TowerDefense
 {
@@ -8,6 +10,7 @@ namespace TowerDefense
     {
         public LaneDefinition[] lanes;
         public GameObject rewardUI;
+        public int starterLevel = 10;
 
         public FriendlyAI rewardPrefab;
         public EnemyAI enemyPrefab;
@@ -48,10 +51,11 @@ namespace TowerDefense
 
             rewardUI.SetActive(true);
             var slots = rewardUI.GetComponentsInChildren<Slot>();
-            foreach (var slot in slots)
+            for (var i = 0; i < slots.Length; i++)
             {
+                var slot = slots[i];
                 var reward = Instantiate(rewardPrefab);
-                reward.pokemon.ResetTo("PIKACHU", 50);
+                SetReward(reward.pokemon, waveNum, i);
                 reward.pokemon.MoveToSlot(slot);
                 slot.Set(reward);
             }
@@ -63,6 +67,36 @@ namespace TowerDefense
                     Destroy(slot.InSlot.gameObject);
 
             rewardUI.SetActive(false);
+        }
+
+        private void SetReward(PokemonInstance pokemon, int waveNum, int num)
+        {
+            if (waveNum == 0)
+            {
+                var starterList = num switch
+                {
+                    0 => new[]
+                    {
+                        "BULBASAUR", "CHIKORITA", "TREEKO", "TURTWIG", "SNIVY", "CHESPIN", "ROWLET", "GROOKEY",
+                        "SPRIGATITO"
+                    },
+                    1 => new[]
+                    {
+                        "CHARMANDER", "CYNDAQUIL", "TORCHIC", "CHIMCHAR", "TEPIG", "FENNEKIN", "LITTEN", "SCORBUNNY",
+                        "FUECOCO"
+                    },
+                    2 => new[]
+                    {
+                        "SQUIRTLE", "TOTODILE", "MUDKIP", "PIPLUP", "OSHAWOTT", "FROAKIE", "POPPLIO", "SOBBLE", "QUAXLY"
+                    },
+                    _ => throw new ArgumentOutOfRangeException(nameof(num), num, null)
+                };
+                pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
+            }
+            else
+            {
+                pokemon.ResetTo("PIKACHU", 50);
+            }
         }
     }
 }
