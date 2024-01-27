@@ -85,7 +85,6 @@ MonoBehaviour:
   - {fileID: 262934618740753463}
   rewardUI: {fileID: 0}
   starterLevel: 10
-  rewardPrefab: {fileID: 0}
   enemyPrefab: {fileID: 3159782871063787935, guid: 2af23cffa96f05c4d977cb13d53d79d8, type: 3}
   friendlyPrefab: {fileID: 6210403908881280045, guid: 950a6abcc03797949bbbfb7aa856fc66, type: 3}
   waves:
