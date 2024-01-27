@@ -21,6 +21,7 @@ namespace TowerDefense
         public int level;
         public PokemonData data;
         public bool isShiny;
+        public MoveData[] moves;
 
         [Header("State Data")] public bool inBox;
         public int damageTaken;
