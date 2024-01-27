@@ -84,5 +84,11 @@ namespace Data
                 Debug.LogException(e);
             }
         }
+
+        public bool IsValid()
+        {
+            if (Category == MoveCategory.Status) return false;
+            return true;
+        }
     }
 }

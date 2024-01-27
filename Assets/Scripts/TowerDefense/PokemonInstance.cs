@@ -127,7 +127,11 @@ namespace TowerDefense
             moves.Clear();
             for (var i = 0; i < data.Moves.Length; i++)
                 if (data.MoveLearnLevels[i] <= level)
-                    moves.Add(moveDatabase.Get(data.Moves[i]));
+                {
+                    var move = moveDatabase.Get(data.Moves[i]);
+                    if (move.IsValid())
+                        moves.Add(move);
+                }
         }
 
         public void Move(Vector2 pos)
