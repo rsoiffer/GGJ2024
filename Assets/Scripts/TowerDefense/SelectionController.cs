@@ -24,16 +24,16 @@ namespace TowerDefense
             {
                 if (dragging != null)
                 {
-                    var oldSlot = Slot.GetSlot(dragging)!;
+                    var oldSlot = Slot.GetSlot(dragging);
                     var newSlot = Slot.GetSlot(mousePos, slotSelectionRadius, _ => true);
 
-                    if (newSlot != null)
-                        if (newSlot.InSlot == null)
-                        {
+                    if (newSlot != null && newSlot != oldSlot && newSlot.InSlot == null)
+                    {
+                        if (oldSlot != null)
                             oldSlot.Set(null);
-                            dragging.pokemon.MoveToSlot(newSlot);
-                            newSlot.Set(dragging);
-                        }
+                        dragging.pokemon.MoveToSlot(newSlot);
+                        newSlot.Set(dragging);
+                    }
                 }
 
                 dragging = null;
