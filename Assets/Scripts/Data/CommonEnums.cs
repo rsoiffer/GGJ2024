@@ -3,25 +3,25 @@ namespace Data
     // ReSharper disable InconsistentNaming
     public enum Type
     {
-        GRASS,
-        POISON,
-        FIRE,
-        FLYING,
-        WATER,
-        BUG,
         NORMAL,
-        ELECTRIC,
-        GROUND,
-        FAIRY,
         FIGHTING,
-        PSYCHIC,
+        FLYING,
+        POISON,
+        GROUND,
         ROCK,
-        STEEL,
-        ICE,
+        BUG,
         GHOST,
+        STEEL,
+        QMARKS,
+        FIRE,
+        WATER,
+        GRASS,
+        ELECTRIC,
+        PSYCHIC,
+        ICE,
         DRAGON,
         DARK,
-        QMARKS
+        FAIRY
     }
 
     public enum Stat
@@ -54,5 +54,12 @@ namespace Data
         Slow,
         Fluctuating,
         Erratic
+    }
+
+    public enum MoveCategory
+    {
+        Physical,
+        Special,
+        Status
     }
 }

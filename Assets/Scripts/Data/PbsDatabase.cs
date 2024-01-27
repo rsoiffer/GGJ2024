@@ -148,7 +148,7 @@ namespace Data
 
                 var lowest = database.Entries.Values.MinBy(GetStat);
                 var highest = database.Entries.Values.MinBy(e => -GetStat(e));
-                Debug.Log($"{statNames[statId]} ranges from {GetStat(lowest)} ({GetName(lowest)})" +
+                Debug.Log($"Base {statNames[statId]} ranges from {GetStat(lowest)} ({GetName(lowest)})" +
                           $" to {GetStat(highest)} ({GetName(highest)})");
                 continue;
 
@@ -156,17 +156,39 @@ namespace Data
                 {
                     return int.Parse(pokemon.Lookup("BaseStats")!.Split(",")[statIdCopy]);
                 }
+            }
 
-                string GetName(PbsEntry pokemon)
+            for (var statId = 0; statId < 6; statId++)
+            {
+                var statIdCopy = statId;
+
+                var lowest = database.Entries.Values.MinBy(GetStat);
+                var highest = database.Entries.Values.MinBy(e => -GetStat(e));
+                Debug.Log($"Level 100 {statNames[statId]} ranges from {GetStat(lowest)} ({GetName(lowest)})" +
+                          $" to {GetStat(highest)} ({GetName(highest)})");
+                continue;
+
+                int GetStat(PbsEntry pokemon)
                 {
-                    return pokemon.Lookup("FormName") ?? pokemon.Lookup("Name");
+                    var data = new PokemonData(pokemon);
+                    var level = 100;
+                    if ((Stat)statIdCopy == Stat.HP)
+                        return Mathf.FloorToInt((level / 100f + 1) * data.BaseStats[statIdCopy] + level);
+                    return Mathf.FloorToInt((level / 50f + 1) * data.BaseStats[statIdCopy] / 1.5f);
                 }
+            }
+
+            string GetName(PbsEntry pokemon)
+            {
+                return pokemon.Lookup("FormName") ?? pokemon.Lookup("Name");
             }
 
             var allDatas = database.Entries.Values.Select(p => new PokemonData(p)).ToList();
             var allMoves = new HashSet<string>();
             allMoves.AddRange(allDatas.SelectMany(p => p.Moves));
-            var usageCounts = allMoves.Select(code => (code, allDatas.Count(p => p.Moves.Contains(code))))
+            allMoves.AddRange(allDatas.SelectMany(p => p.TutorMoves ?? new string[] { }));
+            var usageCounts = allMoves.Select(code => (code,
+                    allDatas.Count(p => p.Moves.Contains(code) || (p.TutorMoves?.Contains(code) ?? false))))
                 .OrderByDescending(x => x.Item2).ToList();
 
             var databaseMoves = PbsDatabase.LoadDatabase("moves");
@@ -176,8 +198,9 @@ namespace Data
             {
                 movesMessage += $"Type {type}:\n";
                 foreach (var (code, usages) in usageCounts)
-                    if (databaseMoves.Entries[code].Lookup("Type") == type.ToString())
-                        movesMessage += $"{code} used {usages} times\n";
+                    if (usages >= 30)
+                        if (databaseMoves.Entries[code].Lookup("Type") == type.ToString())
+                            movesMessage += $"{code} used {usages} times\n";
                 movesMessage += "\n";
             }
 
@@ -203,6 +226,16 @@ namespace Data
             var allFlags = Enumerable.ToHashSet(database.Entries.Values
                 .SelectMany(p => p.Lookup("Flags") != null ? p.Lookup("Flags")!.Split(",") : new string[] { }));
             Debug.Log($"List of flags is {string.Join(",", allFlags)}");
+
+            var allTargets = Enumerable.ToHashSet(database.Entries.Values.Select(p => p.Lookup("Target")))
+                .ToList();
+            var usageCounts2 = allTargets.Select(code =>
+                    (code, database.Entries.Values.Count(p => p.Lookup("Target") == code)))
+                .OrderByDescending(x => x.Item2).ToList();
+            var targetMessage = "";
+            foreach (var (code, usages) in usageCounts2)
+                targetMessage += $"{code} used {usages} times\n";
+            Debug.Log(targetMessage);
         }
     }
 }

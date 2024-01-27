@@ -10,16 +10,16 @@ namespace TowerDefense
 
         public float laneProgress;
 
-        private void Update()
-        {
-            var modProgress = laneProgress + Time.time - Time.fixedTime;
-            pokemon.Move(lane.Position(modProgress));
-        }
-
         private void FixedUpdate()
         {
             laneProgress += Time.fixedDeltaTime;
             transform.position = lane.Position(laneProgress);
+        }
+
+        private void LateUpdate()
+        {
+            var modProgress = laneProgress + Time.time - Time.fixedTime;
+            pokemon.Move(lane.Position(modProgress));
         }
     }
 }

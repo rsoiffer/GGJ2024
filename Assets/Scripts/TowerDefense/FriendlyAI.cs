@@ -9,8 +9,13 @@ namespace TowerDefense
 
         private void Start()
         {
-            pokemon.ResetTo(id, pokemon.level);
-            pokemon.Move(pokemon.transform.position);
+            if (string.IsNullOrEmpty(pokemon.data.Id))
+            {
+                pokemon.ResetTo(id, pokemon.level);
+                pokemon.Move(pokemon.transform.position);
+            }
+
+            if (Slot.GetSlot(this) == null) Slot.GetSlot(transform.position, 100, _ => true)!.Set(this);
         }
     }
 }

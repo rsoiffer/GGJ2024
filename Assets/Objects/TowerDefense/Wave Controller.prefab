@@ -40,7 +40,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2695488476687236255}
-  - component: {fileID: 3061668767764925905}
   - component: {fileID: 4424207535123861351}
   - component: {fileID: 5496850074266736537}
   - component: {fileID: 5675118544670223799}
@@ -70,19 +69,6 @@ Transform:
   - {fileID: 4131811655409933092}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3061668767764925905
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2083331897583929340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6ed276a1272c46d7b8051e31d52ac0c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cellSize: 0.5
 --- !u!114 &4424207535123861351
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,9 +81,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5cce91837eac44b9aed37a9f45ec5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gridManager: {fileID: 3061668767764925905}
   lanes:
   - {fileID: 262934618740753463}
+  rewardUI: {fileID: 0}
+  starterLevel: 10
+  rewardPrefab: {fileID: 0}
   enemyPrefab: {fileID: 3159782871063787935, guid: 2af23cffa96f05c4d977cb13d53d79d8, type: 3}
   friendlyPrefab: {fileID: 6210403908881280045, guid: 950a6abcc03797949bbbfb7aa856fc66, type: 3}
   waves:

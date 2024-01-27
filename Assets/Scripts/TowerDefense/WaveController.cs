@@ -1,53 +1,107 @@
+using System;
 using System.Collections;
 using System.Linq;
-using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TowerDefense
 {
     public class WaveController : MonoBehaviour
     {
-        public GridManager gridManager;
         public LaneDefinition[] lanes;
+        public GameObject rewardUI;
+        public int starterLevel = 10;
 
         public EnemyAI enemyPrefab;
-		public FriendlyAI friendlyPrefab;
-		public Wave[] waves;
-		public MoneyManager moneyManager;
+        public FriendlyAI friendlyPrefab;
+        public Wave[] waves;
+        public MoneyManager moneyManager;
 
         public IEnumerator Start()
         {
-            for (var i = 0; i < waves.Length; i++)
+            yield return DoReward(-1);
+
+            for (var i = 0; i <= waves.Length; i++)
             {
-                Debug.Log($"Starting Wave {i + 1}");
+                yield return DoWave(i);
+                yield return DoReward(i);
+            }
+        }
 
-                for (var j = 0; j < waves[i].numEnemies; j++)
+        private IEnumerator DoWave(int waveNum)
+        {
+            Debug.Log($"Starting Wave {waveNum + 1}");
+
+            for (var j = 0; j < 10; j++)
+            {
+                var lane = lanes[Random.Range(0, lanes.Length)];
+                var enemy = Instantiate(enemyPrefab);
+                enemy.lane = lane;
+                enemy.pokemon.ResetTo(waves[waveNum].randomEnemy(), waves[waveNum].baseLevel);
+                yield return new WaitForSeconds(waves[waveNum].enemySpawnDelay);
+            }
+
+            while (PokemonInstance.AllPokemon.Any(p => !p.isFriendly)) yield return null;
+
+            yield return new WaitForSeconds(2);
+
+            moneyManager.addMoney(100 * (waveNum + 1));
+        }
+
+        private IEnumerator DoReward(int waveNum)
+        {
+            Debug.Log($"Granting reward for wave {waveNum}");
+
+            foreach (var p in PokemonInstance.AllPokemon) p.damageTaken = 0;
+
+            rewardUI.SetActive(true);
+            var slots = rewardUI.GetComponentsInChildren<Slot>();
+            for (var i = 0; i < slots.Length; i++)
+            {
+                var slot = slots[i];
+                var reward = Instantiate(friendlyPrefab);
+                SetReward(reward.pokemon, waveNum, i);
+                reward.pokemon.MoveToSlot(slot);
+                slot.Set(reward);
+            }
+
+            while (slots.All(s => s.InSlot != null)) yield return null;
+
+            foreach (var slot in slots)
+                if (slot.InSlot != null)
+                    Destroy(slot.InSlot.gameObject);
+
+            rewardUI.SetActive(false);
+        }
+
+        private void SetReward(PokemonInstance pokemon, int waveNum, int num)
+        {
+            if (waveNum == -1)
+            {
+                var starterList = num switch
                 {
-					//int encounters=waves[i].enemies.Length;
-                    var lane = lanes[Random.Range(0, lanes.Length)];
-                    var enemy = Instantiate(enemyPrefab);
-                    enemy.lane = lane;
-                    enemy.pokemon.ResetTo(waves[i].randomEnemy(), waves[i].baseLevel);
-                    yield return new WaitForSeconds(waves[i].enemySpawnDelay);
-                }
-				
-				/* //Old testing code
-				List<string> encounters=waves[i].encounters;
-				var ally = Instantiate(friendlyPrefab);
-				ally.transform.position=ally.transform.position+new Vector3((i+1)*2.5f,0,0);
-				//Debug.Log(encounters[Random.Range(0,encounters.Count)]);
-				ally.id=encounters[Random.Range(0,encounters.Count)];
-				ally.pokemon.level=waves[i].baseLevel;
-				//ally.pokemon.ResetTo("PIDGEY",waves[i].baseLevel);
-				team.members.Add(ally.pokemon);
-				*/
-				
-				
-				moneyManager.addMoney(100*(i+1));
-
-                yield return new WaitForSeconds(10);
+                    0 => new[]
+                    {
+                        "BULBASAUR", "CHIKORITA", "TREECKO", "TURTWIG", "SNIVY", "CHESPIN", "ROWLET", "GROOKEY",
+                        "SPRIGATITO"
+                    },
+                    1 => new[]
+                    {
+                        "CHARMANDER", "CYNDAQUIL", "TORCHIC", "CHIMCHAR", "TEPIG", "FENNEKIN", "LITTEN", "SCORBUNNY",
+                        "FUECOCO"
+                    },
+                    2 => new[]
+                    {
+                        "SQUIRTLE", "TOTODILE", "MUDKIP", "PIPLUP", "OSHAWOTT", "FROAKIE", "POPPLIO", "SOBBLE", "QUAXLY"
+                    },
+                    _ => throw new ArgumentOutOfRangeException(nameof(num), num, null)
+                };
+                pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
+            }
+            else
+            {
+                pokemon.ResetTo("PIKACHU", 50);
             }
         }
     }
-
 }
