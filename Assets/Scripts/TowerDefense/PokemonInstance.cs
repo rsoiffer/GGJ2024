@@ -106,11 +106,13 @@ namespace TowerDefense
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
         }
+		
 		public void LevelUp(){
 			level++;
 			var fanfare = Instantiate(fanfarePrefab);
 			fanfare.transform.position=transform.position;
 		}
+		
 		public GrowthRate GetGrowthRate(){
 			return _data.GrowthRate;
 		}

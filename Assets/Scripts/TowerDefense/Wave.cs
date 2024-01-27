@@ -5,7 +5,8 @@ using UnityEngine;
 public class Wave : MonoBehaviour
 {
 	public int baseLevel;
-		[System.Serializable]
+	
+	[System.Serializable]
 	public struct enemyWeight{
 		public string species;
 		public float weight;
@@ -31,19 +32,20 @@ public class Wave : MonoBehaviour
 		for (int i=0; i<enemies.Length; i++){
 			totalWeight+=enemies[i].weight;
 		}
+		
 		float rand=Random.Range(0.0f,totalWeight);
 		foreach (enemyWeight enemy in enemies){
-		if (rand<enemy.weight){
-			encounters.Add(enemy.species);
-				return enemy.species;	
+			if (rand<enemy.weight){
+				encounters.Add(enemy.species);
+					return enemy.species;	
+			}
+			else{
+				rand-=enemy.weight;
+			}
 		}
-		else{
-			rand-=enemy.weight;
-		}
-	}
-				encounters.Add(enemies[enemies.Length-1].species);
+	encounters.Add(enemies[enemies.Length-1].species);
 	return enemies[enemies.Length-1].species;
-}
+	}
 
 }
 
