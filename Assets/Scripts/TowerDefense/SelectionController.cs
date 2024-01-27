@@ -5,6 +5,7 @@ namespace TowerDefense
 {
     public class SelectionController : MonoBehaviour
     {
+        public AudioSource cryAudioSource;
         public float slotSelectionRadius = .5f;
 
         [CanBeNull] public FriendlyAI dragging;
@@ -48,6 +49,12 @@ namespace TowerDefense
             if (newSelected != null) newSelected.sprite.selectionRing.enabled = true;
 
             selected = newSelected;
+
+            if (selected != null)
+            {
+                cryAudioSource.clip = selected.data.cry;
+                cryAudioSource.Play();
+            }
         }
     }
 }

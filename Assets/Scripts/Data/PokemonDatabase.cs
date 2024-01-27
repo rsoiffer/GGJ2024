@@ -103,7 +103,7 @@ namespace Data
 
                 spriteSet = new PokemonSpriteSet(Id, false);
                 spriteSetShiny = new PokemonSpriteSet(Id, true);
-                cry = AssetDatabase.LoadAssetAtPath<AudioClip>($"Assets/Audio/SE/Cries/{Id}.ogg");
+                cry = AssetDatabase.LoadAssetAtPath<AudioClip>($"Assets/DataPack/Audio/SE/Cries/{Id}.ogg");
             }
             catch (Exception e)
             {

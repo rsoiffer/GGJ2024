@@ -65,11 +65,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
   sprite: {fileID: 4912254043681046233}
+  attackFXPrefab: {fileID: 7076545157764386722, guid: 907b009877e58e84792b92dd87dfc059, type: 3}
   isFriendly: 0
   level: 1
-  damageTaken: 0
-  currentStats: 
-  attackFXPrefab: {fileID: 7076545157764386722, guid: 907b009877e58e84792b92dd87dfc059, type: 3}
   data:
     Id: 
     ParentId: 
@@ -112,6 +110,12 @@ MonoBehaviour:
       front: {fileID: 0}
       icons: []
     cry: {fileID: 0}
+  isShiny: 0
+  inBox: 0
+  damageTaken: 0
+  currentStats: 
+  lastPhysicalAttackTime: 0
+  lastSpecialAttackTime: 0
 --- !u!114 &4912254043681046233
 MonoBehaviour:
   m_ObjectHideFlags: 0
