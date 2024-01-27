@@ -28,11 +28,11 @@ namespace TowerDefense
                     var newSlot = Slot.GetSlot(mousePos, slotSelectionRadius, _ => true);
 
                     if (newSlot != null)
-                        if (newSlot.inSlot == null)
+                        if (newSlot.InSlot == null)
                         {
-                            oldSlot.inSlot = null;
+                            oldSlot.Set(null);
                             dragging.pokemon.MoveToSlot(newSlot);
-                            newSlot.inSlot = dragging;
+                            newSlot.Set(dragging);
                         }
                 }
 

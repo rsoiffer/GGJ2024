@@ -11,7 +11,7 @@ namespace TowerDefense
         {
             pokemon.ResetTo(id, pokemon.level);
             pokemon.Move(pokemon.transform.position);
-            if (Slot.GetSlot(this) == null) Slot.GetSlot(transform.position, 100, _ => true)!.inSlot = this;
+            if (Slot.GetSlot(this) == null) Slot.GetSlot(transform.position, 100, _ => true)!.Set(this);
         }
     }
 }
