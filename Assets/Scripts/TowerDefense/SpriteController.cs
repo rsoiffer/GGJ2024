@@ -9,7 +9,7 @@ namespace TowerDefense
         public SpriteRenderer sprite;
         public SpriteRenderer selectionRing;
 
-        private PokemonSpriteSet SpriteSet => pokemon.isShiny ? pokemon.data.spriteSetShiny : pokemon.data.spriteSet;
+        public PokemonSpriteSet SpriteSet => pokemon.isShiny ? pokemon.data.spriteSetShiny : pokemon.data.spriteSet;
 
         public void Look(Vector2 direction)
         {
