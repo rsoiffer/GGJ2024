@@ -13,17 +13,19 @@ namespace TowerDefense
     {
         private static readonly HashSet<PokemonInstance> AllPokemon = new();
 
-        public PokemonDatabase database;
+        [Header("References")] public PokemonDatabase database;
         public SpriteController sprite;
-        public bool isFriendly;
-        public int level;
-        public int damageTaken;
-        public int[] currentStats;
         public GameObject attackFXPrefab;
 
+        [Header("Data")] public bool isFriendly;
+        public int level;
         public PokemonData data;
-        private float _lastPhysicalAttackTime;
-        private float _lastSpecialAttackTime;
+        public bool isShiny;
+
+        [Header("Debug")] public int damageTaken;
+        public int[] currentStats;
+        public float lastPhysicalAttackTime;
+        public float lastSpecialAttackTime;
 
         private void Update()
         {
@@ -33,22 +35,22 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
-            if (Time.time > _lastPhysicalAttackTime + 1)
+            if (Time.time > lastPhysicalAttackTime + 1)
             {
                 var nearestOther = GetTarget(.75f);
                 if (nearestOther != null)
                 {
-                    _lastPhysicalAttackTime = Time.time;
+                    lastPhysicalAttackTime = Time.time;
                     Attack(nearestOther, false);
                 }
             }
 
-            if (Time.time > _lastSpecialAttackTime + 2)
+            if (Time.time > lastSpecialAttackTime + 2)
             {
                 var nearestOther = GetTarget(2);
                 if (nearestOther != null)
                 {
-                    _lastSpecialAttackTime = Time.time;
+                    lastSpecialAttackTime = Time.time;
                     Attack(nearestOther, true);
                 }
             }
