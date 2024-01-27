@@ -31,7 +31,7 @@ namespace TowerDefense
                 var lane = lanes[Random.Range(0, lanes.Length)];
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
-                enemy.pokemon.ResetTo("BIDOOF", 1);
+                enemy.pokemon.ResetTo("BIDOOF", waveNum);
                 yield return new WaitForSeconds(1);
             }
 
@@ -43,6 +43,8 @@ namespace TowerDefense
         private IEnumerator DoReward(int waveNum)
         {
             Debug.Log($"Granting reward for wave {waveNum}");
+
+            foreach (var p in PokemonInstance.AllPokemon) p.damageTaken = 0;
 
             rewardUI.SetActive(true);
             var slots = rewardUI.GetComponentsInChildren<Slot>();
