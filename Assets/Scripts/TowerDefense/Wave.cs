@@ -29,6 +29,7 @@ namespace TowerDefense
         {
             float totalWeight = 0;
             for (var i = 0; i < enemies.Length; i++) totalWeight += enemies[i].weight;
+
             var rand = Random.Range(0.0f, totalWeight);
             foreach (var enemy in enemies)
                 if (rand < enemy.weight)

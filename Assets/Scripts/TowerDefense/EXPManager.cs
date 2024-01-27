@@ -2,20 +2,14 @@ using System.Collections;
 using System.Linq;
 using Data;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace TowerDefense
 {
     public class EXPManager : MonoBehaviour
     {
-        public Text expText;
-        public int exp;
-
         // Start is called before the first frame update
         private void Start()
         {
-            if (expText != null)
-                expText.text = "EXP: " + exp;
         }
 
         // Update is called once per frame
@@ -47,6 +41,7 @@ namespace TowerDefense
         public void addFlatExp(float amount, PokemonInstance mon)
         {
             mon.experience += amount;
+            calcLevelUp(mon);
         }
 
 
@@ -62,24 +57,19 @@ namespace TowerDefense
                 case GrowthRate.Parabolic:
                     nextLevelMinExp = 6.0f / 5.0f * Mathf.Pow(nextLevel, 3.0f) - 15.0f * Mathf.Pow(nextLevel, 2.0f) +
                         100.0f * nextLevel - 140.0f;
-
                     break;
                 //exp=n^3
                 //bulbapedia calls medium "medium fast"
                 case GrowthRate.Medium:
                     nextLevelMinExp = Mathf.Pow(nextLevel, 3.0f);
-
                     break;
-
                 //exp=4n^3/5
                 case GrowthRate.Fast:
                     nextLevelMinExp = 4.0f / 5.0f * Mathf.Pow(nextLevel, 3.0f);
                     break;
-
                 //exp=5n^3/4
                 case GrowthRate.Slow:
                     nextLevelMinExp = 5.0f / 4.0f * Mathf.Pow(nextLevel, 3.0f);
-
                     break;
                 //exp=annoying piecewise function
                 case GrowthRate.Fluctuating:
@@ -90,7 +80,6 @@ namespace TowerDefense
                         nextLevelMinExp = Mathf.Pow(nextLevel, 3.0f) * (nextLevel + 14) / 50.0f;
                     else
                         nextLevelMinExp = (Mathf.Pow(nextLevel, 3.0f) * Mathf.Floor(nextLevel / 2) + 32) / 50.0f;
-
                     break;
                 //exp=annoying piecewise function
                 case GrowthRate.Erratic:
