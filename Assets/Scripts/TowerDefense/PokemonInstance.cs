@@ -120,7 +120,7 @@ namespace TowerDefense
 
         public void ResetTo(string id, int level)
         {
-            data = database.database.First(p => p.Id == id);
+            data = database.Get(id);
             this.level = level;
         }
 

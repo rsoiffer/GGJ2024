@@ -11,7 +11,23 @@ namespace Data
     [CreateAssetMenu(fileName = "MoveDatabase", menuName = "Move Database", order = 0)]
     public class MoveDatabase : ScriptableObject
     {
-        public MoveData[] database;
+        [SerializeField] private MoveData[] database;
+
+        [CanBeNull] private Dictionary<string, MoveData> _table;
+
+        public MoveData Get(string id)
+        {
+            if (_table != null) return _table[id];
+
+            _table = new Dictionary<string, MoveData>();
+            foreach (var move in database) _table.Add(move.Id, move);
+            return _table[id];
+        }
+
+        public IEnumerable<MoveData> GetAll()
+        {
+            return database;
+        }
 
         [MenuItem("Tools/Build MoveDatabase")]
         public static void BuildDatabase()
@@ -35,15 +51,15 @@ namespace Data
         public string Id;
         public string Name;
         public Type Type;
-        public MoveCategory category;
-        [CanBeNull] public int Power;
-
+        public MoveCategory Category;
+        public int Power;
         public int Accuracy;
-        //#TODO public int TotalPP;
-        //#TODO Target, enum that specifies who is targeted by the move
-        //#TODO FunctionCodes, a list or array of functions;
-        //#TODO Flags, a list of enums that are used for cases;
-        //#TODO Description, string flavor text summarizing the move;
+        public int TotalPP;
+        public string Target;
+        public string FunctionCode;
+        public string[] Flags;
+        public int EffectChance;
+        public string Description;
 
         public MoveData(PbsEntry pbsEntry)
         {
@@ -52,11 +68,15 @@ namespace Data
                 Id = pbsEntry.GetId();
                 Name = pbsEntry.Lookup("Name");
                 Type = Enum.Parse<Type>(pbsEntry.Lookup("Type"));
-                category = Enum.Parse<MoveCategory>(pbsEntry.Lookup("Category"));
-                Power = int.TryParse( pbsEntry.Lookup("Power"), result: out Power) ? int.Parse(pbsEntry.Lookup(("Power") )) : 0;
-                Accuracy =int.TryParse( pbsEntry.Lookup("Accuracy"), result: out Accuracy) ? int.Parse(pbsEntry.Lookup(("Accuracy") )) : 0;
-
-
+                Category = Enum.Parse<MoveCategory>(pbsEntry.Lookup("Category"));
+                Power = int.Parse(pbsEntry.Lookup("Power") ?? "0");
+                Accuracy = int.Parse(pbsEntry.Lookup("Accuracy")!);
+                TotalPP = int.Parse(pbsEntry.Lookup("TotalPP")!);
+                Target = pbsEntry.Lookup("Target");
+                FunctionCode = pbsEntry.Lookup("FunctionCode");
+                Flags = pbsEntry.Lookup("Flags")!.Split(",");
+                EffectChance = int.Parse(pbsEntry.Lookup("EffectChance") ?? "0");
+                Description = pbsEntry.Lookup("Description");
             }
             catch (Exception e)
             {
