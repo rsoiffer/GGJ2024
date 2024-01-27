@@ -17,12 +17,13 @@ namespace TowerDefense
         public SpriteController sprite;
         public GameObject attackFXPrefab;
 
-        [Header("Data")] public bool isFriendly;
+        [Header("Instance Data")] public bool isFriendly;
         public int level;
         public PokemonData data;
         public bool isShiny;
 
-        [Header("Debug")] public int damageTaken;
+        [Header("State Data")] public bool inBox;
+        public int damageTaken;
         public int[] currentStats;
         public float lastPhysicalAttackTime;
         public float lastSpecialAttackTime;
@@ -35,6 +36,8 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
+            if (inBox) return;
+
             if (Time.time > lastPhysicalAttackTime + 1)
             {
                 var nearestOther = GetTarget(.75f);
@@ -120,6 +123,7 @@ namespace TowerDefense
 
         public void MoveToSlot(Slot slot)
         {
+            inBox = slot.isBox;
             if (slot.isBox)
             {
                 transform.position = slot.transform.position;
