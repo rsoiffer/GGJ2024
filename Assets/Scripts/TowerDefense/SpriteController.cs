@@ -16,5 +16,10 @@ namespace TowerDefense
             if (-direction.x >= max) sprite.sprite = pokemon.data.spriteSet.followers[8];
             if (-direction.y >= max) sprite.sprite = pokemon.data.spriteSet.followers[12];
         }
+
+        public void SetToIcon()
+        {
+            sprite.sprite = pokemon.data.spriteSet.icons[0];
+        }
     }
 }

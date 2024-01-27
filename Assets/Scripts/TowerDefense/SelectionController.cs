@@ -6,6 +6,7 @@ namespace TowerDefense
     public class SelectionController : MonoBehaviour
     {
         public GridManager gridManager;
+        public BoxManager boxManager;
 
         public PokemonInstance dragging;
         public PokemonInstance selected;
@@ -26,10 +27,21 @@ namespace TowerDefense
                 {
                     var oldCell = gridManager.ToCell(dragging.transform.position);
                     var newCell = gridManager.ToCell(mousePos);
-                    if (!gridManager.pokemon.ContainsKey(newCell))
+
+                    var slot = boxManager.GetSlot(mousePos, _ => true);
+                    if (slot != null)
+                    {
+                        if (boxManager.Slots[slot] == null)
+                        {
+                            gridManager.pokemon.Remove(oldCell);
+                            dragging.MoveToBox(slot);
+                            boxManager.Slots[slot] = dragging;
+                        }
+                    }
+                    else if (!gridManager.pokemon.ContainsKey(newCell))
                     {
                         gridManager.pokemon.Remove(oldCell);
-                        dragging.transform.position = gridManager.FromCell(newCell);
+                        dragging.Move(gridManager.FromCell(newCell));
                         gridManager.pokemon.Add(newCell, dragging);
                     }
                 }
