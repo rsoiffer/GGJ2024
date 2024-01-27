@@ -77,7 +77,7 @@ namespace TowerDefense
                 {
                     0 => new[]
                     {
-                        "BULBASAUR", "CHIKORITA", "TREEKO", "TURTWIG", "SNIVY", "CHESPIN", "ROWLET", "GROOKEY",
+                        "BULBASAUR", "CHIKORITA", "TREECKO", "TURTWIG", "SNIVY", "CHESPIN", "ROWLET", "GROOKEY",
                         "SPRIGATITO"
                     },
                     1 => new[]

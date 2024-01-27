@@ -186,7 +186,9 @@ namespace Data
             var allDatas = database.Entries.Values.Select(p => new PokemonData(p)).ToList();
             var allMoves = new HashSet<string>();
             allMoves.AddRange(allDatas.SelectMany(p => p.Moves));
-            var usageCounts = allMoves.Select(code => (code, allDatas.Count(p => p.Moves.Contains(code))))
+            allMoves.AddRange(allDatas.SelectMany(p => p.TutorMoves ?? new string[] { }));
+            var usageCounts = allMoves.Select(code => (code,
+                    allDatas.Count(p => p.Moves.Contains(code) || (p.TutorMoves?.Contains(code) ?? false))))
                 .OrderByDescending(x => x.Item2).ToList();
 
             var databaseMoves = PbsDatabase.LoadDatabase("moves");
@@ -196,8 +198,9 @@ namespace Data
             {
                 movesMessage += $"Type {type}:\n";
                 foreach (var (code, usages) in usageCounts)
-                    if (databaseMoves.Entries[code].Lookup("Type") == type.ToString())
-                        movesMessage += $"{code} used {usages} times\n";
+                    if (usages >= 30)
+                        if (databaseMoves.Entries[code].Lookup("Type") == type.ToString())
+                            movesMessage += $"{code} used {usages} times\n";
                 movesMessage += "\n";
             }
 
