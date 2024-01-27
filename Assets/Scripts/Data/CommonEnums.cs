@@ -55,4 +55,11 @@ namespace Data
         Fluctuating,
         Erratic
     }
+
+    public enum MoveCategory
+    {
+        Physical,
+        Special,
+        Status
+    }
 }

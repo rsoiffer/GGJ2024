@@ -1,0 +1,5007 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4cb9432b194e81042b9c5adbb81a2c1b, type: 3}
+  m_Name: MoveDatabase
+  m_EditorClassIdentifier: 
+  database:
+  - Id: MEGAHORN
+    Name: Megahorn
+    Type: 5
+    category: 0
+    Power: 120
+    Accuracy: 85
+  - Id: ATTACKORDER
+    Name: Attack Order
+    Type: 5
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: BUGBUZZ
+    Name: Bug Buzz
+    Type: 5
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: FIRSTIMPRESSION
+    Name: First Impression
+    Type: 5
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: POLLENPUFF
+    Name: Pollen Puff
+    Type: 5
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: LEECHLIFE
+    Name: Leech Life
+    Type: 5
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: LUNGE
+    Name: Lunge
+    Type: 5
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: XSCISSOR
+    Name: X-Scissor
+    Type: 5
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SIGNALBEAM
+    Name: Signal Beam
+    Type: 5
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: SKITTERSMACK
+    Name: Skitter Smack
+    Type: 5
+    category: 0
+    Power: 70
+    Accuracy: 90
+  - Id: UTURN
+    Name: U-turn
+    Type: 5
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: STEAMROLLER
+    Name: Steamroller
+    Type: 5
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: BUGBITE
+    Name: Bug Bite
+    Type: 5
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: SILVERWIND
+    Name: Silver Wind
+    Type: 5
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: FELLSTINGER
+    Name: Fell Stinger
+    Type: 5
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: STRUGGLEBUG
+    Name: Struggle Bug
+    Type: 5
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: FURYCUTTER
+    Name: Fury Cutter
+    Type: 5
+    category: 0
+    Power: 40
+    Accuracy: 95
+  - Id: PINMISSILE
+    Name: Pin Missile
+    Type: 5
+    category: 0
+    Power: 25
+    Accuracy: 95
+  - Id: TWINEEDLE
+    Name: Twineedle
+    Type: 5
+    category: 0
+    Power: 25
+    Accuracy: 100
+  - Id: INFESTATION
+    Name: Infestation
+    Type: 5
+    category: 1
+    Power: 20
+    Accuracy: 100
+  - Id: DEFENDORDER
+    Name: Defend Order
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEALORDER
+    Name: Heal Order
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: POWDER
+    Name: Powder
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: QUIVERDANCE
+    Name: Quiver Dance
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: RAGEPOWDER
+    Name: Rage Powder
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPIDERWEB
+    Name: Spider Web
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STICKYWEB
+    Name: Sticky Web
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STRINGSHOT
+    Name: String Shot
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 95
+  - Id: TAILGLOW
+    Name: Tail Glow
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HYPERSPACEFURY
+    Name: Hyperspace Fury
+    Type: 17
+    category: 0
+    Power: 100
+    Accuracy: 0
+  - Id: FOULPLAY
+    Name: Foul Play
+    Type: 17
+    category: 0
+    Power: 95
+    Accuracy: 100
+  - Id: FIERYWRATH
+    Name: Fiery Wrath
+    Type: 17
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: DARKESTLARIAT
+    Name: Darkest Lariat
+    Type: 17
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: NIGHTDAZE
+    Name: Night Daze
+    Type: 17
+    category: 1
+    Power: 85
+    Accuracy: 95
+  - Id: CRUNCH
+    Name: Crunch
+    Type: 17
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: DARKPULSE
+    Name: Dark Pulse
+    Type: 17
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: FALSESURRENDER
+    Name: False Surrender
+    Type: 17
+    category: 0
+    Power: 80
+    Accuracy: 0
+  - Id: JAWLOCK
+    Name: Jaw Lock
+    Type: 17
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: THROATCHOP
+    Name: Throat Chop
+    Type: 17
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: WICKEDBLOW
+    Name: Wicked Blow
+    Type: 17
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: LASHOUT
+    Name: Lash Out
+    Type: 17
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: NIGHTSLASH
+    Name: Night Slash
+    Type: 17
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: SUCKERPUNCH
+    Name: Sucker Punch
+    Type: 17
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: KNOCKOFF
+    Name: Knock Off
+    Type: 17
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: ASSURANCE
+    Name: Assurance
+    Type: 17
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: BITE
+    Name: Bite
+    Type: 17
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: BRUTALSWING
+    Name: Brutal Swing
+    Type: 17
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: FEINTATTACK
+    Name: Feint Attack
+    Type: 17
+    category: 0
+    Power: 60
+    Accuracy: 0
+  - Id: THIEF
+    Name: Thief
+    Type: 17
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: SNARL
+    Name: Snarl
+    Type: 17
+    category: 1
+    Power: 55
+    Accuracy: 95
+  - Id: PAYBACK
+    Name: Payback
+    Type: 17
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: PURSUIT
+    Name: Pursuit
+    Type: 17
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: BEATUP
+    Name: Beat Up
+    Type: 17
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: FLING
+    Name: Fling
+    Type: 17
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: POWERTRIP
+    Name: Power Trip
+    Type: 17
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: PUNISHMENT
+    Name: Punishment
+    Type: 17
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: DARKVOID
+    Name: Dark Void
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 50
+  - Id: EMBARGO
+    Name: Embargo
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FAKETEARS
+    Name: Fake Tears
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FLATTER
+    Name: Flatter
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: HONECLAWS
+    Name: Hone Claws
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MEMENTO
+    Name: Memento
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: NASTYPLOT
+    Name: Nasty Plot
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: OBSTRUCT
+    Name: Obstruct
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PARTINGSHOT
+    Name: Parting Shot
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: QUASH
+    Name: Quash
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SNATCH
+    Name: Snatch
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SWITCHEROO
+    Name: Switcheroo
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TAUNT
+    Name: Taunt
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TOPSYTURVY
+    Name: Topsy-Turvy
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TORMENT
+    Name: Torment
+    Type: 17
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: ETERNABEAM
+    Name: Eternabeam
+    Type: 16
+    category: 1
+    Power: 160
+    Accuracy: 90
+  - Id: DRAGONENERGY
+    Name: Dragon Energy
+    Type: 16
+    category: 1
+    Power: 150
+    Accuracy: 100
+  - Id: ROAROFTIME
+    Name: Roar of Time
+    Type: 16
+    category: 1
+    Power: 150
+    Accuracy: 90
+  - Id: DRACOMETEOR
+    Name: Draco Meteor
+    Type: 16
+    category: 1
+    Power: 130
+    Accuracy: 90
+  - Id: OUTRAGE
+    Name: Outrage
+    Type: 16
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: CLANGINGSCALES
+    Name: Clanging Scales
+    Type: 16
+    category: 1
+    Power: 110
+    Accuracy: 100
+  - Id: COREENFORCER
+    Name: Core Enforcer
+    Type: 16
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: DRAGONRUSH
+    Name: Dragon Rush
+    Type: 16
+    category: 0
+    Power: 100
+    Accuracy: 75
+  - Id: DYNAMAXCANNON
+    Name: Dynamax Cannon
+    Type: 16
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: SPACIALREND
+    Name: Spacial Rend
+    Type: 16
+    category: 1
+    Power: 100
+    Accuracy: 95
+  - Id: DRAGONHAMMER
+    Name: Dragon Hammer
+    Type: 16
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: DRAGONPULSE
+    Name: Dragon Pulse
+    Type: 16
+    category: 1
+    Power: 85
+    Accuracy: 100
+  - Id: DRAGONCLAW
+    Name: Dragon Claw
+    Type: 16
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: BREAKINGSWIPE
+    Name: Breaking Swipe
+    Type: 16
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: DRAGONBREATH
+    Name: Dragon Breath
+    Type: 16
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: DRAGONTAIL
+    Name: Dragon Tail
+    Type: 16
+    category: 0
+    Power: 60
+    Accuracy: 90
+  - Id: DRAGONDARTS
+    Name: Dragon Darts
+    Type: 16
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: DUALCHOP
+    Name: Dual Chop
+    Type: 16
+    category: 0
+    Power: 40
+    Accuracy: 90
+  - Id: TWISTER
+    Name: Twister
+    Type: 16
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: SCALESHOT
+    Name: Scale Shot
+    Type: 16
+    category: 0
+    Power: 25
+    Accuracy: 90
+  - Id: DRAGONRAGE
+    Name: Dragon Rage
+    Type: 16
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: CLANGOROUSSOUL
+    Name: Clangorous Soul
+    Type: 16
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DRAGONDANCE
+    Name: Dragon Dance
+    Type: 16
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BOLTSTRIKE
+    Name: Bolt Strike
+    Type: 7
+    category: 0
+    Power: 130
+    Accuracy: 85
+  - Id: VOLTTACKLE
+    Name: Volt Tackle
+    Type: 7
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: ZAPCANNON
+    Name: Zap Cannon
+    Type: 7
+    category: 1
+    Power: 120
+    Accuracy: 50
+  - Id: AURAWHEEL
+    Name: Aura Wheel
+    Type: 7
+    category: 0
+    Power: 110
+    Accuracy: 100
+  - Id: THUNDER
+    Name: Thunder
+    Type: 7
+    category: 1
+    Power: 110
+    Accuracy: 70
+  - Id: FUSIONBOLT
+    Name: Fusion Bolt
+    Type: 7
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: PLASMAFISTS
+    Name: Plasma Fists
+    Type: 7
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: THUNDERBOLT
+    Name: Thunderbolt
+    Type: 7
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: WILDCHARGE
+    Name: Wild Charge
+    Type: 7
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: BOLTBEAK
+    Name: Bolt Beak
+    Type: 7
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: DISCHARGE
+    Name: Discharge
+    Type: 7
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: OVERDRIVE
+    Name: Overdrive
+    Type: 7
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: THUNDERCAGE
+    Name: Thunder Cage
+    Type: 7
+    category: 1
+    Power: 80
+    Accuracy: 90
+  - Id: ZINGZAP
+    Name: Zing Zap
+    Type: 7
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: THUNDERPUNCH
+    Name: Thunder Punch
+    Type: 7
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: RISINGVOLTAGE
+    Name: Rising Voltage
+    Type: 7
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: VOLTSWITCH
+    Name: Volt Switch
+    Type: 7
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: PARABOLICCHARGE
+    Name: Parabolic Charge
+    Type: 7
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: SPARK
+    Name: Spark
+    Type: 7
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: THUNDERFANG
+    Name: Thunder Fang
+    Type: 7
+    category: 0
+    Power: 65
+    Accuracy: 95
+  - Id: SHOCKWAVE
+    Name: Shock Wave
+    Type: 7
+    category: 1
+    Power: 60
+    Accuracy: 0
+  - Id: ELECTROWEB
+    Name: Electroweb
+    Type: 7
+    category: 1
+    Power: 55
+    Accuracy: 95
+  - Id: CHARGEBEAM
+    Name: Charge Beam
+    Type: 7
+    category: 1
+    Power: 50
+    Accuracy: 90
+  - Id: THUNDERSHOCK
+    Name: Thunder Shock
+    Type: 7
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: NUZZLE
+    Name: Nuzzle
+    Type: 7
+    category: 0
+    Power: 20
+    Accuracy: 100
+  - Id: ELECTROBALL
+    Name: Electro Ball
+    Type: 7
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: CHARGE
+    Name: Charge
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: EERIEIMPULSE
+    Name: Eerie Impulse
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: ELECTRICTERRAIN
+    Name: Electric Terrain
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ELECTRIFY
+    Name: Electrify
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: IONDELUGE
+    Name: Ion Deluge
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MAGNETRISE
+    Name: Magnet Rise
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MAGNETICFLUX
+    Name: Magnetic Flux
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: THUNDERWAVE
+    Name: Thunder Wave
+    Type: 7
+    category: 2
+    Power: 0
+    Accuracy: 90
+  - Id: LIGHTOFRUIN
+    Name: Light of Ruin
+    Type: 9
+    category: 1
+    Power: 140
+    Accuracy: 90
+  - Id: FLEURCANNON
+    Name: Fleur Cannon
+    Type: 9
+    category: 1
+    Power: 130
+    Accuracy: 90
+  - Id: MISTYEXPLOSION
+    Name: Misty Explosion
+    Type: 9
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: MOONBLAST
+    Name: Moonblast
+    Type: 9
+    category: 1
+    Power: 95
+    Accuracy: 100
+  - Id: PLAYROUGH
+    Name: Play Rough
+    Type: 9
+    category: 0
+    Power: 90
+    Accuracy: 90
+  - Id: STRANGESTEAM
+    Name: Strange Steam
+    Type: 9
+    category: 1
+    Power: 90
+    Accuracy: 95
+  - Id: DAZZLINGGLEAM
+    Name: Dazzling Gleam
+    Type: 9
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: SPIRITBREAK
+    Name: Spirit Break
+    Type: 9
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: DRAININGKISS
+    Name: Draining Kiss
+    Type: 9
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: DISARMINGVOICE
+    Name: Disarming Voice
+    Type: 9
+    category: 1
+    Power: 40
+    Accuracy: 0
+  - Id: FAIRYWIND
+    Name: Fairy Wind
+    Type: 9
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: NATURESMADNESS
+    Name: Nature's Madness
+    Type: 9
+    category: 1
+    Power: 1
+    Accuracy: 90
+  - Id: AROMATICMIST
+    Name: Aromatic Mist
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BABYDOLLEYES
+    Name: Baby-Doll Eyes
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: CHARM
+    Name: Charm
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: CRAFTYSHIELD
+    Name: Crafty Shield
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DECORATE
+    Name: Decorate
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FAIRYLOCK
+    Name: Fairy Lock
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FLORALHEALING
+    Name: Floral Healing
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FLOWERSHIELD
+    Name: Flower Shield
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GEOMANCY
+    Name: Geomancy
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MISTYTERRAIN
+    Name: Misty Terrain
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MOONLIGHT
+    Name: Moonlight
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SWEETKISS
+    Name: Sweet Kiss
+    Type: 9
+    category: 2
+    Power: 0
+    Accuracy: 75
+  - Id: FOCUSPUNCH
+    Name: Focus Punch
+    Type: 10
+    category: 0
+    Power: 150
+    Accuracy: 100
+  - Id: METEORASSAULT
+    Name: Meteor Assault
+    Type: 10
+    category: 0
+    Power: 150
+    Accuracy: 100
+  - Id: HIGHJUMPKICK
+    Name: High Jump Kick
+    Type: 10
+    category: 0
+    Power: 130
+    Accuracy: 90
+  - Id: CLOSECOMBAT
+    Name: Close Combat
+    Type: 10
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: FOCUSBLAST
+    Name: Focus Blast
+    Type: 10
+    category: 1
+    Power: 120
+    Accuracy: 70
+  - Id: SUPERPOWER
+    Name: Superpower
+    Type: 10
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: CROSSCHOP
+    Name: Cross Chop
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 80
+  - Id: DYNAMICPUNCH
+    Name: Dynamic Punch
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 50
+  - Id: FLYINGPRESS
+    Name: Flying Press
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 95
+  - Id: HAMMERARM
+    Name: Hammer Arm
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 90
+  - Id: JUMPKICK
+    Name: Jump Kick
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 95
+  - Id: SACREDSWORD
+    Name: Sacred Sword
+    Type: 10
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: THUNDEROUSKICK
+    Name: Thunderous Kick
+    Type: 10
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: SECRETSWORD
+    Name: Secret Sword
+    Type: 10
+    category: 1
+    Power: 85
+    Accuracy: 100
+  - Id: SKYUPPERCUT
+    Name: Sky Uppercut
+    Type: 10
+    category: 0
+    Power: 85
+    Accuracy: 90
+  - Id: AURASPHERE
+    Name: Aura Sphere
+    Type: 10
+    category: 1
+    Power: 80
+    Accuracy: 0
+  - Id: BODYPRESS
+    Name: Body Press
+    Type: 10
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SUBMISSION
+    Name: Submission
+    Type: 10
+    category: 0
+    Power: 80
+    Accuracy: 80
+  - Id: BRICKBREAK
+    Name: Brick Break
+    Type: 10
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: DRAINPUNCH
+    Name: Drain Punch
+    Type: 10
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: VITALTHROW
+    Name: Vital Throw
+    Type: 10
+    category: 0
+    Power: 70
+    Accuracy: 0
+  - Id: WAKEUPSLAP
+    Name: Wake-Up Slap
+    Type: 10
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: LOWSWEEP
+    Name: Low Sweep
+    Type: 10
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: CIRCLETHROW
+    Name: Circle Throw
+    Type: 10
+    category: 0
+    Power: 60
+    Accuracy: 90
+  - Id: FORCEPALM
+    Name: Force Palm
+    Type: 10
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: REVENGE
+    Name: Revenge
+    Type: 10
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: ROLLINGKICK
+    Name: Rolling Kick
+    Type: 10
+    category: 0
+    Power: 60
+    Accuracy: 85
+  - Id: STORMTHROW
+    Name: Storm Throw
+    Type: 10
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: KARATECHOP
+    Name: Karate Chop
+    Type: 10
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: MACHPUNCH
+    Name: Mach Punch
+    Type: 10
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: POWERUPPUNCH
+    Name: Power-Up Punch
+    Type: 10
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: ROCKSMASH
+    Name: Rock Smash
+    Type: 10
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: VACUUMWAVE
+    Name: Vacuum Wave
+    Type: 10
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: DOUBLEKICK
+    Name: Double Kick
+    Type: 10
+    category: 0
+    Power: 30
+    Accuracy: 100
+  - Id: ARMTHRUST
+    Name: Arm Thrust
+    Type: 10
+    category: 0
+    Power: 15
+    Accuracy: 100
+  - Id: TRIPLEKICK
+    Name: Triple Kick
+    Type: 10
+    category: 0
+    Power: 10
+    Accuracy: 90
+  - Id: COUNTER
+    Name: Counter
+    Type: 10
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: FINALGAMBIT
+    Name: Final Gambit
+    Type: 10
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: LOWKICK
+    Name: Low Kick
+    Type: 10
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: REVERSAL
+    Name: Reversal
+    Type: 10
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: SEISMICTOSS
+    Name: Seismic Toss
+    Type: 10
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: BULKUP
+    Name: Bulk Up
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COACHING
+    Name: Coaching
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DETECT
+    Name: Detect
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MATBLOCK
+    Name: Mat Block
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: NORETREAT
+    Name: No Retreat
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: OCTOLOCK
+    Name: Octolock
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: QUICKGUARD
+    Name: Quick Guard
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: VCREATE
+    Name: V-create
+    Type: 2
+    category: 0
+    Power: 180
+    Accuracy: 95
+  - Id: BLASTBURN
+    Name: Blast Burn
+    Type: 2
+    category: 1
+    Power: 150
+    Accuracy: 90
+  - Id: ERUPTION
+    Name: Eruption
+    Type: 2
+    category: 1
+    Power: 150
+    Accuracy: 100
+  - Id: MINDBLOWN
+    Name: Mind Blown
+    Type: 2
+    category: 1
+    Power: 150
+    Accuracy: 100
+  - Id: SHELLTRAP
+    Name: Shell Trap
+    Type: 2
+    category: 1
+    Power: 150
+    Accuracy: 100
+  - Id: BLUEFLARE
+    Name: Blue Flare
+    Type: 2
+    category: 1
+    Power: 130
+    Accuracy: 85
+  - Id: BURNUP
+    Name: Burn Up
+    Type: 2
+    category: 1
+    Power: 130
+    Accuracy: 100
+  - Id: OVERHEAT
+    Name: Overheat
+    Type: 2
+    category: 1
+    Power: 130
+    Accuracy: 90
+  - Id: FLAREBLITZ
+    Name: Flare Blitz
+    Type: 2
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: PYROBALL
+    Name: Pyro Ball
+    Type: 2
+    category: 0
+    Power: 120
+    Accuracy: 90
+  - Id: FIREBLAST
+    Name: Fire Blast
+    Type: 2
+    category: 1
+    Power: 110
+    Accuracy: 85
+  - Id: FUSIONFLARE
+    Name: Fusion Flare
+    Type: 2
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: INFERNO
+    Name: Inferno
+    Type: 2
+    category: 1
+    Power: 100
+    Accuracy: 50
+  - Id: MAGMASTORM
+    Name: Magma Storm
+    Type: 2
+    category: 1
+    Power: 100
+    Accuracy: 75
+  - Id: SACREDFIRE
+    Name: Sacred Fire
+    Type: 2
+    category: 0
+    Power: 100
+    Accuracy: 95
+  - Id: SEARINGSHOT
+    Name: Searing Shot
+    Type: 2
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: HEATWAVE
+    Name: Heat Wave
+    Type: 2
+    category: 1
+    Power: 95
+    Accuracy: 90
+  - Id: FLAMETHROWER
+    Name: Flamethrower
+    Type: 2
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: BLAZEKICK
+    Name: Blaze Kick
+    Type: 2
+    category: 0
+    Power: 85
+    Accuracy: 90
+  - Id: FIERYDANCE
+    Name: Fiery Dance
+    Type: 2
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: FIRELASH
+    Name: Fire Lash
+    Type: 2
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: FIREPLEDGE
+    Name: Fire Pledge
+    Type: 2
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: LAVAPLUME
+    Name: Lava Plume
+    Type: 2
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: FIREPUNCH
+    Name: Fire Punch
+    Type: 2
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: MYSTICALFIRE
+    Name: Mystical Fire
+    Type: 2
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: BURNINGJEALOUSY
+    Name: Burning Jealousy
+    Type: 2
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: FLAMEBURST
+    Name: Flame Burst
+    Type: 2
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: FIREFANG
+    Name: Fire Fang
+    Type: 2
+    category: 0
+    Power: 65
+    Accuracy: 95
+  - Id: FLAMEWHEEL
+    Name: Flame Wheel
+    Type: 2
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: INCINERATE
+    Name: Incinerate
+    Type: 2
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: FLAMECHARGE
+    Name: Flame Charge
+    Type: 2
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: EMBER
+    Name: Ember
+    Type: 2
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: FIRESPIN
+    Name: Fire Spin
+    Type: 2
+    category: 1
+    Power: 35
+    Accuracy: 85
+  - Id: HEATCRASH
+    Name: Heat Crash
+    Type: 2
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: SUNNYDAY
+    Name: Sunny Day
+    Type: 2
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WILLOWISP
+    Name: Will-O-Wisp
+    Type: 2
+    category: 2
+    Power: 0
+    Accuracy: 85
+  - Id: SKYATTACK
+    Name: Sky Attack
+    Type: 3
+    category: 0
+    Power: 140
+    Accuracy: 90
+  - Id: BRAVEBIRD
+    Name: Brave Bird
+    Type: 3
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: DRAGONASCENT
+    Name: Dragon Ascent
+    Type: 3
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: HURRICANE
+    Name: Hurricane
+    Type: 3
+    category: 1
+    Power: 110
+    Accuracy: 70
+  - Id: AEROBLAST
+    Name: Aeroblast
+    Type: 3
+    category: 1
+    Power: 100
+    Accuracy: 95
+  - Id: BEAKBLAST
+    Name: Beak Blast
+    Type: 3
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: FLY
+    Name: Fly
+    Type: 3
+    category: 0
+    Power: 90
+    Accuracy: 95
+  - Id: BOUNCE
+    Name: Bounce
+    Type: 3
+    category: 0
+    Power: 85
+    Accuracy: 85
+  - Id: DRILLPECK
+    Name: Drill Peck
+    Type: 3
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: OBLIVIONWING
+    Name: Oblivion Wing
+    Type: 3
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: AIRSLASH
+    Name: Air Slash
+    Type: 3
+    category: 1
+    Power: 75
+    Accuracy: 95
+  - Id: CHATTER
+    Name: Chatter
+    Type: 3
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: AERIALACE
+    Name: Aerial Ace
+    Type: 3
+    category: 0
+    Power: 60
+    Accuracy: 0
+  - Id: AIRCUTTER
+    Name: Air Cutter
+    Type: 3
+    category: 1
+    Power: 60
+    Accuracy: 95
+  - Id: PLUCK
+    Name: Pluck
+    Type: 3
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: SKYDROP
+    Name: Sky Drop
+    Type: 3
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: WINGATTACK
+    Name: Wing Attack
+    Type: 3
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: ACROBATICS
+    Name: Acrobatics
+    Type: 3
+    category: 0
+    Power: 55
+    Accuracy: 100
+  - Id: DUALWINGBEAT
+    Name: Dual Wingbeat
+    Type: 3
+    category: 0
+    Power: 40
+    Accuracy: 90
+  - Id: GUST
+    Name: Gust
+    Type: 3
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: PECK
+    Name: Peck
+    Type: 3
+    category: 0
+    Power: 35
+    Accuracy: 100
+  - Id: DEFOG
+    Name: Defog
+    Type: 3
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FEATHERDANCE
+    Name: Feather Dance
+    Type: 3
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: MIRRORMOVE
+    Name: Mirror Move
+    Type: 3
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ROOST
+    Name: Roost
+    Type: 3
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TAILWIND
+    Name: Tailwind
+    Type: 3
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ASTRALBARRAGE
+    Name: Astral Barrage
+    Type: 15
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: SHADOWFORCE
+    Name: Shadow Force
+    Type: 15
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: POLTERGEIST
+    Name: Poltergeist
+    Type: 15
+    category: 0
+    Power: 110
+    Accuracy: 90
+  - Id: MOONGEISTBEAM
+    Name: Moongeist Beam
+    Type: 15
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: PHANTOMFORCE
+    Name: Phantom Force
+    Type: 15
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: SPECTRALTHIEF
+    Name: Spectral Thief
+    Type: 15
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: SHADOWBONE
+    Name: Shadow Bone
+    Type: 15
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: SHADOWBALL
+    Name: Shadow Ball
+    Type: 15
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: SPIRITSHACKLE
+    Name: Spirit Shackle
+    Type: 15
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SHADOWCLAW
+    Name: Shadow Claw
+    Type: 15
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: HEX
+    Name: Hex
+    Type: 15
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: OMINOUSWIND
+    Name: Ominous Wind
+    Type: 15
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: SHADOWPUNCH
+    Name: Shadow Punch
+    Type: 15
+    category: 0
+    Power: 60
+    Accuracy: 0
+  - Id: SHADOWSNEAK
+    Name: Shadow Sneak
+    Type: 15
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: ASTONISH
+    Name: Astonish
+    Type: 15
+    category: 0
+    Power: 30
+    Accuracy: 100
+  - Id: LICK
+    Name: Lick
+    Type: 15
+    category: 0
+    Power: 30
+    Accuracy: 100
+  - Id: NIGHTSHADE
+    Name: Night Shade
+    Type: 15
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: CONFUSERAY
+    Name: Confuse Ray
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: CURSE
+    Name: Curse
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DESTINYBOND
+    Name: Destiny Bond
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GRUDGE
+    Name: Grudge
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: NIGHTMARE
+    Name: Nightmare
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SPITE
+    Name: Spite
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TRICKORTREAT
+    Name: Trick-or-Treat
+    Type: 15
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FRENZYPLANT
+    Name: Frenzy Plant
+    Type: 0
+    category: 1
+    Power: 150
+    Accuracy: 90
+  - Id: LEAFSTORM
+    Name: Leaf Storm
+    Type: 0
+    category: 1
+    Power: 130
+    Accuracy: 90
+  - Id: SOLARBLADE
+    Name: Solar Blade
+    Type: 0
+    category: 0
+    Power: 125
+    Accuracy: 100
+  - Id: PETALDANCE
+    Name: Petal Dance
+    Type: 0
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: POWERWHIP
+    Name: Power Whip
+    Type: 0
+    category: 0
+    Power: 120
+    Accuracy: 85
+  - Id: SEEDFLARE
+    Name: Seed Flare
+    Type: 0
+    category: 1
+    Power: 120
+    Accuracy: 85
+  - Id: SOLARBEAM
+    Name: Solar Beam
+    Type: 0
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: WOODHAMMER
+    Name: Wood Hammer
+    Type: 0
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: ENERGYBALL
+    Name: Energy Ball
+    Type: 0
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: LEAFBLADE
+    Name: Leaf Blade
+    Type: 0
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: PETALBLIZZARD
+    Name: Petal Blizzard
+    Type: 0
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: APPLEACID
+    Name: Apple Acid
+    Type: 0
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: DRUMBEATING
+    Name: Drum Beating
+    Type: 0
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: GRASSPLEDGE
+    Name: Grass Pledge
+    Type: 0
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: GRAVAPPLE
+    Name: Grav Apple
+    Type: 0
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SEEDBOMB
+    Name: Seed Bomb
+    Type: 0
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: GIGADRAIN
+    Name: Giga Drain
+    Type: 0
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: HORNLEECH
+    Name: Horn Leech
+    Type: 0
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: GRASSYGLIDE
+    Name: Grassy Glide
+    Type: 0
+    category: 0
+    Power: 55
+    Accuracy: 100
+  - Id: TROPKICK
+    Name: Trop Kick
+    Type: 0
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: LEAFTORNADO
+    Name: Leaf Tornado
+    Type: 0
+    category: 1
+    Power: 65
+    Accuracy: 90
+  - Id: MAGICALLEAF
+    Name: Magical Leaf
+    Type: 0
+    category: 1
+    Power: 60
+    Accuracy: 0
+  - Id: NEEDLEARM
+    Name: Needle Arm
+    Type: 0
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: RAZORLEAF
+    Name: Razor Leaf
+    Type: 0
+    category: 0
+    Power: 55
+    Accuracy: 95
+  - Id: VINEWHIP
+    Name: Vine Whip
+    Type: 0
+    category: 0
+    Power: 45
+    Accuracy: 100
+  - Id: BRANCHPOKE
+    Name: Branch Poke
+    Type: 0
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: LEAFAGE
+    Name: Leafage
+    Type: 0
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: MEGADRAIN
+    Name: Mega Drain
+    Type: 0
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: SNAPTRAP
+    Name: Snap Trap
+    Type: 0
+    category: 0
+    Power: 35
+    Accuracy: 100
+  - Id: BULLETSEED
+    Name: Bullet Seed
+    Type: 0
+    category: 0
+    Power: 25
+    Accuracy: 100
+  - Id: ABSORB
+    Name: Absorb
+    Type: 0
+    category: 1
+    Power: 20
+    Accuracy: 100
+  - Id: GRASSKNOT
+    Name: Grass Knot
+    Type: 0
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: AROMATHERAPY
+    Name: Aromatherapy
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COTTONGUARD
+    Name: Cotton Guard
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COTTONSPORE
+    Name: Cotton Spore
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FORESTSCURSE
+    Name: Forest's Curse
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: GRASSWHISTLE
+    Name: Grass Whistle
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 55
+  - Id: GRASSYTERRAIN
+    Name: Grassy Terrain
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: INGRAIN
+    Name: Ingrain
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: JUNGLEHEALING
+    Name: Jungle Healing
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LEECHSEED
+    Name: Leech Seed
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 90
+  - Id: SLEEPPOWDER
+    Name: Sleep Powder
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 75
+  - Id: SPIKYSHIELD
+    Name: Spiky Shield
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPORE
+    Name: Spore
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: STRENGTHSAP
+    Name: Strength Sap
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: STUNSPORE
+    Name: Stun Spore
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 75
+  - Id: SYNTHESIS
+    Name: Synthesis
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WORRYSEED
+    Name: Worry Seed
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: PRECIPICEBLADES
+    Name: Precipice Blades
+    Type: 8
+    category: 0
+    Power: 120
+    Accuracy: 85
+  - Id: EARTHQUAKE
+    Name: Earthquake
+    Type: 8
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: HIGHHORSEPOWER
+    Name: High Horsepower
+    Type: 8
+    category: 0
+    Power: 95
+    Accuracy: 95
+  - Id: EARTHPOWER
+    Name: Earth Power
+    Type: 8
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: LANDSWRATH
+    Name: Land's Wrath
+    Type: 8
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: THOUSANDARROWS
+    Name: Thousand Arrows
+    Type: 8
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: THOUSANDWAVES
+    Name: Thousand Waves
+    Type: 8
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: DIG
+    Name: Dig
+    Type: 8
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: DRILLRUN
+    Name: Drill Run
+    Type: 8
+    category: 0
+    Power: 80
+    Accuracy: 95
+  - Id: STOMPINGTANTRUM
+    Name: Stomping Tantrum
+    Type: 8
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: SCORCHINGSANDS
+    Name: Scorching Sands
+    Type: 8
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: BONECLUB
+    Name: Bone Club
+    Type: 8
+    category: 0
+    Power: 65
+    Accuracy: 85
+  - Id: MUDBOMB
+    Name: Mud Bomb
+    Type: 8
+    category: 1
+    Power: 65
+    Accuracy: 85
+  - Id: BULLDOZE
+    Name: Bulldoze
+    Type: 8
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: MUDSHOT
+    Name: Mud Shot
+    Type: 8
+    category: 1
+    Power: 55
+    Accuracy: 95
+  - Id: BONEMERANG
+    Name: Bonemerang
+    Type: 8
+    category: 0
+    Power: 50
+    Accuracy: 90
+  - Id: SANDTOMB
+    Name: Sand Tomb
+    Type: 8
+    category: 0
+    Power: 35
+    Accuracy: 85
+  - Id: BONERUSH
+    Name: Bone Rush
+    Type: 8
+    category: 0
+    Power: 25
+    Accuracy: 90
+  - Id: MUDSLAP
+    Name: Mud-Slap
+    Type: 8
+    category: 1
+    Power: 20
+    Accuracy: 100
+  - Id: FISSURE
+    Name: Fissure
+    Type: 8
+    category: 0
+    Power: 1
+    Accuracy: 30
+  - Id: MAGNITUDE
+    Name: Magnitude
+    Type: 8
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: MUDSPORT
+    Name: Mud Sport
+    Type: 8
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ROTOTILLER
+    Name: Rototiller
+    Type: 8
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SANDATTACK
+    Name: Sand Attack
+    Type: 8
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SHOREUP
+    Name: Shore Up
+    Type: 8
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPIKES
+    Name: Spikes
+    Type: 8
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FREEZESHOCK
+    Name: Freeze Shock
+    Type: 14
+    category: 0
+    Power: 140
+    Accuracy: 90
+  - Id: ICEBURN
+    Name: Ice Burn
+    Type: 14
+    category: 1
+    Power: 140
+    Accuracy: 90
+  - Id: GLACIALLANCE
+    Name: Glacial Lance
+    Type: 14
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: BLIZZARD
+    Name: Blizzard
+    Type: 14
+    category: 1
+    Power: 110
+    Accuracy: 70
+  - Id: ICEHAMMER
+    Name: Ice Hammer
+    Type: 14
+    category: 0
+    Power: 100
+    Accuracy: 90
+  - Id: ICEBEAM
+    Name: Ice Beam
+    Type: 14
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: ICICLECRASH
+    Name: Icicle Crash
+    Type: 14
+    category: 0
+    Power: 85
+    Accuracy: 90
+  - Id: ICEPUNCH
+    Name: Ice Punch
+    Type: 14
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: FREEZEDRY
+    Name: Freeze-Dry
+    Type: 14
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: AURORABEAM
+    Name: Aurora Beam
+    Type: 14
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: GLACIATE
+    Name: Glaciate
+    Type: 14
+    category: 1
+    Power: 65
+    Accuracy: 95
+  - Id: ICEFANG
+    Name: Ice Fang
+    Type: 14
+    category: 0
+    Power: 65
+    Accuracy: 95
+  - Id: AVALANCHE
+    Name: Avalanche
+    Type: 14
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: FROSTBREATH
+    Name: Frost Breath
+    Type: 14
+    category: 1
+    Power: 60
+    Accuracy: 90
+  - Id: ICYWIND
+    Name: Icy Wind
+    Type: 14
+    category: 1
+    Power: 55
+    Accuracy: 95
+  - Id: ICESHARD
+    Name: Ice Shard
+    Type: 14
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: POWDERSNOW
+    Name: Powder Snow
+    Type: 14
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: ICEBALL
+    Name: Ice Ball
+    Type: 14
+    category: 0
+    Power: 30
+    Accuracy: 90
+  - Id: ICICLESPEAR
+    Name: Icicle Spear
+    Type: 14
+    category: 0
+    Power: 25
+    Accuracy: 100
+  - Id: TRIPLEAXEL
+    Name: Triple Axel
+    Type: 14
+    category: 0
+    Power: 20
+    Accuracy: 90
+  - Id: SHEERCOLD
+    Name: Sheer Cold
+    Type: 14
+    category: 1
+    Power: 1
+    Accuracy: 30
+  - Id: AURORAVEIL
+    Name: Aurora Veil
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HAIL
+    Name: Hail
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HAZE
+    Name: Haze
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MIST
+    Name: Mist
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: EXPLOSION
+    Name: Explosion
+    Type: 6
+    category: 0
+    Power: 250
+    Accuracy: 100
+  - Id: SELFDESTRUCT
+    Name: Self-Destruct
+    Type: 6
+    category: 0
+    Power: 200
+    Accuracy: 100
+  - Id: GIGAIMPACT
+    Name: Giga Impact
+    Type: 6
+    category: 0
+    Power: 150
+    Accuracy: 90
+  - Id: HYPERBEAM
+    Name: Hyper Beam
+    Type: 6
+    category: 1
+    Power: 150
+    Accuracy: 90
+  - Id: BOOMBURST
+    Name: Boomburst
+    Type: 6
+    category: 1
+    Power: 140
+    Accuracy: 100
+  - Id: LASTRESORT
+    Name: Last Resort
+    Type: 6
+    category: 0
+    Power: 140
+    Accuracy: 100
+  - Id: SKULLBASH
+    Name: Skull Bash
+    Type: 6
+    category: 0
+    Power: 130
+    Accuracy: 100
+  - Id: DOUBLEEDGE
+    Name: Double-Edge
+    Type: 6
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: HEADCHARGE
+    Name: Head Charge
+    Type: 6
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: MEGAKICK
+    Name: Mega Kick
+    Type: 6
+    category: 0
+    Power: 120
+    Accuracy: 75
+  - Id: MULTIATTACK
+    Name: Multi-Attack
+    Type: 6
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: TECHNOBLAST
+    Name: Techno Blast
+    Type: 6
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: THRASH
+    Name: Thrash
+    Type: 6
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: EGGBOMB
+    Name: Egg Bomb
+    Type: 6
+    category: 0
+    Power: 100
+    Accuracy: 75
+  - Id: JUDGMENT
+    Name: Judgment
+    Type: 6
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: HYPERVOICE
+    Name: Hyper Voice
+    Type: 6
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: REVELATIONDANCE
+    Name: Revelation Dance
+    Type: 6
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: ROCKCLIMB
+    Name: Rock Climb
+    Type: 6
+    category: 0
+    Power: 90
+    Accuracy: 85
+  - Id: TAKEDOWN
+    Name: Take Down
+    Type: 6
+    category: 0
+    Power: 90
+    Accuracy: 85
+  - Id: UPROAR
+    Name: Uproar
+    Type: 6
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: BODYSLAM
+    Name: Body Slam
+    Type: 6
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: EXTREMESPEED
+    Name: Extreme Speed
+    Type: 6
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: HYPERFANG
+    Name: Hyper Fang
+    Type: 6
+    category: 0
+    Power: 80
+    Accuracy: 90
+  - Id: MEGAPUNCH
+    Name: Mega Punch
+    Type: 6
+    category: 0
+    Power: 80
+    Accuracy: 85
+  - Id: RAZORWIND
+    Name: Razor Wind
+    Type: 6
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: SLAM
+    Name: Slam
+    Type: 6
+    category: 0
+    Power: 80
+    Accuracy: 75
+  - Id: STRENGTH
+    Name: Strength
+    Type: 6
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: TRIATTACK
+    Name: Tri Attack
+    Type: 6
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: CRUSHCLAW
+    Name: Crush Claw
+    Type: 6
+    category: 0
+    Power: 75
+    Accuracy: 95
+  - Id: RELICSONG
+    Name: Relic Song
+    Type: 6
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: CHIPAWAY
+    Name: Chip Away
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: DIZZYPUNCH
+    Name: Dizzy Punch
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: FACADE
+    Name: Facade
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: HEADBUTT
+    Name: Headbutt
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: RETALIATE
+    Name: Retaliate
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: SECRETPOWER
+    Name: Secret Power
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: SLASH
+    Name: Slash
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: SMELLINGSALTS
+    Name: Smelling Salts
+    Type: 6
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: HORNATTACK
+    Name: Horn Attack
+    Type: 6
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: STOMP
+    Name: Stomp
+    Type: 6
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: COVET
+    Name: Covet
+    Type: 6
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: HIDDENPOWER
+    Name: Hidden Power
+    Type: 6
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: ROUND
+    Name: Round
+    Type: 6
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: SWIFT
+    Name: Swift
+    Type: 6
+    category: 1
+    Power: 60
+    Accuracy: 0
+  - Id: VISEGRIP
+    Name: Vise Grip
+    Type: 6
+    category: 0
+    Power: 55
+    Accuracy: 100
+  - Id: CUT
+    Name: Cut
+    Type: 6
+    category: 0
+    Power: 50
+    Accuracy: 95
+  - Id: RAPIDSPIN
+    Name: Rapid Spin
+    Type: 6
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: SNORE
+    Name: Snore
+    Type: 6
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: TERRAINPULSE
+    Name: Terrain Pulse
+    Type: 6
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: WEATHERBALL
+    Name: Weather Ball
+    Type: 6
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: ECHOEDVOICE
+    Name: Echoed Voice
+    Type: 6
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: FAKEOUT
+    Name: Fake Out
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: FALSESWIPE
+    Name: False Swipe
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: HOLDBACK
+    Name: Hold Back
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: PAYDAY
+    Name: Pay Day
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: POUND
+    Name: Pound
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: QUICKATTACK
+    Name: Quick Attack
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: SCRATCH
+    Name: Scratch
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: TACKLE
+    Name: Tackle
+    Type: 6
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: DOUBLEHIT
+    Name: Double Hit
+    Type: 6
+    category: 0
+    Power: 35
+    Accuracy: 90
+  - Id: FEINT
+    Name: Feint
+    Type: 6
+    category: 0
+    Power: 30
+    Accuracy: 100
+  - Id: TAILSLAP
+    Name: Tail Slap
+    Type: 6
+    category: 0
+    Power: 25
+    Accuracy: 85
+  - Id: RAGE
+    Name: Rage
+    Type: 6
+    category: 0
+    Power: 20
+    Accuracy: 100
+  - Id: SPIKECANNON
+    Name: Spike Cannon
+    Type: 6
+    category: 0
+    Power: 20
+    Accuracy: 100
+  - Id: COMETPUNCH
+    Name: Comet Punch
+    Type: 6
+    category: 0
+    Power: 18
+    Accuracy: 85
+  - Id: FURYSWIPES
+    Name: Fury Swipes
+    Type: 6
+    category: 0
+    Power: 18
+    Accuracy: 80
+  - Id: BARRAGE
+    Name: Barrage
+    Type: 6
+    category: 0
+    Power: 15
+    Accuracy: 85
+  - Id: BIND
+    Name: Bind
+    Type: 6
+    category: 0
+    Power: 15
+    Accuracy: 85
+  - Id: DOUBLESLAP
+    Name: Double Slap
+    Type: 6
+    category: 0
+    Power: 15
+    Accuracy: 85
+  - Id: FURYATTACK
+    Name: Fury Attack
+    Type: 6
+    category: 0
+    Power: 15
+    Accuracy: 85
+  - Id: WRAP
+    Name: Wrap
+    Type: 6
+    category: 0
+    Power: 15
+    Accuracy: 90
+  - Id: CONSTRICT
+    Name: Constrict
+    Type: 6
+    category: 0
+    Power: 10
+    Accuracy: 100
+  - Id: BIDE
+    Name: Bide
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 0
+  - Id: CRUSHGRIP
+    Name: Crush Grip
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: ENDEAVOR
+    Name: Endeavor
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: FLAIL
+    Name: Flail
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: FRUSTRATION
+    Name: Frustration
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: GUILLOTINE
+    Name: Guillotine
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 30
+  - Id: HORNDRILL
+    Name: Horn Drill
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 30
+  - Id: NATURALGIFT
+    Name: Natural Gift
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: PRESENT
+    Name: Present
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 90
+  - Id: RETURN
+    Name: Return
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: SONICBOOM
+    Name: Sonic Boom
+    Type: 6
+    category: 1
+    Power: 1
+    Accuracy: 90
+  - Id: SPITUP
+    Name: Spit Up
+    Type: 6
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: SUPERFANG
+    Name: Super Fang
+    Type: 6
+    category: 0
+    Power: 1
+    Accuracy: 90
+  - Id: TRUMPCARD
+    Name: Trump Card
+    Type: 6
+    category: 1
+    Power: 1
+    Accuracy: 0
+  - Id: WRINGOUT
+    Name: Wring Out
+    Type: 6
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: ACUPRESSURE
+    Name: Acupressure
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: AFTERYOU
+    Name: After You
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ASSIST
+    Name: Assist
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ATTRACT
+    Name: Attract
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: BATONPASS
+    Name: Baton Pass
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BELLYDRUM
+    Name: Belly Drum
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BESTOW
+    Name: Bestow
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BLOCK
+    Name: Block
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CAMOUFLAGE
+    Name: Camouflage
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CAPTIVATE
+    Name: Captivate
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: CELEBRATE
+    Name: Celebrate
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CONFIDE
+    Name: Confide
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CONVERSION
+    Name: Conversion
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CONVERSION2
+    Name: Conversion 2
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COPYCAT
+    Name: Copycat
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COURTCHANGE
+    Name: Court Change
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DEFENSECURL
+    Name: Defense Curl
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DISABLE
+    Name: Disable
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: DOUBLETEAM
+    Name: Double Team
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ENCORE
+    Name: Encore
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: ENDURE
+    Name: Endure
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ENTRAINMENT
+    Name: Entrainment
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FLASH
+    Name: Flash
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: FOCUSENERGY
+    Name: Focus Energy
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FOLLOWME
+    Name: Follow Me
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FORESIGHT
+    Name: Foresight
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GLARE
+    Name: Glare
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: GROWL
+    Name: Growl
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: GROWTH
+    Name: Growth
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HAPPYHOUR
+    Name: Happy Hour
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HARDEN
+    Name: Harden
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEALBELL
+    Name: Heal Bell
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HELPINGHAND
+    Name: Helping Hand
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HOLDHANDS
+    Name: Hold Hands
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HOWL
+    Name: Howl
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LASERFOCUS
+    Name: Laser Focus
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LEER
+    Name: Leer
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: LOCKON
+    Name: Lock-On
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LOVELYKISS
+    Name: Lovely Kiss
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 75
+  - Id: LUCKYCHANT
+    Name: Lucky Chant
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MEFIRST
+    Name: Me First
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MEANLOOK
+    Name: Mean Look
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: METRONOME
+    Name: Metronome
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MILKDRINK
+    Name: Milk Drink
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MIMIC
+    Name: Mimic
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MINDREADER
+    Name: Mind Reader
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MINIMIZE
+    Name: Minimize
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MORNINGSUN
+    Name: Morning Sun
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: NATUREPOWER
+    Name: Nature Power
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: NOBLEROAR
+    Name: Noble Roar
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ODORSLEUTH
+    Name: Odor Sleuth
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PAINSPLIT
+    Name: Pain Split
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PERISHSONG
+    Name: Perish Song
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PLAYNICE
+    Name: Play Nice
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PROTECT
+    Name: Protect
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PSYCHUP
+    Name: Psych Up
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: RECOVER
+    Name: Recover
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: RECYCLE
+    Name: Recycle
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: REFLECTTYPE
+    Name: Reflect Type
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: REFRESH
+    Name: Refresh
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ROAR
+    Name: Roar
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SAFEGUARD
+    Name: Safeguard
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SCARYFACE
+    Name: Scary Face
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SCREECH
+    Name: Screech
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 85
+  - Id: SHARPEN
+    Name: Sharpen
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SHELLSMASH
+    Name: Shell Smash
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SIMPLEBEAM
+    Name: Simple Beam
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SING
+    Name: Sing
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 55
+  - Id: SKETCH
+    Name: Sketch
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SLACKOFF
+    Name: Slack Off
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SLEEPTALK
+    Name: Sleep Talk
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SMOKESCREEN
+    Name: Smokescreen
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SOFTBOILED
+    Name: Soft-Boiled
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPLASH
+    Name: Splash
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPOTLIGHT
+    Name: Spotlight
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STOCKPILE
+    Name: Stockpile
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STUFFCHEEKS
+    Name: Stuff Cheeks
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SUBSTITUTE
+    Name: Substitute
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SUPERSONIC
+    Name: Supersonic
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 55
+  - Id: SWAGGER
+    Name: Swagger
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 85
+  - Id: SWALLOW
+    Name: Swallow
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SWEETSCENT
+    Name: Sweet Scent
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: SWORDSDANCE
+    Name: Swords Dance
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TAILWHIP
+    Name: Tail Whip
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TEARFULLOOK
+    Name: Tearful Look
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TEATIME
+    Name: Teatime
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TEETERDANCE
+    Name: Teeter Dance
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TICKLE
+    Name: Tickle
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TRANSFORM
+    Name: Transform
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WHIRLWIND
+    Name: Whirlwind
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WISH
+    Name: Wish
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WORKUP
+    Name: Work Up
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: YAWN
+    Name: Yawn
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BELCH
+    Name: Belch
+    Type: 1
+    category: 1
+    Power: 120
+    Accuracy: 90
+  - Id: GUNKSHOT
+    Name: Gunk Shot
+    Type: 1
+    category: 0
+    Power: 120
+    Accuracy: 80
+  - Id: SLUDGEWAVE
+    Name: Sludge Wave
+    Type: 1
+    category: 1
+    Power: 95
+    Accuracy: 100
+  - Id: SHELLSIDEARM
+    Name: Shell Side Arm
+    Type: 1
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: SLUDGEBOMB
+    Name: Sludge Bomb
+    Type: 1
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: POISONJAB
+    Name: Poison Jab
+    Type: 1
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: CROSSPOISON
+    Name: Cross Poison
+    Type: 1
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: SLUDGE
+    Name: Sludge
+    Type: 1
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: VENOSHOCK
+    Name: Venoshock
+    Type: 1
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: CLEARSMOG
+    Name: Clear Smog
+    Type: 1
+    category: 1
+    Power: 50
+    Accuracy: 0
+  - Id: POISONFANG
+    Name: Poison Fang
+    Type: 1
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: POISONTAIL
+    Name: Poison Tail
+    Type: 1
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: ACID
+    Name: Acid
+    Type: 1
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: ACIDSPRAY
+    Name: Acid Spray
+    Type: 1
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: SMOG
+    Name: Smog
+    Type: 1
+    category: 1
+    Power: 30
+    Accuracy: 70
+  - Id: POISONSTING
+    Name: Poison Sting
+    Type: 1
+    category: 0
+    Power: 15
+    Accuracy: 100
+  - Id: ACIDARMOR
+    Name: Acid Armor
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BANEFULBUNKER
+    Name: Baneful Bunker
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COIL
+    Name: Coil
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CORROSIVEGAS
+    Name: Corrosive Gas
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: GASTROACID
+    Name: Gastro Acid
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: POISONGAS
+    Name: Poison Gas
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 90
+  - Id: POISONPOWDER
+    Name: Poison Powder
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 75
+  - Id: PURIFY
+    Name: Purify
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TOXIC
+    Name: Toxic
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 90
+  - Id: TOXICSPIKES
+    Name: Toxic Spikes
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TOXICTHREAD
+    Name: Toxic Thread
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: VENOMDRENCH
+    Name: Venom Drench
+    Type: 1
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: PRISMATICLASER
+    Name: Prismatic Laser
+    Type: 11
+    category: 1
+    Power: 160
+    Accuracy: 100
+  - Id: PSYCHOBOOST
+    Name: Psycho Boost
+    Type: 11
+    category: 1
+    Power: 140
+    Accuracy: 90
+  - Id: FUTURESIGHT
+    Name: Future Sight
+    Type: 11
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: SYNCHRONOISE
+    Name: Synchronoise
+    Type: 11
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: DREAMEATER
+    Name: Dream Eater
+    Type: 11
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: PHOTONGEYSER
+    Name: Photon Geyser
+    Type: 11
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: PSYSTRIKE
+    Name: Psystrike
+    Type: 11
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: FREEZINGGLARE
+    Name: Freezing Glare
+    Type: 11
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: PSYCHIC
+    Name: Psychic
+    Type: 11
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: PSYCHICFANGS
+    Name: Psychic Fangs
+    Type: 11
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: EERIESPELL
+    Name: Eerie Spell
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: EXPANDINGFORCE
+    Name: Expanding Force
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: EXTRASENSORY
+    Name: Extrasensory
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: HYPERSPACEHOLE
+    Name: Hyperspace Hole
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 0
+  - Id: PSYSHOCK
+    Name: Psyshock
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: ZENHEADBUTT
+    Name: Zen Headbutt
+    Type: 11
+    category: 0
+    Power: 80
+    Accuracy: 90
+  - Id: LUSTERPURGE
+    Name: Luster Purge
+    Type: 11
+    category: 1
+    Power: 95
+    Accuracy: 100
+  - Id: MISTBALL
+    Name: Mist Ball
+    Type: 11
+    category: 1
+    Power: 95
+    Accuracy: 100
+  - Id: PSYCHOCUT
+    Name: Psycho Cut
+    Type: 11
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: PSYBEAM
+    Name: Psybeam
+    Type: 11
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: HEARTSTAMP
+    Name: Heart Stamp
+    Type: 11
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: CONFUSION
+    Name: Confusion
+    Type: 11
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: STOREDPOWER
+    Name: Stored Power
+    Type: 11
+    category: 1
+    Power: 20
+    Accuracy: 100
+  - Id: MIRRORCOAT
+    Name: Mirror Coat
+    Type: 11
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: PSYWAVE
+    Name: Psywave
+    Type: 11
+    category: 1
+    Power: 1
+    Accuracy: 100
+  - Id: AGILITY
+    Name: Agility
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ALLYSWITCH
+    Name: Ally Switch
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: AMNESIA
+    Name: Amnesia
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: BARRIER
+    Name: Barrier
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: CALMMIND
+    Name: Calm Mind
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COSMICPOWER
+    Name: Cosmic Power
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GRAVITY
+    Name: Gravity
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GUARDSPLIT
+    Name: Guard Split
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GUARDSWAP
+    Name: Guard Swap
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEALBLOCK
+    Name: Heal Block
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: HEALPULSE
+    Name: Heal Pulse
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEALINGWISH
+    Name: Healing Wish
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEARTSWAP
+    Name: Heart Swap
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HYPNOSIS
+    Name: Hypnosis
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 60
+  - Id: IMPRISON
+    Name: Imprison
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: INSTRUCT
+    Name: Instruct
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: KINESIS
+    Name: Kinesis
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 80
+  - Id: LIGHTSCREEN
+    Name: Light Screen
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LUNARDANCE
+    Name: Lunar Dance
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MAGICCOAT
+    Name: Magic Coat
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MAGICPOWDER
+    Name: Magic Powder
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: MAGICROOM
+    Name: Magic Room
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MEDITATE
+    Name: Meditate
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: MIRACLEEYE
+    Name: Miracle Eye
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: POWERSPLIT
+    Name: Power Split
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: POWERSWAP
+    Name: Power Swap
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: POWERTRICK
+    Name: Power Trick
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PSYCHICTERRAIN
+    Name: Psychic Terrain
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PSYCHOSHIFT
+    Name: Psycho Shift
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: REFLECT
+    Name: Reflect
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: REST
+    Name: Rest
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ROLEPLAY
+    Name: Role Play
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SKILLSWAP
+    Name: Skill Swap
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPEEDSWAP
+    Name: Speed Swap
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TELEKINESIS
+    Name: Telekinesis
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TELEPORT
+    Name: Teleport
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TRICK
+    Name: Trick
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: TRICKROOM
+    Name: Trick Room
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WONDERROOM
+    Name: Wonder Room
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HEADSMASH
+    Name: Head Smash
+    Type: 12
+    category: 0
+    Power: 150
+    Accuracy: 80
+  - Id: ROCKWRECKER
+    Name: Rock Wrecker
+    Type: 12
+    category: 0
+    Power: 150
+    Accuracy: 90
+  - Id: METEORBEAM
+    Name: Meteor Beam
+    Type: 12
+    category: 1
+    Power: 120
+    Accuracy: 90
+  - Id: DIAMONDSTORM
+    Name: Diamond Storm
+    Type: 12
+    category: 0
+    Power: 100
+    Accuracy: 95
+  - Id: STONEEDGE
+    Name: Stone Edge
+    Type: 12
+    category: 0
+    Power: 100
+    Accuracy: 80
+  - Id: POWERGEM
+    Name: Power Gem
+    Type: 12
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: ROCKSLIDE
+    Name: Rock Slide
+    Type: 12
+    category: 0
+    Power: 75
+    Accuracy: 90
+  - Id: ANCIENTPOWER
+    Name: Ancient Power
+    Type: 12
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: ROCKTOMB
+    Name: Rock Tomb
+    Type: 12
+    category: 0
+    Power: 60
+    Accuracy: 95
+  - Id: ROCKTHROW
+    Name: Rock Throw
+    Type: 12
+    category: 0
+    Power: 50
+    Accuracy: 90
+  - Id: SMACKDOWN
+    Name: Smack Down
+    Type: 12
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: ACCELEROCK
+    Name: Accelerock
+    Type: 12
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: ROLLOUT
+    Name: Rollout
+    Type: 12
+    category: 0
+    Power: 30
+    Accuracy: 90
+  - Id: ROCKBLAST
+    Name: Rock Blast
+    Type: 12
+    category: 0
+    Power: 25
+    Accuracy: 90
+  - Id: ROCKPOLISH
+    Name: Rock Polish
+    Type: 12
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SANDSTORM
+    Name: Sandstorm
+    Type: 12
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STEALTHROCK
+    Name: Stealth Rock
+    Type: 12
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TARSHOT
+    Name: Tar Shot
+    Type: 12
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: WIDEGUARD
+    Name: Wide Guard
+    Type: 12
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DOOMDESIRE
+    Name: Doom Desire
+    Type: 13
+    category: 1
+    Power: 140
+    Accuracy: 100
+  - Id: STEELBEAM
+    Name: Steel Beam
+    Type: 13
+    category: 1
+    Power: 140
+    Accuracy: 95
+  - Id: STEELROLLER
+    Name: Steel Roller
+    Type: 13
+    category: 0
+    Power: 130
+    Accuracy: 100
+  - Id: BEHEMOTHBASH
+    Name: Behemoth Bash
+    Type: 13
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: BEHEMOTHBLADE
+    Name: Behemoth Blade
+    Type: 13
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: IRONTAIL
+    Name: Iron Tail
+    Type: 13
+    category: 0
+    Power: 100
+    Accuracy: 75
+  - Id: SUNSTEELSTRIKE
+    Name: Sunsteel Strike
+    Type: 13
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: METEORMASH
+    Name: Meteor Mash
+    Type: 13
+    category: 0
+    Power: 90
+    Accuracy: 90
+  - Id: ANCHORSHOT
+    Name: Anchor Shot
+    Type: 13
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: FLASHCANNON
+    Name: Flash Cannon
+    Type: 13
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: IRONHEAD
+    Name: Iron Head
+    Type: 13
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SMARTSTRIKE
+    Name: Smart Strike
+    Type: 13
+    category: 0
+    Power: 70
+    Accuracy: 0
+  - Id: STEELWING
+    Name: Steel Wing
+    Type: 13
+    category: 0
+    Power: 70
+    Accuracy: 90
+  - Id: DOUBLEIRONBASH
+    Name: Double Iron Bash
+    Type: 13
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: MIRRORSHOT
+    Name: Mirror Shot
+    Type: 13
+    category: 1
+    Power: 65
+    Accuracy: 85
+  - Id: MAGNETBOMB
+    Name: Magnet Bomb
+    Type: 13
+    category: 0
+    Power: 60
+    Accuracy: 0
+  - Id: GEARGRIND
+    Name: Gear Grind
+    Type: 13
+    category: 0
+    Power: 50
+    Accuracy: 85
+  - Id: METALCLAW
+    Name: Metal Claw
+    Type: 13
+    category: 0
+    Power: 50
+    Accuracy: 95
+  - Id: BULLETPUNCH
+    Name: Bullet Punch
+    Type: 13
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: GYROBALL
+    Name: Gyro Ball
+    Type: 13
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: HEAVYSLAM
+    Name: Heavy Slam
+    Type: 13
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: METALBURST
+    Name: Metal Burst
+    Type: 13
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: AUTOTOMIZE
+    Name: Autotomize
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: GEARUP
+    Name: Gear Up
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: IRONDEFENSE
+    Name: Iron Defense
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: KINGSSHIELD
+    Name: King's Shield
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: METALSOUND
+    Name: Metal Sound
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 85
+  - Id: SHIFTGEAR
+    Name: Shift Gear
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: HYDROCANNON
+    Name: Hydro Cannon
+    Type: 4
+    category: 1
+    Power: 150
+    Accuracy: 90
+  - Id: WATERSPOUT
+    Name: Water Spout
+    Type: 4
+    category: 1
+    Power: 150
+    Accuracy: 100
+  - Id: HYDROPUMP
+    Name: Hydro Pump
+    Type: 4
+    category: 1
+    Power: 110
+    Accuracy: 80
+  - Id: ORIGINPULSE
+    Name: Origin Pulse
+    Type: 4
+    category: 1
+    Power: 110
+    Accuracy: 85
+  - Id: STEAMERUPTION
+    Name: Steam Eruption
+    Type: 4
+    category: 1
+    Power: 110
+    Accuracy: 95
+  - Id: CRABHAMMER
+    Name: Crabhammer
+    Type: 4
+    category: 0
+    Power: 100
+    Accuracy: 90
+  - Id: AQUATAIL
+    Name: Aqua Tail
+    Type: 4
+    category: 0
+    Power: 90
+    Accuracy: 90
+  - Id: MUDDYWATER
+    Name: Muddy Water
+    Type: 4
+    category: 1
+    Power: 90
+    Accuracy: 85
+  - Id: SPARKLINGARIA
+    Name: Sparkling Aria
+    Type: 4
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: SURF
+    Name: Surf
+    Type: 4
+    category: 1
+    Power: 90
+    Accuracy: 100
+  - Id: FISHIOUSREND
+    Name: Fishious Rend
+    Type: 4
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: LIQUIDATION
+    Name: Liquidation
+    Type: 4
+    category: 0
+    Power: 85
+    Accuracy: 100
+  - Id: DIVE
+    Name: Dive
+    Type: 4
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SCALD
+    Name: Scald
+    Type: 4
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: SNIPESHOT
+    Name: Snipe Shot
+    Type: 4
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: WATERPLEDGE
+    Name: Water Pledge
+    Type: 4
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: WATERFALL
+    Name: Waterfall
+    Type: 4
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: RAZORSHELL
+    Name: Razor Shell
+    Type: 4
+    category: 0
+    Power: 75
+    Accuracy: 95
+  - Id: BRINE
+    Name: Brine
+    Type: 4
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: BUBBLEBEAM
+    Name: Bubble Beam
+    Type: 4
+    category: 1
+    Power: 65
+    Accuracy: 100
+  - Id: OCTAZOOKA
+    Name: Octazooka
+    Type: 4
+    category: 1
+    Power: 65
+    Accuracy: 85
+  - Id: FLIPTURN
+    Name: Flip Turn
+    Type: 4
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: WATERPULSE
+    Name: Water Pulse
+    Type: 4
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: AQUAJET
+    Name: Aqua Jet
+    Type: 4
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: BUBBLE
+    Name: Bubble
+    Type: 4
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: WATERGUN
+    Name: Water Gun
+    Type: 4
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: CLAMP
+    Name: Clamp
+    Type: 4
+    category: 0
+    Power: 35
+    Accuracy: 85
+  - Id: WHIRLPOOL
+    Name: Whirlpool
+    Type: 4
+    category: 1
+    Power: 35
+    Accuracy: 85
+  - Id: SURGINGSTRIKES
+    Name: Surging Strikes
+    Type: 4
+    category: 0
+    Power: 25
+    Accuracy: 100
+  - Id: WATERSHURIKEN
+    Name: Water Shuriken
+    Type: 4
+    category: 1
+    Power: 15
+    Accuracy: 100
+  - Id: AQUARING
+    Name: Aqua Ring
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: LIFEDEW
+    Name: Life Dew
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: RAINDANCE
+    Name: Rain Dance
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SOAK
+    Name: Soak
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: WATERSPORT
+    Name: Water Sport
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: WITHDRAW
+    Name: Withdraw
+    Type: 4
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: DIRECLAW
+    Name: Dire Claw
+    Type: 1
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: SPRINGTIDESTORM
+    Name: Springtide Storm
+    Type: 9
+    category: 1
+    Power: 100
+    Accuracy: 80
+  - Id: RAGINGFURY
+    Name: Raging Fury
+    Type: 2
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: WAVECRASH
+    Name: Wave Crash
+    Type: 4
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: CHLOROBLAST
+    Name: Chloroblast
+    Type: 0
+    category: 1
+    Power: 150
+    Accuracy: 95
+  - Id: MOUNTAINGALE
+    Name: Mountain Gale
+    Type: 14
+    category: 0
+    Power: 100
+    Accuracy: 85
+  - Id: HEADLONGRUSH
+    Name: Headlong Rush
+    Type: 8
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: BARBBARRAGE
+    Name: Barb Barrage
+    Type: 1
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: ESPERWING
+    Name: Esper Wing
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: BITTERMALICE
+    Name: Bitter Malice
+    Type: 15
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: TRIPLEARROWS
+    Name: Triple Arrows
+    Type: 10
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: BLEAKWINDSTORM
+    Name: Bleakwind Storm
+    Type: 3
+    category: 1
+    Power: 100
+    Accuracy: 80
+  - Id: WILDBOLTSTORM
+    Name: Wildbolt Storm
+    Type: 7
+    category: 1
+    Power: 100
+    Accuracy: 80
+  - Id: SANDSEARSTORM
+    Name: Sandsear Storm
+    Type: 8
+    category: 1
+    Power: 100
+    Accuracy: 80
+  - Id: LUNARBLESSING
+    Name: Lunar Blessing
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: PSYSHIELDBASH
+    Name: Psyshield Bash
+    Type: 11
+    category: 0
+    Power: 70
+    Accuracy: 90
+  - Id: POWERSHIFT
+    Name: Power Shift
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: STONEAXE
+    Name: Stone Axe
+    Type: 12
+    category: 0
+    Power: 65
+    Accuracy: 90
+  - Id: MYSTICALPOWER
+    Name: Mystical Power
+    Type: 11
+    category: 1
+    Power: 70
+    Accuracy: 90
+  - Id: VICTORYDANCE
+    Name: Victory Dance
+    Type: 10
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SHELTER
+    Name: Shelter
+    Type: 13
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: INFERNALPARADE
+    Name: Infernal Parade
+    Type: 15
+    category: 1
+    Power: 60
+    Accuracy: 100
+  - Id: CEASELESSEDGE
+    Name: Ceaseless Edge
+    Type: 17
+    category: 0
+    Power: 65
+    Accuracy: 90
+  - Id: TAKEHEART
+    Name: Take Heart
+    Type: 11
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: AQUACUTTER
+    Name: Aqua Cutter
+    Type: 4
+    category: 0
+    Power: 70
+    Accuracy: 100
+  - Id: AQUASTEP
+    Name: Aqua Step
+    Type: 4
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: ARMORCANNON
+    Name: Armor Cannon
+    Type: 2
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: AXEKICK
+    Name: Axe Kick
+    Type: 10
+    category: 0
+    Power: 120
+    Accuracy: 90
+  - Id: BITTERBLADE
+    Name: Bitter Blade
+    Type: 2
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: BLAZINGTORQUE
+    Name: Blazing Torque
+    Type: 2
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: CHILLINGWATER
+    Name: Chilling Water
+    Type: 4
+    category: 1
+    Power: 50
+    Accuracy: 100
+  - Id: CHILLYRECEPTION
+    Name: Chilly Reception
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: COLLISIONCOURSE
+    Name: Collision Course
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: COMBATTORQUE
+    Name: Combat Torque
+    Type: 10
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: COMEUPPANCE
+    Name: Comeuppance
+    Type: 17
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: DOODLE
+    Name: Doodle
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 100
+  - Id: DOUBLESHOCK
+    Name: Double Shock
+    Type: 7
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: ELECTRODRIFT
+    Name: Electro Drift
+    Type: 7
+    category: 1
+    Power: 100
+    Accuracy: 100
+  - Id: FILLETAWAY
+    Name: Fillet Away
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: FLOWERTRICK
+    Name: Flower Trick
+    Type: 0
+    category: 0
+    Power: 70
+    Accuracy: 0
+  - Id: GIGATONHAMMER
+    Name: Gigaton Hammer
+    Type: 13
+    category: 0
+    Power: 160
+    Accuracy: 100
+  - Id: GLAIVERUSH
+    Name: Glaive Rush
+    Type: 16
+    category: 0
+    Power: 120
+    Accuracy: 100
+  - Id: HYPERDRILL
+    Name: Hyper Drill
+    Type: 6
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: ICESPINNER
+    Name: Ice Spinner
+    Type: 14
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: JETPUNCH
+    Name: Jet Punch
+    Type: 4
+    category: 0
+    Power: 60
+    Accuracy: 100
+  - Id: KOWTOWCLEAVE
+    Name: Kowtow Cleave
+    Type: 17
+    category: 0
+    Power: 85
+    Accuracy: 0
+  - Id: LASTRESPECTS
+    Name: Last Respects
+    Type: 15
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: LUMINACRASH
+    Name: Lumina Crash
+    Type: 11
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: MAGICALTORQUE
+    Name: Magical Torque
+    Type: 9
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: MAKEITRAIN
+    Name: Make It Rain
+    Type: 13
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: MORTALSPIN
+    Name: Mortal Spin
+    Type: 1
+    category: 0
+    Power: 30
+    Accuracy: 100
+  - Id: NOXIOUSTORQUE
+    Name: Noxious Torque
+    Type: 1
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: ORDERUP
+    Name: Order Up
+    Type: 16
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: POPULATIONBOMB
+    Name: Population Bomb
+    Type: 6
+    category: 0
+    Power: 20
+    Accuracy: 90
+  - Id: POUNCE
+    Name: Pounce
+    Type: 5
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: RAGEFIST
+    Name: Rage Fist
+    Type: 15
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: RAGINGBULL
+    Name: Raging Bull
+    Type: 6
+    category: 0
+    Power: 90
+    Accuracy: 100
+  - Id: REVIVALBLESSING
+    Name: Revival Blessing
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: RUINATION
+    Name: Ruination
+    Type: 17
+    category: 1
+    Power: 1
+    Accuracy: 90
+  - Id: SALTCURE
+    Name: Salt Cure
+    Type: 12
+    category: 0
+    Power: 40
+    Accuracy: 100
+  - Id: SHEDTAIL
+    Name: Shed Tail
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SILKTRAP
+    Name: Silk Trap
+    Type: 5
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SNOWSCAPE
+    Name: Snowscape
+    Type: 14
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPICYEXTRACT
+    Name: Spicy Extract
+    Type: 0
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: SPINOUT
+    Name: Spin Out
+    Type: 13
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: TIDYUP
+    Name: Tidy Up
+    Type: 6
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: TORCHSONG
+    Name: Torch Song
+    Type: 2
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: TRAILBLAZE
+    Name: Trailblaze
+    Type: 0
+    category: 0
+    Power: 50
+    Accuracy: 100
+  - Id: TRIPLEDIVE
+    Name: Triple Dive
+    Type: 4
+    category: 0
+    Power: 30
+    Accuracy: 95
+  - Id: TWINBEAM
+    Name: Twin Beam
+    Type: 11
+    category: 1
+    Power: 40
+    Accuracy: 100
+  - Id: WICKEDTORQUE
+    Name: Wicked Torque
+    Type: 17
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: HYDROSTEAM
+    Name: Hydro Steam
+    Type: 4
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: PSYBLADE
+    Name: Psyblade
+    Type: 11
+    category: 0
+    Power: 80
+    Accuracy: 100
+  - Id: BLOODMOON
+    Name: Blood Moon
+    Type: 6
+    category: 1
+    Power: 140
+    Accuracy: 100
+  - Id: MATCHAGOTCHA
+    Name: Matcha Gotcha
+    Type: 0
+    category: 1
+    Power: 80
+    Accuracy: 90
+  - Id: SYRUPBOMB
+    Name: Syrup Bomb
+    Type: 0
+    category: 1
+    Power: 60
+    Accuracy: 85
+  - Id: IVYCUDGEL
+    Name: Ivy Cudgel
+    Type: 0
+    category: 0
+    Power: 100
+    Accuracy: 100
+  - Id: ELECTROSHOT
+    Name: Electro Shot
+    Type: 7
+    category: 1
+    Power: 130
+    Accuracy: 100
+  - Id: TERASTARSTORM
+    Name: Tera Starstorm
+    Type: 6
+    category: 1
+    Power: 120
+    Accuracy: 100
+  - Id: FICKLEBEAM
+    Name: Fickle Beam
+    Type: 16
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: BURNINGBULWARK
+    Name: Burning Bulwark
+    Type: 2
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: THUNDERCLAP
+    Name: Thunderclap
+    Type: 7
+    category: 1
+    Power: 70
+    Accuracy: 100
+  - Id: MIGHTYCLEAVE
+    Name: Mighty Cleave
+    Type: 12
+    category: 0
+    Power: 95
+    Accuracy: 100
+  - Id: TACHYONCUTTER
+    Name: Tachyon Cutter
+    Type: 13
+    category: 1
+    Power: 50
+    Accuracy: 0
+  - Id: HARDPRESS
+    Name: Hard Press
+    Type: 13
+    category: 0
+    Power: 1
+    Accuracy: 100
+  - Id: DRAGONCHEER
+    Name: Dragon Cheer
+    Type: 16
+    category: 2
+    Power: 0
+    Accuracy: 0
+  - Id: ALLURINGVOICE
+    Name: Alluring Voice
+    Type: 9
+    category: 1
+    Power: 80
+    Accuracy: 100
+  - Id: TEMPERFLARE
+    Name: Temper Flare
+    Type: 2
+    category: 0
+    Power: 75
+    Accuracy: 100
+  - Id: SUPERCELLSLAM
+    Name: Supercell Slam
+    Type: 7
+    category: 0
+    Power: 100
+    Accuracy: 95
+  - Id: PSYCHICNOISE
+    Name: Psychic Noise
+    Type: 11
+    category: 1
+    Power: 75
+    Accuracy: 100
+  - Id: UPPERHAND
+    Name: Upper Hand
+    Type: 10
+    category: 0
+    Power: 65
+    Accuracy: 100
+  - Id: MALIGNANTCHAIN
+    Name: Malignant Chain
+    Type: 1
+    category: 1
+    Power: 100
+    Accuracy: 100
