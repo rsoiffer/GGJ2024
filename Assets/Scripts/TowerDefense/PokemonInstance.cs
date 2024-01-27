@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Data;
 using Helpers;
 using JetBrains.Annotations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TowerDefense
 {
@@ -11,17 +13,20 @@ namespace TowerDefense
     {
         private static readonly HashSet<PokemonInstance> AllPokemon = new();
 
-        public PokemonDatabase database;
-        public SpriteRenderer sprite;
-        public bool isFriendly;
-        public int level;
-        public int damageTaken;
-        public int[] currentStats;
+        [Header("References")] public PokemonDatabase database;
+        public SpriteController sprite;
         public GameObject attackFXPrefab;
 
-        private PokemonData _data;
-        private float _lastPhysicalAttackTime;
-        private float _lastSpecialAttackTime;
+        [Header("Instance Data")] public bool isFriendly;
+        public int level;
+        public PokemonData data;
+        public bool isShiny;
+
+        [Header("State Data")] public bool inBox;
+        public int damageTaken;
+        public int[] currentStats;
+        public float lastPhysicalAttackTime;
+        public float lastSpecialAttackTime;
 
         private void Update()
         {
@@ -31,22 +36,24 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
-            if (Time.time > _lastPhysicalAttackTime + 1)
+            if (inBox) return;
+
+            if (Time.time > lastPhysicalAttackTime + 1)
             {
                 var nearestOther = GetTarget(.75f);
                 if (nearestOther != null)
                 {
-                    _lastPhysicalAttackTime = Time.time;
+                    lastPhysicalAttackTime = Time.time;
                     Attack(nearestOther, false);
                 }
             }
 
-            if (Time.time > _lastSpecialAttackTime + 2)
+            if (Time.time > lastSpecialAttackTime + 2)
             {
                 var nearestOther = GetTarget(2);
                 if (nearestOther != null)
                 {
-                    _lastSpecialAttackTime = Time.time;
+                    lastSpecialAttackTime = Time.time;
                     Attack(nearestOther, true);
                 }
             }
@@ -57,7 +64,6 @@ namespace TowerDefense
         private void OnEnable()
         {
             AllPokemon.Add(this);
-            sprite.enabled = false;
         }
 
         private void OnDisable()
@@ -68,19 +74,25 @@ namespace TowerDefense
         [CanBeNull]
         private PokemonInstance GetTarget(float maxRange)
         {
-            var nearestOther = AllPokemon.Where(p => p.isFriendly != isFriendly)
-                .MinByOrElse(p => Vector2.Distance(transform.position, p.transform.position), null);
+            return GetNearest(transform.position, maxRange, p => p.isFriendly != isFriendly);
+        }
+
+        [CanBeNull]
+        public static PokemonInstance GetNearest(Vector2 position, float maxRange, Func<PokemonInstance, bool> filter)
+        {
+            var nearestOther = AllPokemon.Where(filter)
+                .MinByOrElse(p => Vector2.Distance(position, p.transform.position), null);
             if (nearestOther == null) return null;
-            var dist = Vector2.Distance(transform.position, nearestOther.transform.position);
+            var dist = Vector2.Distance(position, nearestOther.transform.position);
             return dist < maxRange ? nearestOther : null;
         }
 
         public int GetStat(Stat stat)
         {
             if (stat == Stat.HP)
-                return Mathf.FloorToInt((level / 100f + 1) * _data.BaseStats[(int)stat] + level);
+                return Mathf.FloorToInt((level / 100f + 1) * data.BaseStats[(int)stat] + level);
 
-            return Mathf.FloorToInt((level / 50f + 1) * _data.BaseStats[(int)stat] / 1.5f);
+            return Mathf.FloorToInt((level / 50f + 1) * data.BaseStats[(int)stat] / 1.5f);
         }
 
         private void Attack(PokemonInstance target, bool isSpecial)
@@ -98,7 +110,7 @@ namespace TowerDefense
 
         public void ResetTo(string id, int level)
         {
-            _data = database.database.First(p => p.Id == id);
+            data = database.database.First(p => p.Id == id);
             this.level = level;
         }
 
@@ -106,13 +118,21 @@ namespace TowerDefense
         {
             var direction = pos - (Vector2)transform.position;
             transform.position = pos;
-            // if (direction.magnitude < 1e-3f) return;
-            sprite.enabled = true;
-            var max = Mathf.Max(Mathf.Abs(direction.x), Mathf.Abs(direction.y));
-            if (direction.y >= max) sprite.sprite = _data.spriteSet.followers[0];
-            if (direction.x >= max) sprite.sprite = _data.spriteSet.followers[4];
-            if (-direction.x >= max) sprite.sprite = _data.spriteSet.followers[8];
-            if (-direction.y >= max) sprite.sprite = _data.spriteSet.followers[12];
+            sprite.Look(direction);
+        }
+
+        public void MoveToSlot(Slot slot)
+        {
+            inBox = slot.isBox;
+            if (slot.isBox)
+            {
+                transform.position = slot.transform.position;
+                sprite.SetToIcon();
+            }
+            else
+            {
+                Move(slot.transform.position);
+            }
         }
     }
 }

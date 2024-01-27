@@ -8,6 +8,7 @@ namespace TowerDefense
     {
         public PokemonInstance pokemon;
         public Image fill;
+        public GameObject canvas;
 
         public Color green;
         public Color yellow;
@@ -15,6 +16,7 @@ namespace TowerDefense
 
         private void Update()
         {
+            canvas.SetActive(!pokemon.inBox);
             var currentHealthPerc = (float)(pokemon.GetStat(Stat.HP) - pokemon.damageTaken) / pokemon.GetStat(Stat.HP);
             fill.rectTransform.sizeDelta = new Vector2(currentHealthPerc * .75f, 0);
             fill.color = currentHealthPerc switch

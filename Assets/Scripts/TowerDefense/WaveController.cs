@@ -5,7 +5,6 @@ namespace TowerDefense
 {
     public class WaveController : MonoBehaviour
     {
-        public GridManager gridManager;
         public LaneDefinition[] lanes;
 
         public EnemyAI enemyPrefab;
