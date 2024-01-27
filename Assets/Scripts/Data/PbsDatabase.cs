@@ -223,6 +223,16 @@ namespace Data
             var allFlags = Enumerable.ToHashSet(database.Entries.Values
                 .SelectMany(p => p.Lookup("Flags") != null ? p.Lookup("Flags")!.Split(",") : new string[] { }));
             Debug.Log($"List of flags is {string.Join(",", allFlags)}");
+
+            var allTargets = Enumerable.ToHashSet(database.Entries.Values.Select(p => p.Lookup("Target")))
+                .ToList();
+            var usageCounts2 = allTargets.Select(code =>
+                    (code, database.Entries.Values.Count(p => p.Lookup("Target") == code)))
+                .OrderByDescending(x => x.Item2).ToList();
+            var targetMessage = "";
+            foreach (var (code, usages) in usageCounts2)
+                targetMessage += $"{code} used {usages} times\n";
+            Debug.Log(targetMessage);
         }
     }
 }
