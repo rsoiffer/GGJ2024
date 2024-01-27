@@ -48,15 +48,15 @@ namespace TowerDefense
             ability3.gameObject.SetActive(s.data.HiddenAbilities.Length > 1);
             if (s.data.HiddenAbilities.Length > 1) ability3.SetText(s.data.HiddenAbilities![1]);
 
-            moveType1.enabled = s.moves.Length > 0;
-            if (s.moves.Length > 0) moveType1.sprite = typeSprites[(int)s.moves[0].Type];
-            move1.gameObject.SetActive(s.moves.Length > 0);
-            if (s.moves.Length > 0) move1.SetText(s.moves[0].Name);
+            moveType1.enabled = s.moves.Count > 0;
+            if (s.moves.Count > 0) moveType1.sprite = typeSprites[(int)s.moves[0].Type];
+            move1.gameObject.SetActive(s.moves.Count > 0);
+            if (s.moves.Count > 0) move1.SetText(s.moves[0].Name);
 
-            moveType2.enabled = s.moves.Length > 1;
-            if (s.moves.Length > 1) moveType2.sprite = typeSprites[(int)s.moves[1].Type];
-            move2.gameObject.SetActive(s.moves.Length > 1);
-            if (s.moves.Length > 1) move2.SetText(s.moves[1].Name);
+            moveType2.enabled = s.moves.Count > 1;
+            if (s.moves.Count > 1) moveType2.sprite = typeSprites[(int)s.moves[1].Type];
+            move2.gameObject.SetActive(s.moves.Count > 1);
+            if (s.moves.Count > 1) move2.SetText(s.moves[1].Name);
 
             for (var i = 0; i < 6; i++) stats[i].SetText($"{s.GetStat((Stat)i)}");
         }

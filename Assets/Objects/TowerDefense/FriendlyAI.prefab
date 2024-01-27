@@ -62,7 +62,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60f58d047fc848d79fb85466ee5efde7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
+  pokeDatabase: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
+  moveDatabase: {fileID: 11400000, guid: fb3e0aa429e07ca4e96f5dc71f84bd95, type: 2}
   sprite: {fileID: 7956360473118265446}
   attackFXPrefab: {fileID: 7076545157764386722, guid: d7d545b5840739f4796d1e7ff30878fe, type: 3}
   isFriendly: 1
@@ -110,6 +111,7 @@ MonoBehaviour:
       icons: []
     cry: {fileID: 0}
   isShiny: 0
+  moves: []
   inBox: 0
   damageTaken: 0
   currentStats: 

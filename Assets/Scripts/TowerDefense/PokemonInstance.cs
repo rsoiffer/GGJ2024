@@ -13,7 +13,8 @@ namespace TowerDefense
     {
         public static readonly HashSet<PokemonInstance> AllPokemon = new();
 
-        [Header("References")] public PokemonDatabase database;
+        [Header("References")] public PokemonDatabase pokeDatabase;
+        public MoveDatabase moveDatabase;
         public SpriteController sprite;
         public GameObject attackFXPrefab;
 
@@ -21,7 +22,7 @@ namespace TowerDefense
         public int level;
         public PokemonData data;
         public bool isShiny;
-        public MoveData[] moves;
+        public List<MoveData> moves;
 
         [Header("State Data")] public bool inBox;
         public int damageTaken;
@@ -121,8 +122,12 @@ namespace TowerDefense
 
         public void ResetTo(string id, int level)
         {
-            data = database.Get(id);
+            data = pokeDatabase.Get(id);
             this.level = level;
+            moves.Clear();
+            for (var i = 0; i < data.Moves.Length; i++)
+                if (data.MoveLearnLevels[i] <= level)
+                    moves.Add(moveDatabase.Get(data.Moves[i]));
         }
 
         public void Move(Vector2 pos)

@@ -57,7 +57,7 @@ namespace Data
         public int TotalPP;
         public string Target;
         public string FunctionCode;
-        public string[] Flags;
+        [CanBeNull] public string[] Flags;
         public int EffectChance;
         public string Description;
 
@@ -74,7 +74,7 @@ namespace Data
                 TotalPP = int.Parse(pbsEntry.Lookup("TotalPP")!);
                 Target = pbsEntry.Lookup("Target");
                 FunctionCode = pbsEntry.Lookup("FunctionCode");
-                Flags = pbsEntry.Lookup("Flags")!.Split(",");
+                Flags = pbsEntry.Lookup("Flags")?.Split(",");
                 EffectChance = int.Parse(pbsEntry.Lookup("EffectChance") ?? "0");
                 Description = pbsEntry.Lookup("Description");
             }
