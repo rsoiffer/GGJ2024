@@ -68,7 +68,7 @@ MonoBehaviour:
   damageTaken: 0
   currentStats: 
   attackFXPrefab: {fileID: 7076545157764386722, guid: d7d545b5840739f4796d1e7ff30878fe, type: 3}
-  healthFill: {fileID: 4486856144843419238}
+  fanfarePrefab: {fileID: 7076545157764386722, guid: 449eb8356878f494999c040d86152e9a, type: 3}
 --- !u!1 &8229042749428532519
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,17 +260,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a24a8dd31b9b4d049b80f61d3933cc0b, type: 3}
---- !u!114 &4486856144843419238 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5449509712978248400, guid: a24a8dd31b9b4d049b80f61d3933cc0b, type: 3}
-  m_PrefabInstance: {fileID: 8494932192780594358}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7181527612201976127 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1607194089676270985, guid: a24a8dd31b9b4d049b80f61d3933cc0b, type: 3}

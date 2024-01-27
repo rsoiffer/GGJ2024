@@ -6,6 +6,7 @@ namespace TowerDefense
     {
         public LaneDefinition lane;
         public PokemonInstance pokemon;
+		//public Wave[] waves;
 
         public float laneProgress;
 

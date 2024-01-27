@@ -9,7 +9,7 @@ namespace TowerDefense
 {
     public class PokemonInstance : MonoBehaviour
     {
-        private static readonly HashSet<PokemonInstance> AllPokemon = new();
+        public static readonly HashSet<PokemonInstance> AllPokemon = new();
 
         public PokemonDatabase database;
         public SpriteRenderer sprite;
@@ -17,7 +17,10 @@ namespace TowerDefense
         public int level;
         public int damageTaken;
         public int[] currentStats;
+		public float experience;
         public GameObject attackFXPrefab;
+		public GameObject fanfarePrefab;
+
 
         private PokemonData _data;
         private float _lastPhysicalAttackTime;
@@ -51,7 +54,15 @@ namespace TowerDefense
                 }
             }
 
-            if (damageTaken >= GetStat(Stat.HP)) Destroy(gameObject);
+            if (damageTaken >= GetStat(Stat.HP)){
+				if (!isFriendly){
+					GameObject controller=GameObject.Find("Controller");
+					if (!controller) return;
+					EXPManager expManager=controller.GetComponent<EXPManager>();
+					expManager.addExp(_data.BaseExp,level);
+				}
+				Destroy(gameObject);
+			}
         }
 
         private void OnEnable()
@@ -95,15 +106,25 @@ namespace TowerDefense
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
         }
+		public void LevelUp(){
+			level++;
+			var fanfare = Instantiate(fanfarePrefab);
+			fanfare.transform.position=transform.position;
+		}
+		public GrowthRate GetGrowthRate(){
+			return _data.GrowthRate;
+		}
 
         public void ResetTo(string id, int level)
         {
             _data = database.database.First(p => p.Id == id);
+				
             this.level = level;
         }
 
         public void Move(Vector2 pos)
         {
+		
             var direction = pos - (Vector2)transform.position;
             transform.position = pos;
             // if (direction.magnitude < 1e-3f) return;
