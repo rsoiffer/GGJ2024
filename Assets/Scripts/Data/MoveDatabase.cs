@@ -18,13 +18,13 @@ namespace Data
         {
             AssetProcessor.IterateOverSelectedAssets(path =>
             {
-                var pokeDatabase = AssetDatabase.LoadAssetAtPath<PokemonDatabase>(path);
-                if (pokeDatabase == null) return;
+                var moveDatabase = AssetDatabase.LoadAssetAtPath<MoveDatabase>(path);
+                if (moveDatabase == null) return;
                 var pbsDatabase = PbsDatabase.LoadDatabase("moves");
-                pokeDatabase.database =
-                    pbsDatabase.Entries.Values.Select(pbsEntry => new PokemonData(pbsEntry)).ToArray();
-                EditorUtility.SetDirty(pokeDatabase);
-                AssetDatabase.SaveAssetIfDirty(pokeDatabase);
+                moveDatabase.database =
+                    pbsDatabase.Entries.Values.Select(pbsEntry => new MoveData(pbsEntry)).ToArray();
+                EditorUtility.SetDirty(moveDatabase);
+                AssetDatabase.SaveAssetIfDirty(moveDatabase);
             });
         }
     }
@@ -32,10 +32,11 @@ namespace Data
     [Serializable]
     public class MoveData
     {
+        public string Id;
         public string Name;
         public Type Type;
         public MoveCategory category;
-        public int Power;
+        [CanBeNull] public int Power;
 
         public int Accuracy;
         //#TODO public int TotalPP;
@@ -48,11 +49,12 @@ namespace Data
         {
             try
             {
+                Id = pbsEntry.GetId();
                 Name = pbsEntry.Lookup("Name");
                 Type = Enum.Parse<Type>(pbsEntry.Lookup("Type"));
                 category = Enum.Parse<MoveCategory>(pbsEntry.Lookup("Category"));
-                Power = int.Parse(pbsEntry.Lookup("Power")) != null ? int.Parse(pbsEntry.Lookup("Power")) : 0;
-                Accuracy = int.Parse(pbsEntry.Lookup("Accuracy"));
+                Power = int.TryParse( pbsEntry.Lookup("Power"), result: out Power) ? int.Parse(pbsEntry.Lookup(("Power") )) : 0;
+                Accuracy =int.TryParse( pbsEntry.Lookup("Accuracy"), result: out Accuracy) ? int.Parse(pbsEntry.Lookup(("Accuracy") )) : 0;
 
 
             }
