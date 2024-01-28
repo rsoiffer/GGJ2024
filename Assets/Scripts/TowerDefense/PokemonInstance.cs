@@ -120,9 +120,11 @@ namespace TowerDefense
         {
             var (atk, def) = move.Category == MoveCategory.Special ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
 
-            var power = 100;
-            var damage = (2 * level / 5f + 2) * power * GetStat(atk) / target.GetStat(def) / 50 + 2;
+            var damage = (2 * level / 5f + 2) * move.Power * GetStat(atk) / target.GetStat(def) / 50 + 2;
             damage *= Random.Range(.85f, 1f);
+            if (data.Types.Contains(move.Type)) damage *= 1.5f;
+            foreach (var type in target.data.Types)
+                damage *= TypeEffectiveness.GetTypeEffectiveness(move.Type, type);
             target.damageTaken += Mathf.CeilToInt(damage);
 
             var attackFX = Instantiate(attackFXPrefab);
