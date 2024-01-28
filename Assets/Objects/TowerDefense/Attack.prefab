@@ -133,6 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprite: {fileID: 1654482490233998233}
   fxPrefab: {fileID: 7076545157764386722, guid: 907b009877e58e84792b92dd87dfc059, type: 3}
+  projectilePrefab: {fileID: 7425433194239973585, guid: fe909a991090ee740a3c020ec695e2b3, type: 3}
   pokemon: {fileID: 0}
   move:
     Id: 
@@ -147,4 +148,3 @@ MonoBehaviour:
     Flags: []
     EffectChance: 0
     Description: 
-  lastAttackTime: 0

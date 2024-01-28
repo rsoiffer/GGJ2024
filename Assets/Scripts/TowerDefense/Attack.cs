@@ -10,6 +10,7 @@ namespace TowerDefense
     {
         [Header("References")] public SpriteRenderer sprite;
         public GameObject fxPrefab;
+        public Projectile projectilePrefab;
 
         [Header("Instance Data")] public PokemonInstance pokemon;
         public MoveData move;
@@ -28,7 +29,15 @@ namespace TowerDefense
                 if (nearestOther != null)
                 {
                     _lastAttackTime = Time.time;
-                    DoAttack(nearestOther);
+                    if (move.Category == MoveCategory.Special)
+                    {
+                        var projectile = Instantiate(projectilePrefab);
+                        projectile.SetTarget(this, nearestOther);
+                    }
+                    else
+                    {
+                        Hit(nearestOther);
+                    }
                 }
             }
         }
@@ -51,7 +60,7 @@ namespace TowerDefense
             return Mathf.Clamp01(1 - (Time.time - _lastAttackTime) / Cooldown());
         }
 
-        private void DoAttack(PokemonInstance target)
+        public void Hit(PokemonInstance target)
         {
             var (atk, def) = (Atk(), Def(target));
 
