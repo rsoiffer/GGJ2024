@@ -224,6 +224,9 @@ MonoBehaviour:
   shadow: {fileID: 2914745450362474205}
   iconSprite: {fileID: 984105866393454948}
   selectionRing: {fileID: 6490191525730286813}
+  lastDirection: {x: 0, y: 0}
+  walkAnimSpeed: 4
+  isWalking: 1
 --- !u!1 &4557247389369785176
 GameObject:
   m_ObjectHideFlags: 0
