@@ -86,9 +86,10 @@ namespace TowerDefense
 
         private void SetReward(Slot slot, int waveNum, int num)
         {
-            if (waveNum == 0)
+            if (waveNum % 2 == 0)
             {
-                slot.Set(itemDatabase.Get("LEFTOVERS"));
+                var itemList = new[] { "LEFTOVERS", "LUCKYEGG" };
+                slot.Set(itemDatabase.Get(itemList[Random.Range(0, itemList.Length)]));
                 return;
             }
 

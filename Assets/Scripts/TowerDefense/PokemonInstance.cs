@@ -150,6 +150,12 @@ namespace TowerDefense
             return data.GrowthRate;
         }
 
+        public void AddExperience(float exp)
+        {
+            if (item?.Id == "LUCKYEGG") exp *= 1.2f;
+            experience += Mathf.FloorToInt(exp + Random.value);
+        }
+
         public void ResetTo(string id, int level, bool autoEvolve = true)
         {
             data = pokeDatabase.Get(id);

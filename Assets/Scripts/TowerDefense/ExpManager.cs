@@ -11,8 +11,8 @@ namespace TowerDefense
         {
             var team = PokemonInstance.AllPokemon.Where(p => p.isFriendly);
             foreach (var mon in team)
-            { 
-                mon.experience += Mathf.RoundToInt(baseExp * enemyLevel / 7.0f);
+            {
+                mon.AddExperience(baseExp * enemyLevel / 7.0f);
                 CalcLevelUp(mon);
             }
         }
