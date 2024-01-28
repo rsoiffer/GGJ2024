@@ -69,7 +69,7 @@ namespace TowerDefense
 
             item.enabled = s.item != null;
             if (s.item != null) item.sprite = s.item.Sprite;
-            itemName.SetText(s.item?.Name ?? "None");
+            itemName.SetText(string.IsNullOrEmpty(s.item?.Name) ? "None" : s.item.Name);
 
             for (var i = 0; i < 4; i++)
             {
