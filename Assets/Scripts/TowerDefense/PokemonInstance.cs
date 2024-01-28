@@ -101,11 +101,12 @@ namespace TowerDefense
         public int GetStat(Stat stat)
         {
             var baseStat = data.BaseStats[(int)stat];
+            var iv = 15;
 
             if (stat == Stat.HP)
-                return Mathf.FloorToInt(2 * baseStat * level / 100f) + level + 10;
+                return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + level + 10;
 
-            return Mathf.FloorToInt(2 * baseStat * level / 100f) + 5;
+            return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + 5;
 
             // Arceus formula
             /*
