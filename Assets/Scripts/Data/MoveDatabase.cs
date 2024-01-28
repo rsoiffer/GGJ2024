@@ -29,6 +29,7 @@ namespace Data
             return database;
         }
 
+#if UNITY_EDITOR
         [MenuItem("Tools/Build MoveDatabase")]
         public static void BuildDatabase()
         {
@@ -43,6 +44,7 @@ namespace Data
                 AssetDatabase.SaveAssetIfDirty(moveDatabase);
             });
         }
+#endif
     }
 
     [Serializable]

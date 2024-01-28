@@ -29,6 +29,7 @@ namespace Data
             return database;
         }
 
+#if UNITY_EDITOR
         [MenuItem("Tools/Build Database")]
         public static void BuildDatabase()
         {
@@ -43,6 +44,7 @@ namespace Data
                 AssetDatabase.SaveAssetIfDirty(pokeDatabase);
             });
         }
+#endif
     }
 
     [Serializable]
