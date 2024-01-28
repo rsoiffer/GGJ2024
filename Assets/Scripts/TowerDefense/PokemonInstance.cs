@@ -137,11 +137,23 @@ namespace TowerDefense
             return data.GrowthRate;
         }
 
-        public void ResetTo(string id, int level)
+        public void ResetTo(string id, int level, bool autoEvolve = true)
         {
             data = pokeDatabase.Get(id);
             this.level = level;
             experience = Mathf.RoundToInt(ExpManager.MinXpByLevel(this, level));
+
+            if (autoEvolve)
+                if (data.Evolutions is { Length: > 0 })
+                    if (data.Evolutions[1] == "Level")
+                    {
+                        var evoLevel = int.Parse(data.Evolutions[2]);
+                        if (level >= evoLevel)
+                        {
+                            var newId = data.Evolutions[0];
+                            data = pokeDatabase.Get(newId);
+                        }
+                    }
 
             moves.Clear();
             for (var i = 0; i < data.Moves.Length; i++)
