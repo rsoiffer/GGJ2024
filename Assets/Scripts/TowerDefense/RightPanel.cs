@@ -30,14 +30,8 @@ namespace TowerDefense
         public SpriteRenderer item;
         public ShadowText itemName;
 
-        public SpriteRenderer moveType1;
-        public ShadowText move1;
-        public SpriteRenderer moveType2;
-        public ShadowText move2;
-        public SpriteRenderer moveType3;
-        public ShadowText move3;
-        public SpriteRenderer moveType4;
-        public ShadowText move4;
+        public SpriteRenderer[] moveTypes;
+        public ShadowText[] moves;
 
         public ShadowText[] stats;
 
@@ -72,25 +66,13 @@ namespace TowerDefense
             ability3.gameObject.SetActive(s.data.HiddenAbilities.Length > 1);
             if (s.data.HiddenAbilities.Length > 1) ability3.SetText(s.data.HiddenAbilities![1]);
 
-            moveType1.enabled = s.moves.Count > 0;
-            if (s.moves.Count > 0) moveType1.sprite = typeSprites[(int)s.moves[0].Type];
-            move1.gameObject.SetActive(s.moves.Count > 0);
-            if (s.moves.Count > 0) move1.SetText(s.moves[0].Name);
-
-            moveType2.enabled = s.moves.Count > 1;
-            if (s.moves.Count > 1) moveType2.sprite = typeSprites[(int)s.moves[1].Type];
-            move2.gameObject.SetActive(s.moves.Count > 1);
-            if (s.moves.Count > 1) move2.SetText(s.moves[1].Name);
-
-            moveType3.enabled = s.moves.Count > 2;
-            if (s.moves.Count > 2) moveType3.sprite = typeSprites[(int)s.moves[2].Type];
-            move3.gameObject.SetActive(s.moves.Count > 2);
-            if (s.moves.Count > 2) move3.SetText(s.moves[2].Name);
-
-            moveType4.enabled = s.moves.Count > 3;
-            if (s.moves.Count > 3) moveType4.sprite = typeSprites[(int)s.moves[3].Type];
-            move4.gameObject.SetActive(s.moves.Count > 3);
-            if (s.moves.Count > 3) move4.SetText(s.moves[3].Name);
+            for (var i = 0; i < 4; i++)
+            {
+                moveTypes[i].enabled = s.attacks[i].Active;
+                if (s.attacks[i].Active) moveTypes[i].sprite = typeSprites[(int)s.attacks[i].move.Type];
+                moves[i].gameObject.SetActive(s.attacks[i].Active);
+                if (s.attacks[i].Active) moves[i].SetText(s.attacks[i].move.Name);
+            }
 
             for (var i = 0; i < 6; i++) stats[i].SetText($"{s.GetStat((Stat)i)}");
         }

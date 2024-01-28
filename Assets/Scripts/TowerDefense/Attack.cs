@@ -16,9 +16,11 @@ namespace TowerDefense
 
         [Header("State Data")] public float lastAttackTime;
 
+        public bool Active => move != null && !string.IsNullOrEmpty(move.Id);
+
         private void FixedUpdate()
         {
-            if (move == null || string.IsNullOrEmpty(move.Id)) return;
+            if (!Active) return;
 
             if (Time.time > lastAttackTime + Cooldown())
             {
@@ -33,7 +35,7 @@ namespace TowerDefense
 
         private void LateUpdate()
         {
-            if (move == null || string.IsNullOrEmpty(move.Id) || SelectionController.Instance.selected != pokemon)
+            if (!Active || SelectionController.Instance.selected != pokemon)
             {
                 sprite.enabled = false;
                 return;
@@ -46,10 +48,7 @@ namespace TowerDefense
 
         private void DoAttack(PokemonInstance target)
         {
-            var (atkStat, defStat) =
-                move.Category == MoveCategory.Special ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
-            var atk = pokemon.GetStat(atkStat);
-            var def = target.GetStat(defStat);
+            var (atk, def) = (Atk(), Def(target));
 
             var damage = (2 * pokemon.level / 5f + 2) * move.Power * atk / def / 50 + 2;
             damage *= Random.Range(.85f, 1f);
@@ -68,17 +67,29 @@ namespace TowerDefense
 
         private float Cooldown()
         {
-            return (move.Category == MoveCategory.Physical ? 1 : 2) * PowerScale(.5f);
+            return (move.Category == MoveCategory.Physical ? 1 : 2) * PowerScale(.5f) *
+                   Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, -.25f);
         }
 
         private float Range()
         {
-            return (move.Category == MoveCategory.Physical ? .75f : 2.5f) * PowerScale(.5f);
+            return (move.Category == MoveCategory.Physical ? .75f : 2.5f) * PowerScale(.5f) *
+                   Mathf.Pow((Atk() + 20f) / 50f, .25f);
         }
 
         private float PowerScale(float exp)
         {
             return Mathf.Pow(20f / move.TotalPP, exp);
+        }
+
+        private int Atk()
+        {
+            return pokemon.GetStat(move.Category == MoveCategory.Special ? Stat.SPATK : Stat.ATK);
+        }
+
+        private int Def(PokemonInstance target)
+        {
+            return target.GetStat(move.Category == MoveCategory.Special ? Stat.SPATK : Stat.ATK);
         }
     }
 }

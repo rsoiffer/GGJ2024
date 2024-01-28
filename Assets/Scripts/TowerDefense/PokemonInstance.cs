@@ -37,10 +37,10 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
-            if (inBox) return;
-
             for (var i = 0; i < attacks.Length; i++)
                 attacks[i].move = i < moves.Count ? moves[moves.Count - 1 - i] : null;
+
+            if (inBox) return;
 
             if (damageTaken >= GetStat(Stat.HP))
             {
