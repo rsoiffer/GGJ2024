@@ -23,7 +23,7 @@ namespace TowerDefense
 
         private void Awake()
         {
-            _walkAnimSpeedActual = walkAnimSpeed + walkAnimSpeedNoise * Random.Range(-1, 1);
+            _walkAnimSpeedActual = walkAnimSpeed + walkAnimSpeedNoise * Random.Range(-1f, 1f);
         }
 
         private void LateUpdate()
