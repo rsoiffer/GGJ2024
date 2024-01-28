@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -17,6 +18,8 @@ namespace TowerDefense
         public Wave[] waves;
         public MoneyManager moneyManager;
 
+        private readonly List<(string id, int level)> encounters = new();
+
         public IEnumerator Start()
         {
             yield return DoReward(-1);
@@ -31,6 +34,7 @@ namespace TowerDefense
         private IEnumerator DoWave(int waveNum)
         {
             Debug.Log($"Starting Wave {waveNum + 1}");
+            encounters.Clear();
 
             var wave = waves[Mathf.Clamp(waveNum, 0, waves.Length - 1)];
             var levelBonus = 0;
@@ -42,6 +46,7 @@ namespace TowerDefense
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
                 enemy.pokemon.ResetTo(wave.RandomEnemy(), wave.baseLevel + levelBonus);
+                encounters.Add((enemy.pokemon.data.Id, enemy.pokemon.level));
                 yield return new WaitForSeconds(wave.enemySpawnDelay);
             }
 
@@ -104,7 +109,8 @@ namespace TowerDefense
             }
             else
             {
-                pokemon.ResetTo("PIKACHU", 50);
+                var randomEncounter = encounters[Random.Range(0, encounters.Count)];
+                pokemon.ResetTo(randomEncounter.id, randomEncounter.level);
             }
         }
     }

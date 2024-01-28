@@ -226,6 +226,7 @@ MonoBehaviour:
   selectionRing: {fileID: 6490191525730286813}
   lastDirection: {x: 0, y: 0}
   walkAnimSpeed: 4
+  walkAnimSpeedNoise: 0.1
   isWalking: 1
 --- !u!1 &4557247389369785176
 GameObject:

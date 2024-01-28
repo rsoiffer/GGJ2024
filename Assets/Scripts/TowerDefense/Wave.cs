@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -14,26 +13,18 @@ namespace TowerDefense
         public int numEnemies;
         public float enemySpawnDelay = 1;
 
-        public List<string> encounters;
-
         public string RandomEnemy()
         {
             var totalWeight = enemies.Sum(e => e.weight);
 
-            var rand = Random.Range(0.0f, totalWeight);
+            var rand = Random.Range(0, totalWeight);
             foreach (var enemy in enemies)
-                if (rand < enemy.weight)
-                {
-                    encounters.Add(enemy.species);
-                    return enemy.species;
-                }
-                else
-                {
-                    rand -= enemy.weight;
-                }
+            {
+                rand -= enemy.weight;
+                if (rand < 0) return enemy.species;
+            }
 
-            encounters.Add(enemies[^1].species);
-            return enemies[^1].species;
+            throw new InvalidOperationException("Failed to sample a random enemy");
         }
 
         [Serializable]

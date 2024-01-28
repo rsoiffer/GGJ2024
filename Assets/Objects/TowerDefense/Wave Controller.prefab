@@ -112,7 +112,6 @@ MonoBehaviour:
     weight: 1
   numEnemies: 5
   enemySpawnDelay: 1.5
-  encounters: []
 --- !u!114 &5675118544670223799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,7 +136,6 @@ MonoBehaviour:
     weight: 2
   numEnemies: 6
   enemySpawnDelay: 1.5
-  encounters: []
 --- !u!114 &1796315056113059037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +164,6 @@ MonoBehaviour:
     weight: 2
   numEnemies: 7
   enemySpawnDelay: 1.5
-  encounters: []
 --- !u!114 &7404949136016200251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,8 +190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c7b01a6172998438eb5c7010c692cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  expText: {fileID: 0}
-  exp: 0
 --- !u!1 &2955059895095616928
 GameObject:
   m_ObjectHideFlags: 0
