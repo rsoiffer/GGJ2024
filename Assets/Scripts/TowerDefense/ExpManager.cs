@@ -12,13 +12,13 @@ namespace TowerDefense
             var team = PokemonInstance.AllPokemon.Where(p => p.isFriendly);
             foreach (var mon in team)
             {
-                mon.experience += baseExp * enemyLevel / 7.0f;
+                mon.experience += Mathf.RoundToInt(baseExp * enemyLevel / 7.0f);
                 CalcLevelUp(mon);
             }
         }
 
         //For if we want to use EXP candies
-        public void AddFlatExp(float amount, PokemonInstance mon)
+        public void AddFlatExp(int amount, PokemonInstance mon)
         {
             mon.experience += amount;
             CalcLevelUp(mon);
@@ -26,7 +26,7 @@ namespace TowerDefense
 
         private void CalcLevelUp(PokemonInstance mon)
         {
-            var nextLevelMinExp = MinXpByLevel(mon.GetGrowthRate(), mon.level + 1);
+            var nextLevelMinExp = MinXpByLevel(mon, mon.level + 1);
 
             if (mon.experience > nextLevelMinExp)
             {
@@ -36,9 +36,9 @@ namespace TowerDefense
             }
         }
 
-        private static float MinXpByLevel(GrowthRate growthRate, int level)
+        public static float MinXpByLevel(PokemonInstance pokemon, int level)
         {
-            switch (growthRate)
+            switch (pokemon.GetGrowthRate())
             {
                 //exp=6/5n^3-15n^2+100n-140
                 //bulbapedia calls parabolic "medium slow"
@@ -74,7 +74,7 @@ namespace TowerDefense
                             Mathf.Floor((1911.0f - 10.0f * level) / 3.0f) / 500.0f;
                     return Mathf.Pow(level, 3.0f) * (160.0f - level) / 100.0f;
                 default:
-                    throw new ArgumentOutOfRangeException(nameof(growthRate), growthRate, null);
+                    throw new ArgumentOutOfRangeException();
             }
         }
     }

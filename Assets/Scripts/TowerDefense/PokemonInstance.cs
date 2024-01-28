@@ -23,7 +23,7 @@ namespace TowerDefense
         public int level;
         public PokemonData data;
         public bool isShiny;
-        public float experience;
+        public int experience;
         public List<MoveData> moves;
 
         [Header("State Data")] public bool inBox;
@@ -156,6 +156,8 @@ namespace TowerDefense
         {
             data = pokeDatabase.Get(id);
             this.level = level;
+            experience = Mathf.RoundToInt(ExpManager.MinXpByLevel(this, level));
+
             moves.Clear();
             for (var i = 0; i < data.Moves.Length; i++)
                 if (data.MoveLearnLevels[i] <= level)
