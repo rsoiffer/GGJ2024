@@ -88,7 +88,7 @@ namespace TowerDefense
         {
             if (waveNum % 2 == 0)
             {
-                var itemList = new[] { "LEFTOVERS", "LUCKYEGG", "QUICKCLAW", "SHELLBELL" };
+                var itemList = new[] { "LEFTOVERS", "LUCKYEGG", "QUICKCLAW", "SHELLBELL", "ROCKYHELMET" };
                 slot.Set(itemDatabase.Get(itemList[Random.Range(0, itemList.Length)]));
                 return;
             }

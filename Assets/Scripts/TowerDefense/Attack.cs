@@ -89,6 +89,9 @@ namespace TowerDefense
                     pokemon.damageTaken -= Mathf.FloorToInt(damage / 8 + Random.value);
                     if (pokemon.damageTaken < 0) pokemon.damageTaken = 0;
                 }
+
+                if (target.item?.Id == "ROCKYHELMET" && move.Category == MoveCategory.Physical)
+                    pokemon.damageTaken += Mathf.FloorToInt(damage * .2f + Random.value);
             }
 
             var attackFX = Instantiate(fxPrefab);
