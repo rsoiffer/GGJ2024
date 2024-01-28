@@ -108,6 +108,18 @@ namespace TowerDefense
         {
             level++;
 
+            if (data.Evolutions is { Length: > 0 })
+                if (data.Evolutions[1] == "Level")
+                {
+                    var evoLevel = int.Parse(data.Evolutions[2]);
+                    if (level >= evoLevel)
+                    {
+                        var newId = data.Evolutions[0];
+                        data = pokeDatabase.Get(newId);
+                    }
+                }
+
+
             for (var i = 0; i < data.Moves.Length; i++)
                 if (data.MoveLearnLevels[i] == level)
                 {

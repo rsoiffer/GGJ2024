@@ -1,19 +1,18 @@
-﻿using UnityEngine;
+﻿using Data;
+using UnityEngine;
 
 namespace TowerDefense
 {
     public class EnemyAI : MonoBehaviour
     {
         public LaneDefinition lane;
-
         public PokemonInstance pokemon;
-        //public Wave[] waves;
 
         public float laneProgress;
 
         private void FixedUpdate()
         {
-            laneProgress += Time.fixedDeltaTime;
+            laneProgress += Time.fixedDeltaTime * Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, .5f);
             transform.position = lane.Position(laneProgress);
         }
 

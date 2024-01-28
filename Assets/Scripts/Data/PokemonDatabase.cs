@@ -76,7 +76,7 @@ namespace Data
         public string Category;
         public string Pokedex;
         public int Generation;
-        [CanBeNull] public string Evolutions;
+        [CanBeNull] public string[] Evolutions;
         [CanBeNull] public string[] Flags;
 
         public PokemonSpriteSet spriteSet;
@@ -114,7 +114,7 @@ namespace Data
                 Category = pbsEntry.Lookup("Category");
                 Pokedex = pbsEntry.Lookup("Pokedex");
                 Generation = int.Parse(pbsEntry.Lookup("Generation")!);
-                Evolutions = pbsEntry.Lookup("Evolutions");
+                Evolutions = pbsEntry.Lookup("Evolutions")?.Split(",");
                 Flags = pbsEntry.Lookup("Flags")?.Split(",");
 
                 spriteSet = new PokemonSpriteSet(Id, false);
