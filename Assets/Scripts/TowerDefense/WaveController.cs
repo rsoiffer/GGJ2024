@@ -21,7 +21,7 @@ namespace TowerDefense
         {
             yield return DoReward(-1);
 
-            for (var i = 0; i <= waves.Length; i++)
+            for (var i = 0; i < 100; i++)
             {
                 yield return DoWave(i);
                 yield return DoReward(i);
@@ -32,13 +32,17 @@ namespace TowerDefense
         {
             Debug.Log($"Starting Wave {waveNum + 1}");
 
-            for (var j = 0; j < 10; j++)
+            var wave = waves[Mathf.Clamp(waveNum, 0, waves.Length - 1)];
+            var levelBonus = 0;
+            if (waveNum >= waves.Length) levelBonus = waveNum - waves.Length + 1;
+
+            for (var j = 0; j < wave.numEnemies; j++)
             {
                 var lane = lanes[Random.Range(0, lanes.Length)];
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
-                enemy.pokemon.ResetTo(waves[waveNum].randomEnemy(), waves[waveNum].baseLevel);
-                yield return new WaitForSeconds(waves[waveNum].enemySpawnDelay);
+                enemy.pokemon.ResetTo(wave.RandomEnemy(), wave.baseLevel + levelBonus);
+                yield return new WaitForSeconds(wave.enemySpawnDelay);
             }
 
             while (PokemonInstance.AllPokemon.Any(p => !p.isFriendly)) yield return null;
