@@ -69,10 +69,7 @@ namespace TowerDefense
             rewardUI.SetActive(true);
             var slots = rewardUI.GetComponentsInChildren<Slot>();
             for (var i = 0; i < slots.Length; i++)
-            {
-                var slot = slots[i];
-                SetReward(slot, waveNum, i);
-            }
+                SetReward(slots[i], waveNum, i);
 
             while (slots.All(s => s.AnyInSlot)) yield return null;
 

@@ -183,7 +183,7 @@ MonoBehaviour:
   isBox: 1
   isTrash: 0
   acceptsItems: 1
-  itemSprite: {fileID: 8018695563931975876}
+  itemSprite: {fileID: 3580581430871196523}
 --- !u!1 &1784104377137298827
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +439,7 @@ MonoBehaviour:
   isBox: 1
   isTrash: 0
   acceptsItems: 1
-  itemSprite: {fileID: 0}
+  itemSprite: {fileID: 8018695563931975876}
 --- !u!1 &8960849719139627975
 GameObject:
   m_ObjectHideFlags: 0
