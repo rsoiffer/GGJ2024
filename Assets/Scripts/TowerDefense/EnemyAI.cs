@@ -12,7 +12,12 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
-            laneProgress += Time.fixedDeltaTime * Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, 1);
+            var speed = Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, 1);
+
+            var nearby = pokemon.GetTarget(1);
+            if (nearby != null) speed *= .25f;
+
+            laneProgress += Time.fixedDeltaTime * speed;
             transform.position = lane.Position(laneProgress);
         }
 
