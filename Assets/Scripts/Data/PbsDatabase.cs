@@ -118,6 +118,7 @@ namespace Data
         }
     }
 
+#if UNITY_EDITOR
     public static class PbsDatabaseTests
     {
         [MenuItem("Tools/Tests/Test PBS Database (Pokemon)")]
@@ -238,4 +239,5 @@ namespace Data
             Debug.Log(targetMessage);
         }
     }
+#endif
 }

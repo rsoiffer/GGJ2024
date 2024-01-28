@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AssetProcessing;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using AssetProcessing;
+#endif
 
 namespace Data
 {
@@ -63,6 +65,7 @@ namespace Data
         public int EffectChance;
         public string Description;
 
+#if UNITY_EDITOR
         public MoveData(PbsEntry pbsEntry)
         {
             try
@@ -86,6 +89,7 @@ namespace Data
                 Debug.LogException(e);
             }
         }
+#endif
 
         public bool IsValid()
         {

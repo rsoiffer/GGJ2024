@@ -6,6 +6,7 @@ namespace PerfectBidoof
 {
     public class PerfectBidoofController : MonoBehaviour
     {
+        public PokemonDatabase pokeDatabase;
         public Player player;
 
         public Enemy enemyPrefab;
@@ -17,10 +18,8 @@ namespace PerfectBidoof
 
         private IEnumerator Start()
         {
-            var database = PbsDatabase.LoadDatabase("pokemon_base");
-
             var startTime = Time.time;
-            foreach (var p in database.Entries.Values)
+            foreach (var p in pokeDatabase.GetAll())
             {
                 var currentTime = Time.time;
                 var spawnRate = enemySpawnRate + enemySpawnRateScaling * (currentTime - startTime);
@@ -29,7 +28,7 @@ namespace PerfectBidoof
                 var newEnemy = Instantiate(enemyPrefab);
                 newEnemy.transform.position = new Vector2(Random.Range(spawnPosMin.x, spawnPosMax.x),
                     Random.Range(spawnPosMin.y, spawnPosMax.y));
-                newEnemy.pokemon = new PokemonData(p);
+                newEnemy.pokemon = p;
                 newEnemy.player = player;
             }
         }

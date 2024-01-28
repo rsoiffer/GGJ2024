@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AssetProcessing;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using AssetProcessing;
+#endif
 
 namespace Data
 {
@@ -85,6 +87,7 @@ namespace Data
         public PokemonSpriteSet spriteSetShiny;
         public AudioClip cry;
 
+#if UNITY_EDITOR
         public PokemonData(PbsEntry pbsEntry)
         {
             try
@@ -129,6 +132,7 @@ namespace Data
                 Debug.LogException(e);
             }
         }
+#endif
 
         private static (int[], string[]) ParseMoves(string input)
         {
@@ -153,6 +157,7 @@ namespace Data
         public Sprite front;
         public Sprite[] icons;
 
+#if UNITY_EDITOR
         public PokemonSpriteSet(string id, bool shiny)
         {
             if (!shiny)
@@ -175,5 +180,6 @@ namespace Data
                     .OfType<Sprite>().OrderBy(s => s.name).ToArray();
             }
         }
+#endif
     }
 }

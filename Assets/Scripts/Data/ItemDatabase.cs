@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AssetProcessing;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using AssetProcessing;
+#endif
 
 namespace Data
 {
@@ -54,6 +56,7 @@ namespace Data
         public string Name;
         public Sprite Sprite;
 
+#if UNITY_EDITOR
         public ItemData(PbsEntry pbsEntry)
         {
             try
@@ -68,5 +71,6 @@ namespace Data
                 Debug.LogException(e);
             }
         }
+#endif
     }
 }
