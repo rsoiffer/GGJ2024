@@ -10,7 +10,9 @@ namespace TowerDefense
 {
     public class WaveController : MonoBehaviour
     {
+        public PokemonDatabase pokeDatabase;
         public ItemDatabase itemDatabase;
+
         public LaneDefinition[] lanes;
         public GameObject rewardUI;
         public int starterLevel = 10;
@@ -24,6 +26,13 @@ namespace TowerDefense
 
         public IEnumerator Start()
         {
+            foreach (var wave in waves)
+            foreach (var e in wave.enemies)
+            {
+                Debug.Log($"Checking {wave.name}");
+                pokeDatabase.Get(e.species);
+            }
+
             yield return DoReward(-1);
 
             for (var i = 0; i < 100; i++)

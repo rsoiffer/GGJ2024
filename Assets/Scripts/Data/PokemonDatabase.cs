@@ -19,11 +19,16 @@ namespace Data
 
         public PokemonData Get(string id)
         {
-            if (_table != null) return _table[id];
+            if (_table == null)
+            {
+                _table = new Dictionary<string, PokemonData>();
+                foreach (var data in database) _table.Add(data.Id, data);
+            }
 
-            _table = new Dictionary<string, PokemonData>();
-            foreach (var move in database) _table.Add(move.Id, move);
-            return _table[id];
+            if (_table.TryGetValue(id, out var p))
+                return p;
+
+            throw new ArgumentException($"Invalid pokemon id: {id}");
         }
 
         public IReadOnlyList<PokemonData> GetAll()
