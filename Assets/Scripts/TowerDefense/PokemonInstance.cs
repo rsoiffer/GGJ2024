@@ -5,6 +5,7 @@ using Data;
 using Helpers;
 using JetBrains.Annotations;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 namespace TowerDefense
 {
@@ -57,6 +58,17 @@ namespace TowerDefense
                 }
 
                 Destroy(gameObject);
+            }
+
+            // Handle items
+
+            switch (item?.Id)
+            {
+                case "LEFTOVERS":
+                    var regenAmount = .05f * GetStat(Stat.HP) * Time.fixedDeltaTime;
+                    damageTaken -= Mathf.FloorToInt(regenAmount + Random.value);
+                    if (damageTaken < 0) damageTaken = 0;
+                    break;
             }
         }
 

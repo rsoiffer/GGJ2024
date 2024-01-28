@@ -20,7 +20,7 @@ namespace TowerDefense
         [CanBeNull] public FriendlyAI InSlot { get; private set; }
         [CanBeNull] public ItemData ItemInSlot { get; private set; }
 
-        public bool AnyInSlot => InSlot != null || ItemInSlot != null;
+        public bool AnyInSlot => InSlot != null || (ItemInSlot != null && !string.IsNullOrEmpty(ItemInSlot.Id));
 
         private void LateUpdate()
         {
