@@ -41,7 +41,7 @@ namespace TowerDefense
         {
             if (inBox) return;
 
-            foreach (var move in moves.Take(2))
+            foreach (var move in moves.Take(4))
             {
                 lastMoveUseTimes.TryAdd(move, 0);
                 if (Time.time > lastMoveUseTimes[move] + move.Cooldown())

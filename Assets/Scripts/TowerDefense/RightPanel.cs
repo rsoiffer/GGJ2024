@@ -27,6 +27,10 @@ namespace TowerDefense
         public ShadowText move1;
         public SpriteRenderer moveType2;
         public ShadowText move2;
+        public SpriteRenderer moveType3;
+        public ShadowText move3;
+        public SpriteRenderer moveType4;
+        public ShadowText move4;
 
         public ShadowText[] stats;
 
@@ -57,6 +61,16 @@ namespace TowerDefense
             if (s.moves.Count > 1) moveType2.sprite = typeSprites[(int)s.moves[1].Type];
             move2.gameObject.SetActive(s.moves.Count > 1);
             if (s.moves.Count > 1) move2.SetText(s.moves[1].Name);
+
+            moveType3.enabled = s.moves.Count > 2;
+            if (s.moves.Count > 2) moveType3.sprite = typeSprites[(int)s.moves[2].Type];
+            move3.gameObject.SetActive(s.moves.Count > 2);
+            if (s.moves.Count > 2) move3.SetText(s.moves[2].Name);
+
+            moveType4.enabled = s.moves.Count > 3;
+            if (s.moves.Count > 3) moveType4.sprite = typeSprites[(int)s.moves[1].Type];
+            move4.gameObject.SetActive(s.moves.Count > 3);
+            if (s.moves.Count > 3) move4.SetText(s.moves[3].Name);
 
             for (var i = 0; i < 6; i++) stats[i].SetText($"{s.GetStat((Stat)i)}");
         }
