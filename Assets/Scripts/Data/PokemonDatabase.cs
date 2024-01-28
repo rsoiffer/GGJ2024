@@ -11,7 +11,23 @@ namespace Data
     [CreateAssetMenu(fileName = "PokemonDatabase", menuName = "Pokemon Database", order = 0)]
     public class PokemonDatabase : ScriptableObject
     {
-        public PokemonData[] database;
+        [SerializeField] private PokemonData[] database;
+
+        [CanBeNull] private Dictionary<string, PokemonData> _table;
+
+        public PokemonData Get(string id)
+        {
+            if (_table != null) return _table[id];
+
+            _table = new Dictionary<string, PokemonData>();
+            foreach (var move in database) _table.Add(move.Id, move);
+            return _table[id];
+        }
+
+        public IReadOnlyList<PokemonData> GetAll()
+        {
+            return database;
+        }
 
         [MenuItem("Tools/Build Database")]
         public static void BuildDatabase()

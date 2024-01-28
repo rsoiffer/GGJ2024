@@ -13,7 +13,8 @@ namespace TowerDefense
     {
         public static readonly HashSet<PokemonInstance> AllPokemon = new();
 
-        [Header("References")] public PokemonDatabase database;
+        [Header("References")] public PokemonDatabase pokeDatabase;
+        public MoveDatabase moveDatabase;
         public SpriteController sprite;
         public GameObject attackFXPrefab;
         public GameObject fanfarePrefab;
@@ -23,12 +24,12 @@ namespace TowerDefense
         public PokemonData data;
         public bool isShiny;
         public float experience;
+        public List<MoveData> moves;
 
         [Header("State Data")] public bool inBox;
         public int damageTaken;
         public int[] currentStats;
-        public float lastPhysicalAttackTime;
-        public float lastSpecialAttackTime;
+        public Dictionary<MoveData, float> lastMoveUseTimes = new();
 
         private void Update()
         {
@@ -40,23 +41,17 @@ namespace TowerDefense
         {
             if (inBox) return;
 
-            if (Time.time > lastPhysicalAttackTime + 1)
+            foreach (var move in moves.Take(2))
             {
-                var nearestOther = GetTarget(.75f);
-                if (nearestOther != null)
+                lastMoveUseTimes.TryAdd(move, 0);
+                if (Time.time > lastMoveUseTimes[move] + move.Cooldown())
                 {
-                    lastPhysicalAttackTime = Time.time;
-                    Attack(nearestOther, false);
-                }
-            }
-
-            if (Time.time > lastSpecialAttackTime + 2)
-            {
-                var nearestOther = GetTarget(2);
-                if (nearestOther != null)
-                {
-                    lastSpecialAttackTime = Time.time;
-                    Attack(nearestOther, true);
+                    var nearestOther = GetTarget(move.Range());
+                    if (nearestOther != null)
+                    {
+                        lastMoveUseTimes[move] = Time.time;
+                        Attack(nearestOther, move);
+                    }
                 }
             }
 
@@ -121,9 +116,9 @@ namespace TowerDefense
             */
         }
 
-        private void Attack(PokemonInstance target, bool isSpecial)
+        private void Attack(PokemonInstance target, MoveData move)
         {
-            var (atk, def) = isSpecial ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
+            var (atk, def) = move.Category == MoveCategory.Special ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
 
             var power = 100;
             var damage = (2 * level / 5f + 2) * power * GetStat(atk) / target.GetStat(def) / 50 + 2;
@@ -148,8 +143,16 @@ namespace TowerDefense
 
         public void ResetTo(string id, int level)
         {
-            data = database.database.First(p => p.Id == id);
+            data = pokeDatabase.Get(id);
             this.level = level;
+            moves.Clear();
+            for (var i = 0; i < data.Moves.Length; i++)
+                if (data.MoveLearnLevels[i] <= level)
+                {
+                    var move = moveDatabase.Get(data.Moves[i]);
+                    if (move.IsValid())
+                        moves.Add(move);
+                }
         }
 
         public void Move(Vector2 pos)
