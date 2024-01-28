@@ -80,7 +80,16 @@ namespace TowerDefense
 
             damage *= .25f; // GLOBAL DAMAGE MULTIPLIER
 
-            if (Random.Range(0, 100f) < move.Accuracy) target.damageTaken += Mathf.FloorToInt(damage);
+            if (Random.Range(0, 100f) < move.Accuracy)
+            {
+                target.damageTaken += Mathf.FloorToInt(damage + Random.value);
+
+                if (pokemon.item?.Id == "SHELLBELL" && move.Category == MoveCategory.Physical)
+                {
+                    pokemon.damageTaken -= Mathf.FloorToInt(damage / 8 + Random.value);
+                    if (pokemon.damageTaken < 0) pokemon.damageTaken = 0;
+                }
+            }
 
             var attackFX = Instantiate(fxPrefab);
             attackFX.transform.position = target.transform.position;
