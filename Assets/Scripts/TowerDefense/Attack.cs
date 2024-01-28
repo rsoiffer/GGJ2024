@@ -60,6 +60,7 @@ namespace TowerDefense
             if (pokemon.data.Types.Contains(move.Type)) damage *= 1.5f;
             foreach (var type in target.data.Types)
                 damage *= TypeHelpers.GetTypeEffectiveness(move.Type, type);
+            damage *= .25f;
 
             if (Random.Range(0, 100f) < move.Accuracy) target.damageTaken += Mathf.FloorToInt(damage);
 
@@ -79,7 +80,7 @@ namespace TowerDefense
         private float Range()
         {
             return (move.Category == MoveCategory.Physical ? .75f : 2.5f) * PowerScale(.5f) *
-                   Mathf.Pow((Atk() + 20f) / 50f, .5f);
+                   Mathf.Pow((Atk() + 20f) / 50f, .25f);
         }
 
         private float PowerScale(float exp)
