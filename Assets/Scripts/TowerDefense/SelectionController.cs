@@ -5,11 +5,18 @@ namespace TowerDefense
 {
     public class SelectionController : MonoBehaviour
     {
+        public static SelectionController Instance;
+
         public AudioSource cryAudioSource;
         public float slotSelectionRadius = .5f;
 
         [CanBeNull] public FriendlyAI dragging;
         public PokemonInstance selected;
+
+        private void Awake()
+        {
+            Instance = this;
+        }
 
         public void Update()
         {

@@ -5,7 +5,6 @@ using Data;
 using Helpers;
 using JetBrains.Annotations;
 using UnityEngine;
-using Random = UnityEngine.Random;
 
 namespace TowerDefense
 {
@@ -16,8 +15,8 @@ namespace TowerDefense
         [Header("References")] public PokemonDatabase pokeDatabase;
         public MoveDatabase moveDatabase;
         public SpriteController sprite;
-        public GameObject attackFXPrefab;
         public GameObject fanfarePrefab;
+        public Attack[] attacks;
 
         [Header("Instance Data")] public bool isFriendly;
         public int level;
@@ -29,7 +28,6 @@ namespace TowerDefense
         [Header("State Data")] public bool inBox;
         public int damageTaken;
         public int[] currentStats;
-        public Dictionary<MoveData, float> lastMoveUseTimes = new();
 
         private void Update()
         {
@@ -41,19 +39,7 @@ namespace TowerDefense
         {
             if (inBox) return;
 
-            foreach (var move in moves.Take(4))
-            {
-                lastMoveUseTimes.TryAdd(move, 0);
-                if (Time.time > lastMoveUseTimes[move] + move.Cooldown())
-                {
-                    var nearestOther = GetTarget(move.Range());
-                    if (nearestOther != null)
-                    {
-                        lastMoveUseTimes[move] = Time.time;
-                        Attack(nearestOther, move);
-                    }
-                }
-            }
+            for (var i = 0; i < attacks.Length; i++) attacks[i].move = i < moves.Count ? moves[i] : null;
 
             if (damageTaken >= GetStat(Stat.HP))
             {
@@ -83,7 +69,7 @@ namespace TowerDefense
         }
 
         [CanBeNull]
-        private PokemonInstance GetTarget(float maxRange)
+        public PokemonInstance GetTarget(float maxRange)
         {
             return GetNearest(transform.position, maxRange, p => p.isFriendly != isFriendly);
         }
@@ -115,24 +101,6 @@ namespace TowerDefense
 
             return Mathf.FloorToInt((level / 50f + 1) * baseStat / 1.5f);
             */
-        }
-
-        private void Attack(PokemonInstance target, MoveData move)
-        {
-            var (atk, def) = move.Category == MoveCategory.Special ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
-
-            var damage = (2 * level / 5f + 2) * move.Power * GetStat(atk) / target.GetStat(def) / 50 + 2;
-            damage *= Random.Range(.85f, 1f);
-            if (data.Types.Contains(move.Type)) damage *= 1.5f;
-            foreach (var type in target.data.Types)
-                damage *= TypeHelpers.GetTypeEffectiveness(move.Type, type);
-            target.damageTaken += Mathf.CeilToInt(damage);
-
-            var attackFX = Instantiate(attackFXPrefab);
-            attackFX.transform.position = target.transform.position;
-            var particles = attackFX.GetComponent<ParticleSystem>();
-            var main = particles.main;
-            main.startColor = TypeHelpers.TypeColor(move.Type);
         }
 
         public void LevelUp()
