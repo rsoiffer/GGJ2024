@@ -101,11 +101,12 @@ namespace TowerDefense
         public int GetStat(Stat stat)
         {
             var baseStat = data.BaseStats[(int)stat];
+            var iv = 15;
 
             if (stat == Stat.HP)
-                return Mathf.FloorToInt(2 * baseStat * level / 100f) + level + 10;
+                return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + level + 10;
 
-            return Mathf.FloorToInt(2 * baseStat * level / 100f) + 5;
+            return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + 5;
 
             // Arceus formula
             /*
@@ -124,11 +125,14 @@ namespace TowerDefense
             damage *= Random.Range(.85f, 1f);
             if (data.Types.Contains(move.Type)) damage *= 1.5f;
             foreach (var type in target.data.Types)
-                damage *= TypeEffectiveness.GetTypeEffectiveness(move.Type, type);
+                damage *= TypeHelpers.GetTypeEffectiveness(move.Type, type);
             target.damageTaken += Mathf.CeilToInt(damage);
 
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
+            var particles = attackFX.GetComponent<ParticleSystem>();
+            var main = particles.main;
+            main.startColor = TypeHelpers.TypeColor(move.Type);
         }
 
         public void LevelUp()
