@@ -78,6 +78,8 @@ namespace TowerDefense
                 LastCritTime = Time.time;
             }
 
+            if (pokemon.item?.Id == "IRONBALL") damage *= 2;
+
             damage *= .25f; // GLOBAL DAMAGE MULTIPLIER
 
             if (Random.Range(0, 100f) < move.Accuracy)

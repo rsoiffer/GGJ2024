@@ -60,15 +60,11 @@ namespace TowerDefense
                 Destroy(gameObject);
             }
 
-            // Handle items
-
-            switch (item?.Id)
+            if (item?.Id == "LEFTOVERS")
             {
-                case "LEFTOVERS":
-                    var regenAmount = .05f * GetStat(Stat.HP) * Time.fixedDeltaTime;
-                    damageTaken -= Mathf.FloorToInt(regenAmount + Random.value);
-                    if (damageTaken < 0) damageTaken = 0;
-                    break;
+                var regenAmount = .05f * GetStat(Stat.HP) * Time.fixedDeltaTime;
+                damageTaken -= Mathf.FloorToInt(regenAmount + Random.value);
+                if (damageTaken < 0) damageTaken = 0;
             }
         }
 
@@ -105,7 +101,8 @@ namespace TowerDefense
 
             var multiplier = 1f;
             if (item?.Id == "QUICKCLAW" && stat == Stat.SPEED && attacks.Any(a => a.LastCritTime > Time.time - 2))
-                multiplier += 1;
+                multiplier *= 2;
+            if (item?.Id == "IRONBALL" && stat == Stat.SPEED) multiplier *= .5f;
 
             if (stat == Stat.HP)
                 return Mathf.FloorToInt(multiplier * ((2 * baseStat + iv) * level / 100f + level + 10));
