@@ -1,0 +1,2271 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da7ac003eac4688a61540473d63e872, type: 3}
+  m_Name: ItemDatabase
+  m_EditorClassIdentifier: 
+  database:
+  - Id: REPEL
+    Name: Repel
+    Sprite: {fileID: 21300000, guid: 4a51146e768490b4fb944e6f8424c3a5, type: 3}
+  - Id: SUPERREPEL
+    Name: Super Repel
+    Sprite: {fileID: 21300000, guid: 0275f6797171e9e41917b0f0d7c41fb5, type: 3}
+  - Id: MAXREPEL
+    Name: Max Repel
+    Sprite: {fileID: 21300000, guid: 54242d866448b2f4a8b24c652c8e31ea, type: 3}
+  - Id: BLACKFLUTE
+    Name: Black Flute
+    Sprite: {fileID: 21300000, guid: c0965fbb88c82fc459897344a5356d48, type: 3}
+  - Id: WHITEFLUTE
+    Name: White Flute
+    Sprite: {fileID: 21300000, guid: 0a1f72f803926bd4e89662417b3253b6, type: 3}
+  - Id: HONEY
+    Name: Honey
+    Sprite: {fileID: 21300000, guid: 3cee9dae156f8024787a3aeca4f3ff68, type: 3}
+  - Id: REDSHARD
+    Name: Red Shard
+    Sprite: {fileID: 21300000, guid: e3d9889f8e6148246b463df230d2d901, type: 3}
+  - Id: YELLOWSHARD
+    Name: Yellow Shard
+    Sprite: {fileID: 21300000, guid: dd0ee94df525e2e47b55d9115960f241, type: 3}
+  - Id: BLUESHARD
+    Name: Blue Shard
+    Sprite: {fileID: 21300000, guid: a83413074513a104b9fa59c9ea142cfb, type: 3}
+  - Id: GREENSHARD
+    Name: Green Shard
+    Sprite: {fileID: 21300000, guid: 5318aca8ba0a3814ea35fe2030c65458, type: 3}
+  - Id: FIRESTONE
+    Name: Fire Stone
+    Sprite: {fileID: 21300000, guid: 20b9d9452340b124498e1fb926f6a348, type: 3}
+  - Id: THUNDERSTONE
+    Name: Thunder Stone
+    Sprite: {fileID: 21300000, guid: 3325cd1f278f56c4893e2f87442b2201, type: 3}
+  - Id: WATERSTONE
+    Name: Water Stone
+    Sprite: {fileID: 21300000, guid: 68bc0fa54e109524eaeda8fbf059f319, type: 3}
+  - Id: LEAFSTONE
+    Name: Leaf Stone
+    Sprite: {fileID: 21300000, guid: fd03b3689b85c7047a8e0c73fcb51d1c, type: 3}
+  - Id: MOONSTONE
+    Name: Moon Stone
+    Sprite: {fileID: 21300000, guid: 907ba007f8f22fc4b8c9407c1ac6cc0f, type: 3}
+  - Id: SUNSTONE
+    Name: Sun Stone
+    Sprite: {fileID: 21300000, guid: f0c5835abee4dfc449f5b7e63421ae23, type: 3}
+  - Id: DUSKSTONE
+    Name: Dusk Stone
+    Sprite: {fileID: 21300000, guid: df26d6149093f4045a3acaf8153a8848, type: 3}
+  - Id: DAWNSTONE
+    Name: Dawn Stone
+    Sprite: {fileID: 21300000, guid: eb61ddcfedde9744e8150d4fd5539b98, type: 3}
+  - Id: SHINYSTONE
+    Name: Shiny Stone
+    Sprite: {fileID: 21300000, guid: 9210e37a47dbde347a9f98c4f07f7753, type: 3}
+  - Id: ICESTONE
+    Name: Ice Stone
+    Sprite: {fileID: 21300000, guid: 1838bf4dee70d9a409da02b28b227e61, type: 3}
+  - Id: SWEETAPPLE
+    Name: Sweet Apple
+    Sprite: {fileID: 21300000, guid: 869b90a10024a624aa1c0db21c44c378, type: 3}
+  - Id: TARTAPPLE
+    Name: Tart Apple
+    Sprite: {fileID: 21300000, guid: ff4015a34950983469369348b537f77a, type: 3}
+  - Id: CRACKEDPOT
+    Name: Cracked Pot
+    Sprite: {fileID: 21300000, guid: ad376d9270eecf948be95719b88b84bd, type: 3}
+  - Id: CHIPPEDPOT
+    Name: Chipped Pot
+    Sprite: {fileID: 21300000, guid: d00a0854efe27264eb09ec46ef62de0b, type: 3}
+  - Id: GALARICACUFF
+    Name: Galarica Cuff
+    Sprite: {fileID: 21300000, guid: 7f85b789c9ed96243ab23864c1ca4f85, type: 3}
+  - Id: GALARICAWREATH
+    Name: Galarica Wreath
+    Sprite: {fileID: 21300000, guid: 9a928084d73dc50478ccdf194883d19e, type: 3}
+  - Id: REDAPRICORN
+    Name: Red Apricorn
+    Sprite: {fileID: 21300000, guid: 4746b51f63f5c5a4ba59595bb2323248, type: 3}
+  - Id: YELLOWAPRICORN
+    Name: Yellow Apricorn
+    Sprite: {fileID: 21300000, guid: bf7301a2bf9714d4ab0994ed20d7c5b6, type: 3}
+  - Id: BLUEAPRICORN
+    Name: Blue Apricorn
+    Sprite: {fileID: 21300000, guid: 1b8000f1984370844afd2fa51377a486, type: 3}
+  - Id: GREENAPRICORN
+    Name: Green Apricorn
+    Sprite: {fileID: 21300000, guid: f09c938737b743a41a778055361902fe, type: 3}
+  - Id: PINKAPRICORN
+    Name: Pink Apricorn
+    Sprite: {fileID: 21300000, guid: e6cdd64e8f3b6524799f1d408acb5744, type: 3}
+  - Id: WHITEAPRICORN
+    Name: White Apricorn
+    Sprite: {fileID: 21300000, guid: 284721ddb527fca43a362ad2676daaf2, type: 3}
+  - Id: BLACKAPRICORN
+    Name: Black Apricorn
+    Sprite: {fileID: 21300000, guid: 87d5879d851b0ee48bf6fa70b4800fdd, type: 3}
+  - Id: HELIXFOSSIL
+    Name: Helix Fossil
+    Sprite: {fileID: 21300000, guid: eacd705ec0f2e964dae5bdf081d86199, type: 3}
+  - Id: DOMEFOSSIL
+    Name: Dome Fossil
+    Sprite: {fileID: 21300000, guid: 7642f0d74df65fa49a95c9e4dc10ec1a, type: 3}
+  - Id: OLDAMBER
+    Name: Old Amber
+    Sprite: {fileID: 21300000, guid: 51688c41538b52c4a9beff864899bf39, type: 3}
+  - Id: ROOTFOSSIL
+    Name: Root Fossil
+    Sprite: {fileID: 21300000, guid: 19707458d1fa9a1428fa3c604f0a4469, type: 3}
+  - Id: CLAWFOSSIL
+    Name: Claw Fossil
+    Sprite: {fileID: 21300000, guid: bfe97d39fb2ae094dbd80a0f0bef3bee, type: 3}
+  - Id: SKULLFOSSIL
+    Name: Skull Fossil
+    Sprite: {fileID: 21300000, guid: 29f10069caa94de47a37e95fa38b09f9, type: 3}
+  - Id: ARMORFOSSIL
+    Name: Armor Fossil
+    Sprite: {fileID: 21300000, guid: 40d96e948da70ba45b5e0f2e6996ccad, type: 3}
+  - Id: COVERFOSSIL
+    Name: Cover Fossil
+    Sprite: {fileID: 21300000, guid: 35ea55a598745ce4088c22369705041a, type: 3}
+  - Id: PLUMEFOSSIL
+    Name: Plume Fossil
+    Sprite: {fileID: 21300000, guid: abf3c8b4c35176d49898ab1bf3d0ed23, type: 3}
+  - Id: JAWFOSSIL
+    Name: Jaw Fossil
+    Sprite: {fileID: 21300000, guid: 4ed028a844037dd45ac0c0961d1b7962, type: 3}
+  - Id: SAILFOSSIL
+    Name: Sail Fossil
+    Sprite: {fileID: 21300000, guid: 9c5d7db1724280746892e7aacea1b239, type: 3}
+  - Id: FOSSILIZEDBIRD
+    Name: Fossilized Bird
+    Sprite: {fileID: 21300000, guid: eef03b9bc1bffe94ebcf5a2b0f989ee0, type: 3}
+  - Id: FOSSILIZEDFISH
+    Name: Fossilized Fish
+    Sprite: {fileID: 21300000, guid: 1cb0d8104ed15984ea27060eeb008069, type: 3}
+  - Id: FOSSILIZEDDRAKE
+    Name: Fossilized Drake
+    Sprite: {fileID: 21300000, guid: 96bf0e80a32c19d4b94d788cce869615, type: 3}
+  - Id: FOSSILIZEDDINO
+    Name: Fossilized Dino
+    Sprite: {fileID: 21300000, guid: 153e9054b3e3e17429eaedc20de23bdf, type: 3}
+  - Id: PRETTYFEATHER
+    Name: Pretty Feather
+    Sprite: {fileID: 21300000, guid: 3d5c86190439d4f43a31c97b1222705c, type: 3}
+  - Id: TINYMUSHROOM
+    Name: Tiny Mushroom
+    Sprite: {fileID: 21300000, guid: eef79b48ffd17fe4ab4b669ece71397a, type: 3}
+  - Id: BIGMUSHROOM
+    Name: Big Mushroom
+    Sprite: {fileID: 21300000, guid: c60fbf1867c3e3d459d5f5b69e06493d, type: 3}
+  - Id: BALMMUSHROOM
+    Name: Balm Mushroom
+    Sprite: {fileID: 21300000, guid: 8704ed12d22264244a6cfa093f3d8dee, type: 3}
+  - Id: PEARL
+    Name: Pearl
+    Sprite: {fileID: 21300000, guid: c4d9799d12919164188e5e87c59c5406, type: 3}
+  - Id: BIGPEARL
+    Name: Big Pearl
+    Sprite: {fileID: 21300000, guid: 14e7ee66de2c6d740bcb6f4d8aa640f1, type: 3}
+  - Id: PEARLSTRING
+    Name: Pearl String
+    Sprite: {fileID: 21300000, guid: 273af5aeda540b749acf88e820c9afa0, type: 3}
+  - Id: STARDUST
+    Name: Stardust
+    Sprite: {fileID: 21300000, guid: 5dfbc4cb3bc78d34593be7b8ffd790fa, type: 3}
+  - Id: STARPIECE
+    Name: Star Piece
+    Sprite: {fileID: 21300000, guid: af84f6083bb67c445b3a661b2c013b99, type: 3}
+  - Id: COMETSHARD
+    Name: Comet Shard
+    Sprite: {fileID: 21300000, guid: e1c65e05c09228c48b49b1d9a50f6f0a, type: 3}
+  - Id: NUGGET
+    Name: Nugget
+    Sprite: {fileID: 21300000, guid: 3f789974454492d4e9339d92adf73694, type: 3}
+  - Id: BIGNUGGET
+    Name: Big Nugget
+    Sprite: {fileID: 21300000, guid: 6019633f70b441a40b10f8f618b1914d, type: 3}
+  - Id: HEARTSCALE
+    Name: Heart Scale
+    Sprite: {fileID: 21300000, guid: 43d31c2745c7300448131e463d570add, type: 3}
+  - Id: SLOWPOKETAIL
+    Name: Slowpoke Tail
+    Sprite: {fileID: 21300000, guid: bc8d4b3a0123b654584383296b724343, type: 3}
+  - Id: RAREBONE
+    Name: Rare Bone
+    Sprite: {fileID: 21300000, guid: ac73b59bbcac517438ffa8c3bb1c1657, type: 3}
+  - Id: RELICCOPPER
+    Name: Relic Copper
+    Sprite: {fileID: 21300000, guid: 68f2267b89704a948bc9a4bff880807c, type: 3}
+  - Id: RELICSILVER
+    Name: Relic Silver
+    Sprite: {fileID: 21300000, guid: 5b0956ce7e4ea5248a237b1beb2ff9dc, type: 3}
+  - Id: RELICGOLD
+    Name: Relic Gold
+    Sprite: {fileID: 21300000, guid: 32945ecc6f891ba4f8428f9cb0e7829d, type: 3}
+  - Id: RELICVASE
+    Name: Relic Vase
+    Sprite: {fileID: 21300000, guid: 017cb04f316dfa6459ac3b59756aaf4a, type: 3}
+  - Id: RELICBAND
+    Name: Relic Band
+    Sprite: {fileID: 21300000, guid: 938834bec6a0a1f4b82a2f5084347feb, type: 3}
+  - Id: RELICSTATUE
+    Name: Relic Statue
+    Sprite: {fileID: 21300000, guid: 60e0943cf7b5a5b4288b2138b4463cb4, type: 3}
+  - Id: RELICCROWN
+    Name: Relic Crown
+    Sprite: {fileID: 21300000, guid: 416936fc628f47d40ae160ab8b59616a, type: 3}
+  - Id: GROWTHMULCH
+    Name: Growth Mulch
+    Sprite: {fileID: 21300000, guid: 77324bf7f95b9154fb93e851dd55efdf, type: 3}
+  - Id: DAMPMULCH
+    Name: Damp Mulch
+    Sprite: {fileID: 21300000, guid: 6637072954ebe8a42a19c337a0e577dd, type: 3}
+  - Id: STABLEMULCH
+    Name: Stable Mulch
+    Sprite: {fileID: 21300000, guid: 9490fe0ff5341be47b92b91f1dc7e7ca, type: 3}
+  - Id: GOOEYMULCH
+    Name: Gooey Mulch
+    Sprite: {fileID: 21300000, guid: ee129102a34211e45863101ecfdfffa4, type: 3}
+  - Id: SHOALSALT
+    Name: Shoal Salt
+    Sprite: {fileID: 21300000, guid: 57f6b607b5470844293c89ce2ce91c87, type: 3}
+  - Id: SHOALSHELL
+    Name: Shoal Shell
+    Sprite: {fileID: 21300000, guid: 3007e90ff739f014f8617e5903a8f5ea, type: 3}
+  - Id: ODDKEYSTONE
+    Name: Odd Keystone
+    Sprite: {fileID: 21300000, guid: 24451c2176770414890dbfecca9d4f6b, type: 3}
+  - Id: REDNECTAR
+    Name: Red Nectar
+    Sprite: {fileID: 21300000, guid: 4d5eddcd9093c1646b68e1eff27aa7b5, type: 3}
+  - Id: YELLOWNECTAR
+    Name: Yellow Nectar
+    Sprite: {fileID: 21300000, guid: 5e2e5d35cc2887444ae3ca95e2763cb5, type: 3}
+  - Id: PINKNECTAR
+    Name: Pink Nectar
+    Sprite: {fileID: 21300000, guid: 707bca3d1d3a9e040935033e9457eb4c, type: 3}
+  - Id: PURPLENECTAR
+    Name: Purple Nectar
+    Sprite: {fileID: 21300000, guid: 81fd0ffb4c11a0944a1e2177b2035f4b, type: 3}
+  - Id: AIRBALLOON
+    Name: Air Balloon
+    Sprite: {fileID: 21300000, guid: d40eba452f80c264795590d346a6e75f, type: 3}
+  - Id: BRIGHTPOWDER
+    Name: Bright Powder
+    Sprite: {fileID: 21300000, guid: a19133539bdc5744c865800ce74c4ac6, type: 3}
+  - Id: EVIOLITE
+    Name: Eviolite
+    Sprite: {fileID: 21300000, guid: 92ddc02301048064db75916c3576d8ba, type: 3}
+  - Id: FLOATSTONE
+    Name: Float Stone
+    Sprite: {fileID: 21300000, guid: 3d2eb14e1e3ab4043b6defed88bcbb52, type: 3}
+  - Id: DESTINYKNOT
+    Name: Destiny Knot
+    Sprite: {fileID: 21300000, guid: c0aedaa6603697f45adea06957050d68, type: 3}
+  - Id: ROCKYHELMET
+    Name: Rocky Helmet
+    Sprite: {fileID: 21300000, guid: 85b0027670fe8664ea9f8c4e2c6ab3d5, type: 3}
+  - Id: ASSAULTVEST
+    Name: Assault Vest
+    Sprite: {fileID: 21300000, guid: 35b17e20ff6df1049ab06ad55dc7961a, type: 3}
+  - Id: SAFETYGOGGLES
+    Name: Safety Goggles
+    Sprite: {fileID: 21300000, guid: ade1bfc500fe83542b28717527f45327, type: 3}
+  - Id: PROTECTIVEPADS
+    Name: Protective Pads
+    Sprite: {fileID: 21300000, guid: 30b94e7430e52eb4cb8a32aa1b16aa13, type: 3}
+  - Id: HEAVYDUTYBOOTS
+    Name: Heavy-Duty Boots
+    Sprite: {fileID: 21300000, guid: 57a792481b437dc4e9d2e02ebd6a5ecc, type: 3}
+  - Id: UTILITYUMBRELLA
+    Name: Utility Umbrella
+    Sprite: {fileID: 21300000, guid: 35b6a312ad08eb74f8c7c4cd2dadcdae, type: 3}
+  - Id: EJECTBUTTON
+    Name: Eject Button
+    Sprite: {fileID: 21300000, guid: b4994c52249c5fe48849a0829b1800dd, type: 3}
+  - Id: EJECTPACK
+    Name: Eject Pack
+    Sprite: {fileID: 21300000, guid: 25464600026554d4c92d30e68fba5633, type: 3}
+  - Id: REDCARD
+    Name: Red Card
+    Sprite: {fileID: 21300000, guid: 6b1fa4ad3031f76488cc7eafe06af33d, type: 3}
+  - Id: SHEDSHELL
+    Name: Shed Shell
+    Sprite: {fileID: 21300000, guid: d83dec06f30210643b0c5bb6161e9490, type: 3}
+  - Id: SMOKEBALL
+    Name: Smoke Ball
+    Sprite: {fileID: 21300000, guid: 6e89b19fd9590b64c82bcd012c196f8e, type: 3}
+  - Id: LUCKYEGG
+    Name: Lucky Egg
+    Sprite: {fileID: 21300000, guid: 318ab015cf990ca4f88fa56a1c3f8a0e, type: 3}
+  - Id: EXPSHARE
+    Name: Exp. Share
+    Sprite: {fileID: 21300000, guid: 529dd5910e574fe478e15ae0fa50612e, type: 3}
+  - Id: AMULETCOIN
+    Name: Amulet Coin
+    Sprite: {fileID: 21300000, guid: 4b594a5b2a324c54e8a6ebccd56485a9, type: 3}
+  - Id: SOOTHEBELL
+    Name: Soothe Bell
+    Sprite: {fileID: 21300000, guid: c37e0d40130fd7542b32cb935d99ab99, type: 3}
+  - Id: CLEANSETAG
+    Name: Cleanse Tag
+    Sprite: {fileID: 21300000, guid: 273e64ea891a24c42867680529a5584c, type: 3}
+  - Id: CHOICEBAND
+    Name: Choice Band
+    Sprite: {fileID: 21300000, guid: 17ab730f1e396e94c926b8f3843b7d07, type: 3}
+  - Id: CHOICESPECS
+    Name: Choice Specs
+    Sprite: {fileID: 21300000, guid: e9b9ee4b9672cb646bf90127decc8972, type: 3}
+  - Id: CHOICESCARF
+    Name: Choice Scarf
+    Sprite: {fileID: 21300000, guid: 0fa4733c37babf94eac8c2d20c2dbab2, type: 3}
+  - Id: HEATROCK
+    Name: Heat Rock
+    Sprite: {fileID: 21300000, guid: b89a73dae6ec3d84a9ae2563080127c7, type: 3}
+  - Id: DAMPROCK
+    Name: Damp Rock
+    Sprite: {fileID: 21300000, guid: a491c6906e7e7a2478ceb32b536fed02, type: 3}
+  - Id: SMOOTHROCK
+    Name: Smooth Rock
+    Sprite: {fileID: 21300000, guid: 87869dfa4c195424984a54dfa40e1b1f, type: 3}
+  - Id: ICYROCK
+    Name: Icy Rock
+    Sprite: {fileID: 21300000, guid: 740ce499255573e4894239b933316080, type: 3}
+  - Id: TERRAINEXTENDER
+    Name: Terrain Extender
+    Sprite: {fileID: 21300000, guid: a89a33e91f6a1164c966d66f3395d340, type: 3}
+  - Id: LIGHTCLAY
+    Name: Light Clay
+    Sprite: {fileID: 21300000, guid: df246db510e50ea48b4117c146a87e5d, type: 3}
+  - Id: GRIPCLAW
+    Name: Grip Claw
+    Sprite: {fileID: 21300000, guid: 6216c4434d00f6c41a7dab13920a7766, type: 3}
+  - Id: BINDINGBAND
+    Name: Binding Band
+    Sprite: {fileID: 21300000, guid: 7b97fb7944b1d6a43b5eac34c66ab4a9, type: 3}
+  - Id: BIGROOT
+    Name: Big Root
+    Sprite: {fileID: 21300000, guid: 072dcc9a4c31d1746aa3eef6e820e49d, type: 3}
+  - Id: BLACKSLUDGE
+    Name: Black Sludge
+    Sprite: {fileID: 21300000, guid: f15bbb61f1d068f4c8ffcc5ab354e99c, type: 3}
+  - Id: LEFTOVERS
+    Name: Leftovers
+    Sprite: {fileID: 21300000, guid: 732c983c48ebc7041924d652956c046f, type: 3}
+  - Id: SHELLBELL
+    Name: Shell Bell
+    Sprite: {fileID: 21300000, guid: a891ec5a3fe20244e81bd2c1df94f431, type: 3}
+  - Id: MENTALHERB
+    Name: Mental Herb
+    Sprite: {fileID: 21300000, guid: 78780ea9209ef4d409011390fdae678b, type: 3}
+  - Id: WHITEHERB
+    Name: White Herb
+    Sprite: {fileID: 21300000, guid: 5463eab9ee038c74d9890bed3b0db871, type: 3}
+  - Id: POWERHERB
+    Name: Power Herb
+    Sprite: {fileID: 21300000, guid: 0a8862b6f45297f42a16a7841960ac14, type: 3}
+  - Id: ABSORBBULB
+    Name: Absorb Bulb
+    Sprite: {fileID: 21300000, guid: ae39b30c01d9dd346b6373446648257c, type: 3}
+  - Id: CELLBATTERY
+    Name: Cell Battery
+    Sprite: {fileID: 21300000, guid: 473989cefdd56d1428163a76d2a57a43, type: 3}
+  - Id: LUMINOUSMOSS
+    Name: Luminous Moss
+    Sprite: {fileID: 21300000, guid: e8398de795a080e4d81b142d29004475, type: 3}
+  - Id: SNOWBALL
+    Name: Snowball
+    Sprite: {fileID: 21300000, guid: 51668d036161663429b4ed2dc0924377, type: 3}
+  - Id: WEAKNESSPOLICY
+    Name: Weakness Policy
+    Sprite: {fileID: 21300000, guid: d549b191238dc95499e7f20b26999c25, type: 3}
+  - Id: BLUNDERPOLICY
+    Name: Blunder Policy
+    Sprite: {fileID: 21300000, guid: d7d7bca3c6c5f044bbd5ee81a08a256e, type: 3}
+  - Id: THROATSPRAY
+    Name: Throat Spray
+    Sprite: {fileID: 21300000, guid: 96000649c41dd60468c140dd4ecbaaaf, type: 3}
+  - Id: ADRENALINEORB
+    Name: Adrenaline Orb
+    Sprite: {fileID: 21300000, guid: db5ca4b1630e2d0499e739e3e5bc66c9, type: 3}
+  - Id: ROOMSERVICE
+    Name: Room Service
+    Sprite: {fileID: 21300000, guid: 6c529bab1d1628f428333d3c25422159, type: 3}
+  - Id: ELECTRICSEED
+    Name: Electric Seed
+    Sprite: {fileID: 21300000, guid: 4619b292b1185b0438d4d5399d76884a, type: 3}
+  - Id: GRASSYSEED
+    Name: Grassy Seed
+    Sprite: {fileID: 21300000, guid: 687769bff6bd3c645824751c4b95a9c7, type: 3}
+  - Id: MISTYSEED
+    Name: Misty Seed
+    Sprite: {fileID: 21300000, guid: 1a9dde7bac1bdc6459f5e1228ad5e2fb, type: 3}
+  - Id: PSYCHICSEED
+    Name: Psychic Seed
+    Sprite: {fileID: 21300000, guid: 159b0066c5d6ba141b309b896d8e18ff, type: 3}
+  - Id: LIFEORB
+    Name: Life Orb
+    Sprite: {fileID: 21300000, guid: 87a7017e0dd27d94794573f94be5cc85, type: 3}
+  - Id: EXPERTBELT
+    Name: Expert Belt
+    Sprite: {fileID: 21300000, guid: 1b9507031b7a9574f87e0bfbe5f36e5e, type: 3}
+  - Id: METRONOME
+    Name: Metronome
+    Sprite: {fileID: 21300000, guid: f516c65e8e9fed24194acf93accaf4d0, type: 3}
+  - Id: MUSCLEBAND
+    Name: Muscle Band
+    Sprite: {fileID: 21300000, guid: 66c649e6e1fff4e4f8ff133dba2596a5, type: 3}
+  - Id: WISEGLASSES
+    Name: Wise Glasses
+    Sprite: {fileID: 21300000, guid: f7595e75a9fa162449dc3a86c16b188e, type: 3}
+  - Id: RAZORCLAW
+    Name: Razor Claw
+    Sprite: {fileID: 21300000, guid: 9b323dccf8d1c2242b8176e04ca0c816, type: 3}
+  - Id: SCOPELENS
+    Name: Scope Lens
+    Sprite: {fileID: 21300000, guid: a28e313f357298d4ca56c68b78efec1d, type: 3}
+  - Id: WIDELENS
+    Name: Wide Lens
+    Sprite: {fileID: 21300000, guid: 799e8b4cb3fdad3438c83926f1d958b4, type: 3}
+  - Id: ZOOMLENS
+    Name: Zoom Lens
+    Sprite: {fileID: 21300000, guid: ca6d460c71c7bcc459530ac814c297ef, type: 3}
+  - Id: KINGSROCK
+    Name: King's Rock
+    Sprite: {fileID: 21300000, guid: e0a60594a6a2e7046a88f257bc8ea77d, type: 3}
+  - Id: RAZORFANG
+    Name: Razor Fang
+    Sprite: {fileID: 21300000, guid: 423cb86aaae7e90489dacb40e0e943df, type: 3}
+  - Id: LAGGINGTAIL
+    Name: Lagging Tail
+    Sprite: {fileID: 21300000, guid: 172b600a13e52f34994a4aeacc1eb4d9, type: 3}
+  - Id: QUICKCLAW
+    Name: Quick Claw
+    Sprite: {fileID: 21300000, guid: b86c84b6f5fd2414c91868cf0485fa4e, type: 3}
+  - Id: FOCUSBAND
+    Name: Focus Band
+    Sprite: {fileID: 21300000, guid: 605a66458da56dc40a563be788b9ecb8, type: 3}
+  - Id: FOCUSSASH
+    Name: Focus Sash
+    Sprite: {fileID: 21300000, guid: 295baabf24274694d953030a2eeb373a, type: 3}
+  - Id: FLAMEORB
+    Name: Flame Orb
+    Sprite: {fileID: 21300000, guid: f73cc6931a4b0b349a9315914704ec7b, type: 3}
+  - Id: TOXICORB
+    Name: Toxic Orb
+    Sprite: {fileID: 21300000, guid: 329c3cec47951bd4d8a9851851566392, type: 3}
+  - Id: STICKYBARB
+    Name: Sticky Barb
+    Sprite: {fileID: 21300000, guid: 2d183572b78cc6741a759b110c2a8f57, type: 3}
+  - Id: IRONBALL
+    Name: Iron Ball
+    Sprite: {fileID: 21300000, guid: c9dd7350793fc674a9715b62110be433, type: 3}
+  - Id: RINGTARGET
+    Name: Ring Target
+    Sprite: {fileID: 21300000, guid: 1385f567721c0c544816998967a065d8, type: 3}
+  - Id: MACHOBRACE
+    Name: Macho Brace
+    Sprite: {fileID: 21300000, guid: 20f698540ed8cdb46b32386acc405e42, type: 3}
+  - Id: POWERWEIGHT
+    Name: Power Weight
+    Sprite: {fileID: 21300000, guid: a75f4d254c38cfc4eb920ec112e7954c, type: 3}
+  - Id: POWERBRACER
+    Name: Power Bracer
+    Sprite: {fileID: 21300000, guid: 0ae29421e9dc66446abec4c0cb31cc21, type: 3}
+  - Id: POWERBELT
+    Name: Power Belt
+    Sprite: {fileID: 21300000, guid: dcf17b0588f9ae04daecb0f095e7a5f6, type: 3}
+  - Id: POWERLENS
+    Name: Power Lens
+    Sprite: {fileID: 21300000, guid: 928bea13d52040a4f93bca682cbf1594, type: 3}
+  - Id: POWERBAND
+    Name: Power Band
+    Sprite: {fileID: 21300000, guid: d733ef7a239ab7e4d806f754d64332e6, type: 3}
+  - Id: POWERANKLET
+    Name: Power Anklet
+    Sprite: {fileID: 21300000, guid: 312599906b78c004290d86ee74e7f451, type: 3}
+  - Id: LAXINCENSE
+    Name: Lax Incense
+    Sprite: {fileID: 21300000, guid: edface731e6ec7e46b3d009db6ef8ced, type: 3}
+  - Id: FULLINCENSE
+    Name: Full Incense
+    Sprite: {fileID: 21300000, guid: a39ffa94bab19674f8ab66b935964c3d, type: 3}
+  - Id: LUCKINCENSE
+    Name: Luck Incense
+    Sprite: {fileID: 21300000, guid: 0031735cb2ec4a94895e5a890076a7b5, type: 3}
+  - Id: PUREINCENSE
+    Name: Pure Incense
+    Sprite: {fileID: 21300000, guid: c3f55d1870583f24cae74a6d02fdc000, type: 3}
+  - Id: SEAINCENSE
+    Name: Sea Incense
+    Sprite: {fileID: 21300000, guid: 06128b7ed5d4c864a96d9294771c306a, type: 3}
+  - Id: WAVEINCENSE
+    Name: Wave Incense
+    Sprite: {fileID: 21300000, guid: b38be7d656bef0240b7cfe9f7de21fa3, type: 3}
+  - Id: ROSEINCENSE
+    Name: Rose Incense
+    Sprite: {fileID: 21300000, guid: 4ba7b91b51304984fa74117dc6169524, type: 3}
+  - Id: ODDINCENSE
+    Name: Odd Incense
+    Sprite: {fileID: 21300000, guid: f94a05e217e212947bbe0a8f19895d6b, type: 3}
+  - Id: ROCKINCENSE
+    Name: Rock Incense
+    Sprite: {fileID: 21300000, guid: b5a0b6df118e1a14cb303de6e9792f2a, type: 3}
+  - Id: CHARCOAL
+    Name: Charcoal
+    Sprite: {fileID: 21300000, guid: 46637df6e9b688544be1049b06fe6923, type: 3}
+  - Id: MYSTICWATER
+    Name: Mystic Water
+    Sprite: {fileID: 21300000, guid: 4b33ecff2e859804cbda455cfd51bcb5, type: 3}
+  - Id: MAGNET
+    Name: Magnet
+    Sprite: {fileID: 21300000, guid: 23c23fb77feba9c42b3797d26970442a, type: 3}
+  - Id: MIRACLESEED
+    Name: Miracle Seed
+    Sprite: {fileID: 21300000, guid: a6138838eca2d684386342136e2762cd, type: 3}
+  - Id: NEVERMELTICE
+    Name: Never-Melt Ice
+    Sprite: {fileID: 21300000, guid: 2f5cf0d7887fbc7458857b5c87f01131, type: 3}
+  - Id: BLACKBELT
+    Name: Black Belt
+    Sprite: {fileID: 21300000, guid: 66693d5bbe5a6cb4ea6a9a6b5b9bde65, type: 3}
+  - Id: POISONBARB
+    Name: Poison Barb
+    Sprite: {fileID: 21300000, guid: 5c65ae95eb9a27040849bcf1a782d8d8, type: 3}
+  - Id: SOFTSAND
+    Name: Soft Sand
+    Sprite: {fileID: 21300000, guid: 003d633b04f71254abaab868a579899c, type: 3}
+  - Id: SHARPBEAK
+    Name: Sharp Beak
+    Sprite: {fileID: 21300000, guid: f86048fbdc250284ca29f7e05a95184c, type: 3}
+  - Id: TWISTEDSPOON
+    Name: Twisted Spoon
+    Sprite: {fileID: 21300000, guid: 07de822efe569c549b693b56db0c83ca, type: 3}
+  - Id: SILVERPOWDER
+    Name: Silver Powder
+    Sprite: {fileID: 21300000, guid: b0e9e12dbf1d8a948abbe0aa25fe638e, type: 3}
+  - Id: HARDSTONE
+    Name: Hard Stone
+    Sprite: {fileID: 21300000, guid: 685460b1a85502544a7a55090ac96e40, type: 3}
+  - Id: SPELLTAG
+    Name: Spell Tag
+    Sprite: {fileID: 21300000, guid: e47aa2dd1dea3984f9c2327feef0a067, type: 3}
+  - Id: DRAGONFANG
+    Name: Dragon Fang
+    Sprite: {fileID: 21300000, guid: fe2cb5bb360d39047aeab1f3c76bd761, type: 3}
+  - Id: BLACKGLASSES
+    Name: Black Glasses
+    Sprite: {fileID: 21300000, guid: 5fa3684b2e1123144a6057b41f877f6e, type: 3}
+  - Id: METALCOAT
+    Name: Metal Coat
+    Sprite: {fileID: 21300000, guid: 4ab0b146ba16be14da6d67296dae3d76, type: 3}
+  - Id: SILKSCARF
+    Name: Silk Scarf
+    Sprite: {fileID: 21300000, guid: 756f22e445fba9a4a97ea500764ed18e, type: 3}
+  - Id: FLAMEPLATE
+    Name: Flame Plate
+    Sprite: {fileID: 21300000, guid: 1f440f13240332242be148d7556f6f26, type: 3}
+  - Id: SPLASHPLATE
+    Name: Splash Plate
+    Sprite: {fileID: 21300000, guid: ababad625f36563418b3f5fda84e9a3a, type: 3}
+  - Id: ZAPPLATE
+    Name: Zap Plate
+    Sprite: {fileID: 21300000, guid: 279fdc8a02ff7eb43a020b5b406573b1, type: 3}
+  - Id: MEADOWPLATE
+    Name: Meadow Plate
+    Sprite: {fileID: 21300000, guid: f452eca0bf891eb418b572ed5f3d392b, type: 3}
+  - Id: ICICLEPLATE
+    Name: Icicle Plate
+    Sprite: {fileID: 21300000, guid: 7dde1ba62712a93468869f79ace0fde9, type: 3}
+  - Id: FISTPLATE
+    Name: Fist Plate
+    Sprite: {fileID: 21300000, guid: 819fc896cf76e6a448b1e85d954c319d, type: 3}
+  - Id: TOXICPLATE
+    Name: Toxic Plate
+    Sprite: {fileID: 21300000, guid: eaa603d6e0874b34a8742dc38990a7e0, type: 3}
+  - Id: EARTHPLATE
+    Name: Earth Plate
+    Sprite: {fileID: 21300000, guid: 773604bce486b7742bfcb6de2668221d, type: 3}
+  - Id: SKYPLATE
+    Name: Sky Plate
+    Sprite: {fileID: 21300000, guid: 476d13bd9495b9f47ae5214a0249ad52, type: 3}
+  - Id: MINDPLATE
+    Name: Mind Plate
+    Sprite: {fileID: 21300000, guid: d4f4720696bdd8941986fa3c95029401, type: 3}
+  - Id: INSECTPLATE
+    Name: Insect Plate
+    Sprite: {fileID: 21300000, guid: ea573dfd296904c4a806fa041bde2b2b, type: 3}
+  - Id: STONEPLATE
+    Name: Stone Plate
+    Sprite: {fileID: 21300000, guid: f85d39d2412510445854b3a28d82050c, type: 3}
+  - Id: SPOOKYPLATE
+    Name: Spooky Plate
+    Sprite: {fileID: 21300000, guid: 7da98df4d9a92de4aafbcc6757768106, type: 3}
+  - Id: DRACOPLATE
+    Name: Draco Plate
+    Sprite: {fileID: 21300000, guid: cfa8c2a2d67925d4497260b4c6334e31, type: 3}
+  - Id: DREADPLATE
+    Name: Dread Plate
+    Sprite: {fileID: 21300000, guid: 7944a58560523ff4c8a45889db4f09b7, type: 3}
+  - Id: IRONPLATE
+    Name: Iron Plate
+    Sprite: {fileID: 21300000, guid: eeb4e222fbfef684dbf92c47815479e2, type: 3}
+  - Id: PIXIEPLATE
+    Name: Pixie Plate
+    Sprite: {fileID: 21300000, guid: ad67c120fc1189949a19e7abce283a40, type: 3}
+  - Id: FIREGEM
+    Name: Fire Gem
+    Sprite: {fileID: 21300000, guid: 32a14c976f24571428af3f7501ca8cd3, type: 3}
+  - Id: WATERGEM
+    Name: Water Gem
+    Sprite: {fileID: 21300000, guid: a0be5cd2a5714f84391a001ad53117c8, type: 3}
+  - Id: ELECTRICGEM
+    Name: Electric Gem
+    Sprite: {fileID: 21300000, guid: f42a3685d4c8cab4582434043fd9d86e, type: 3}
+  - Id: GRASSGEM
+    Name: Grass Gem
+    Sprite: {fileID: 21300000, guid: 874db22c24bb36649a9f5fd9b35f7c59, type: 3}
+  - Id: ICEGEM
+    Name: Ice Gem
+    Sprite: {fileID: 21300000, guid: ea0c669d49d568e4cb840a613da79640, type: 3}
+  - Id: FIGHTINGGEM
+    Name: Fighting Gem
+    Sprite: {fileID: 21300000, guid: 3251df4b31f501e419e45bd7d661f2e5, type: 3}
+  - Id: POISONGEM
+    Name: Poison Gem
+    Sprite: {fileID: 21300000, guid: 3b1cb3617e8d7144ab7114b93fa202d4, type: 3}
+  - Id: GROUNDGEM
+    Name: Ground Gem
+    Sprite: {fileID: 21300000, guid: f2fb25e078df15f42b1b39ae15ca4a28, type: 3}
+  - Id: FLYINGGEM
+    Name: Flying Gem
+    Sprite: {fileID: 21300000, guid: 175a591a4f7d0e54bbac6762611ca380, type: 3}
+  - Id: PSYCHICGEM
+    Name: Psychic Gem
+    Sprite: {fileID: 21300000, guid: 64213acf7bfa5d54eaf76a08bdb0ba89, type: 3}
+  - Id: BUGGEM
+    Name: Bug Gem
+    Sprite: {fileID: 21300000, guid: 047de16502fab4649ae2e2648f321d2d, type: 3}
+  - Id: ROCKGEM
+    Name: Rock Gem
+    Sprite: {fileID: 21300000, guid: ecc30f104b475fb4fb15706a908fd538, type: 3}
+  - Id: GHOSTGEM
+    Name: Ghost Gem
+    Sprite: {fileID: 21300000, guid: 1a645eb16ac4e5647a0a0d872234333d, type: 3}
+  - Id: DRAGONGEM
+    Name: Dragon Gem
+    Sprite: {fileID: 21300000, guid: baa0ef9ba6e7f3b4ab5a755a024428f6, type: 3}
+  - Id: DARKGEM
+    Name: Dark Gem
+    Sprite: {fileID: 21300000, guid: 66562f6d8bba8ff48886699acac95c04, type: 3}
+  - Id: STEELGEM
+    Name: Steel Gem
+    Sprite: {fileID: 21300000, guid: 793d4fae425262e4693e3099afa27dc9, type: 3}
+  - Id: FAIRYGEM
+    Name: Fairy Gem
+    Sprite: {fileID: 21300000, guid: fc7b0028393bc074bab173ebf4a6a104, type: 3}
+  - Id: NORMALGEM
+    Name: Normal Gem
+    Sprite: {fileID: 21300000, guid: f512d7ebb7cbe894ea5733ac18df976f, type: 3}
+  - Id: LIGHTBALL
+    Name: Light Ball
+    Sprite: {fileID: 21300000, guid: 866552819c9a2ac4996a0c6eb31c76de, type: 3}
+  - Id: LUCKYPUNCH
+    Name: Lucky Punch
+    Sprite: {fileID: 21300000, guid: 46c01e552d30f484fbeb00b9e5b5bc54, type: 3}
+  - Id: METALPOWDER
+    Name: Metal Powder
+    Sprite: {fileID: 21300000, guid: 94ec585d62ce3c64bb186785e703f34c, type: 3}
+  - Id: QUICKPOWDER
+    Name: Quick Powder
+    Sprite: {fileID: 21300000, guid: 36a4a66868405984ea33dcec6175a9d0, type: 3}
+  - Id: THICKCLUB
+    Name: Thick Club
+    Sprite: {fileID: 21300000, guid: 295e0f3e3c0c2d74a8a3548d1e022cb6, type: 3}
+  - Id: LEEK
+    Name: Leek
+    Sprite: {fileID: 21300000, guid: d7ccb603234db7d4683acf8124411973, type: 3}
+  - Id: SOULDEW
+    Name: Soul Dew
+    Sprite: {fileID: 21300000, guid: 2a70cf234e0d5ae478c2ec2689c32748, type: 3}
+  - Id: DEEPSEATOOTH
+    Name: Deep Sea Tooth
+    Sprite: {fileID: 21300000, guid: d64288571140114458b9a697fea5a01d, type: 3}
+  - Id: DEEPSEASCALE
+    Name: Deep Sea Scale
+    Sprite: {fileID: 21300000, guid: 085c45a60df324b4490b6682bd23601d, type: 3}
+  - Id: ADAMANTORB
+    Name: Adamant Orb
+    Sprite: {fileID: 21300000, guid: 4ce70e90f89b18646b21112fd131ee55, type: 3}
+  - Id: LUSTROUSORB
+    Name: Lustrous Orb
+    Sprite: {fileID: 21300000, guid: f91f9ebc74cc9c84ba2ecf0b69c106d2, type: 3}
+  - Id: GRISEOUSORB
+    Name: Griseous Orb
+    Sprite: {fileID: 21300000, guid: 3553de0cff2fb644ea7b3a7bd6f1b21b, type: 3}
+  - Id: RUSTEDSWORD
+    Name: Rusted Sword
+    Sprite: {fileID: 21300000, guid: c541429dc94aedc4da1ce4fd8da7d400, type: 3}
+  - Id: RUSTEDSHIELD
+    Name: Rusted Shield
+    Sprite: {fileID: 21300000, guid: b4a6038d81be5ae45a8e599346bf6a10, type: 3}
+  - Id: DOUSEDRIVE
+    Name: Douse Drive
+    Sprite: {fileID: 21300000, guid: 4f3b92bc3d966ae4fa96ef82702ba42a, type: 3}
+  - Id: SHOCKDRIVE
+    Name: Shock Drive
+    Sprite: {fileID: 21300000, guid: 4d508885dc3110d40b57d2563955ea24, type: 3}
+  - Id: BURNDRIVE
+    Name: Burn Drive
+    Sprite: {fileID: 21300000, guid: f9f24d7a528d8b448b845a6231c47207, type: 3}
+  - Id: CHILLDRIVE
+    Name: Chill Drive
+    Sprite: {fileID: 21300000, guid: 3d548a6f617efcd488ff9c61664e6d3c, type: 3}
+  - Id: FIREMEMORY
+    Name: Fire Memory
+    Sprite: {fileID: 21300000, guid: 19e9e366f96496f4cbe44bbeb8f773c4, type: 3}
+  - Id: WATERMEMORY
+    Name: Water Memory
+    Sprite: {fileID: 21300000, guid: 3786ceb538425bd48817860e259cd36a, type: 3}
+  - Id: ELECTRICMEMORY
+    Name: Electric Memory
+    Sprite: {fileID: 21300000, guid: 88ab472e08658704eb4297529e2f7d5e, type: 3}
+  - Id: GRASSMEMORY
+    Name: Grass Memory
+    Sprite: {fileID: 21300000, guid: cadfb543ccc004142b5f081a035eea44, type: 3}
+  - Id: ICEMEMORY
+    Name: Ice Memory
+    Sprite: {fileID: 21300000, guid: 176a8544f9f3ea54fb9e35c29cea52af, type: 3}
+  - Id: FIGHTINGMEMORY
+    Name: Fighting Memory
+    Sprite: {fileID: 21300000, guid: 3291a3e465e240d45b1d632e23892221, type: 3}
+  - Id: POISONMEMORY
+    Name: Poison Memory
+    Sprite: {fileID: 21300000, guid: ad50b498858d8dc4180a312ce4b25175, type: 3}
+  - Id: GROUNDMEMORY
+    Name: Ground Memory
+    Sprite: {fileID: 21300000, guid: 0f74a63fa971b884eb27d42359980659, type: 3}
+  - Id: FLYINGMEMORY
+    Name: Flying Memory
+    Sprite: {fileID: 21300000, guid: 5b29f8b471f9e2b47aea5f9044889c74, type: 3}
+  - Id: PSYCHICMEMORY
+    Name: Psychic Memory
+    Sprite: {fileID: 21300000, guid: 4e5ba56a5fb24ab4b910b780d9d19386, type: 3}
+  - Id: BUGMEMORY
+    Name: Bug Memory
+    Sprite: {fileID: 21300000, guid: 3aa62676b503422438fc55b72cbe8c71, type: 3}
+  - Id: ROCKMEMORY
+    Name: Rock Memory
+    Sprite: {fileID: 21300000, guid: dcd0519574168cc478f83f55951e6cad, type: 3}
+  - Id: GHOSTMEMORY
+    Name: Ghost Memory
+    Sprite: {fileID: 21300000, guid: 844a10e8cf31e3149b030193735d48d3, type: 3}
+  - Id: DRAGONMEMORY
+    Name: Dragon Memory
+    Sprite: {fileID: 21300000, guid: 6d076b4766bdfde418a3545d2ba1f079, type: 3}
+  - Id: DARKMEMORY
+    Name: Dark Memory
+    Sprite: {fileID: 21300000, guid: d59e2750f88f274429e3c71d4ef9c0e0, type: 3}
+  - Id: STEELMEMORY
+    Name: Steel Memory
+    Sprite: {fileID: 21300000, guid: b7d3532ff28858547a3b24ebd127c8f0, type: 3}
+  - Id: FAIRYMEMORY
+    Name: Fairy Memory
+    Sprite: {fileID: 21300000, guid: 02c9968238cddeb438a02fb8e1b1ed0c, type: 3}
+  - Id: EVERSTONE
+    Name: Everstone
+    Sprite: {fileID: 21300000, guid: c4ff2e733f08c8d44b1d507fd96d22d2, type: 3}
+  - Id: DRAGONSCALE
+    Name: Dragon Scale
+    Sprite: {fileID: 21300000, guid: d0d56fb84881c004c9b6d622292824ef, type: 3}
+  - Id: UPGRADE
+    Name: Upgrade
+    Sprite: {fileID: 21300000, guid: 9a9fa4ff9934d8f40a294f1707b60fce, type: 3}
+  - Id: DUBIOUSDISC
+    Name: Dubious Disc
+    Sprite: {fileID: 21300000, guid: 5c7a892beb1f8074d91279ea5cb947a6, type: 3}
+  - Id: PROTECTOR
+    Name: Protector
+    Sprite: {fileID: 21300000, guid: 54e606ea4e6e53543abf5c82306490eb, type: 3}
+  - Id: ELECTIRIZER
+    Name: Electirizer
+    Sprite: {fileID: 21300000, guid: 844587a5ae5901849afb7d922ae6e360, type: 3}
+  - Id: MAGMARIZER
+    Name: Magmarizer
+    Sprite: {fileID: 21300000, guid: 0c2f99b122a19fc44b42ffb5402dd1fa, type: 3}
+  - Id: REAPERCLOTH
+    Name: Reaper Cloth
+    Sprite: {fileID: 21300000, guid: 9d1268c5e7595b2479ed482f8c6a1b3c, type: 3}
+  - Id: PRISMSCALE
+    Name: Prism Scale
+    Sprite: {fileID: 21300000, guid: 0ae51ba94a10e4f47ba7ead20cef0e16, type: 3}
+  - Id: OVALSTONE
+    Name: Oval Stone
+    Sprite: {fileID: 21300000, guid: 7d0aab8e62f089140ad72a7fe0d5676c, type: 3}
+  - Id: WHIPPEDDREAM
+    Name: Whipped Dream
+    Sprite: {fileID: 21300000, guid: 876ba0dd35adfda448634136d251bbd9, type: 3}
+  - Id: SACHET
+    Name: Sachet
+    Sprite: {fileID: 21300000, guid: c9694d5fa06caa141b4976ecf0f2ed7d, type: 3}
+  - Id: STRAWBERRYSWEET
+    Name: Strawberry Sweet
+    Sprite: {fileID: 21300000, guid: 439d693b0db1863479ea06e8f07fb72a, type: 3}
+  - Id: LOVESWEET
+    Name: Love Sweet
+    Sprite: {fileID: 21300000, guid: baed0737bd363c446b6f6b3dfe3e5817, type: 3}
+  - Id: BERRYSWEET
+    Name: Berry Sweet
+    Sprite: {fileID: 21300000, guid: f6cbf7d88fca2564e9df93ee0fab8f96, type: 3}
+  - Id: CLOVERSWEET
+    Name: Clover Sweet
+    Sprite: {fileID: 21300000, guid: bb83b85df9c62054bb29c87d6691adb5, type: 3}
+  - Id: FLOWERSWEET
+    Name: Flower Sweet
+    Sprite: {fileID: 21300000, guid: f6e424e6b28f6144193f59b3300c8f44, type: 3}
+  - Id: STARSWEET
+    Name: Star Sweet
+    Sprite: {fileID: 21300000, guid: 22dee2c53987341478a5191118fc2a88, type: 3}
+  - Id: RIBBONSWEET
+    Name: Ribbon Sweet
+    Sprite: {fileID: 21300000, guid: 5f55b4045ea4b434eab64fcaf8ca465b, type: 3}
+  - Id: VENUSAURITE
+    Name: Venusaurite
+    Sprite: {fileID: 21300000, guid: 4f3203116fd4f294dba4d5ae08bb2c2c, type: 3}
+  - Id: CHARIZARDITEX
+    Name: Charizardite X
+    Sprite: {fileID: 21300000, guid: 458ab3d4d60b2a14b948039fac48db75, type: 3}
+  - Id: CHARIZARDITEY
+    Name: Charizardite Y
+    Sprite: {fileID: 21300000, guid: 67528bdde0d587d4cab30f45bb3d5e73, type: 3}
+  - Id: BLASTOISINITE
+    Name: Blastoisinite
+    Sprite: {fileID: 21300000, guid: 4d27533be30dee6458b3ec8395b02708, type: 3}
+  - Id: BEEDRILLITE
+    Name: Beedrillite
+    Sprite: {fileID: 21300000, guid: f707f4b9b4485c749b30c8e88e047f91, type: 3}
+  - Id: PIDGEOTITE
+    Name: Pidgeotite
+    Sprite: {fileID: 21300000, guid: f60316154fb1abe4fbf3834e93b1e205, type: 3}
+  - Id: ALAKAZITE
+    Name: Alakazite
+    Sprite: {fileID: 21300000, guid: 938a839f6d213ce4389d0000bad30ba7, type: 3}
+  - Id: SLOWBRONITE
+    Name: Slowbronite
+    Sprite: {fileID: 21300000, guid: c71e7d0f5a6df3c4da9f661167dbd893, type: 3}
+  - Id: GENGARITE
+    Name: Gengarite
+    Sprite: {fileID: 21300000, guid: c3cc3a54a4ebf3f44af6b9c9ff4ab531, type: 3}
+  - Id: KANGASKHANITE
+    Name: Kangaskhanite
+    Sprite: {fileID: 21300000, guid: 4d0392a0a6259244e95db5ef911ad31b, type: 3}
+  - Id: PINSIRITE
+    Name: Pinsirite
+    Sprite: {fileID: 21300000, guid: 4b74453dc7386c141a4b87fd6515873e, type: 3}
+  - Id: GYARADOSITE
+    Name: Gyaradosite
+    Sprite: {fileID: 21300000, guid: 25babceb86154254281c7d5b30c63c5a, type: 3}
+  - Id: AERODACTYLITE
+    Name: Aerodactylite
+    Sprite: {fileID: 21300000, guid: c6c18f930b889dc4ab906a56f01eb7aa, type: 3}
+  - Id: MEWTWONITEX
+    Name: Mewtwonite X
+    Sprite: {fileID: 21300000, guid: b85a04b54b777d64a8d5a328cc5542a9, type: 3}
+  - Id: MEWTWONITEY
+    Name: Mewtwonite Y
+    Sprite: {fileID: 21300000, guid: 0144c801d976aea458acd5fd60c53f39, type: 3}
+  - Id: AMPHAROSITE
+    Name: Ampharosite
+    Sprite: {fileID: 21300000, guid: 94bd40739c47a3342b90878794abc7c2, type: 3}
+  - Id: STEELIXITE
+    Name: Steelixite
+    Sprite: {fileID: 21300000, guid: b695496dbc51489428770bb78defed93, type: 3}
+  - Id: SCIZORITE
+    Name: Scizorite
+    Sprite: {fileID: 21300000, guid: d80b8157ef6ddb94bb1c859b32a0b05d, type: 3}
+  - Id: HERACRONITE
+    Name: Heracronite
+    Sprite: {fileID: 21300000, guid: 5105d7eff33a98a4db5ff032d6c5a9a2, type: 3}
+  - Id: HOUNDOOMINITE
+    Name: Houndoominite
+    Sprite: {fileID: 21300000, guid: ad602571a9238b5459cb758637f116a2, type: 3}
+  - Id: TYRANITARITE
+    Name: Tyranitarite
+    Sprite: {fileID: 21300000, guid: af9403c32f05e80408eeff801ae002e8, type: 3}
+  - Id: SCEPTILITE
+    Name: Sceptilite
+    Sprite: {fileID: 21300000, guid: d5b67f02d782b854c999fc452732b348, type: 3}
+  - Id: BLAZIKENITE
+    Name: Blazikenite
+    Sprite: {fileID: 21300000, guid: faeb03ce237de8e48b9ef5cc43162355, type: 3}
+  - Id: SWAMPERTITE
+    Name: Swampertite
+    Sprite: {fileID: 21300000, guid: 58e8e6e18f3efc84e89b42ddc07dcc94, type: 3}
+  - Id: GARDEVOIRITE
+    Name: Gardevoirite
+    Sprite: {fileID: 21300000, guid: bea602d3b2f169646b3375ed06162c88, type: 3}
+  - Id: SABLENITE
+    Name: Sablenite
+    Sprite: {fileID: 21300000, guid: e5a2e35157ca2cd479fc09131a26c561, type: 3}
+  - Id: MAWILITE
+    Name: Mawilite
+    Sprite: {fileID: 21300000, guid: 8ab33c67f0f348a4a841971764ed4114, type: 3}
+  - Id: AGGRONITE
+    Name: Aggronite
+    Sprite: {fileID: 21300000, guid: 8a232eff34d8db748a0b084935a3acf2, type: 3}
+  - Id: MEDICHAMITE
+    Name: Medichamite
+    Sprite: {fileID: 21300000, guid: 0271e1a88cee0f34f82524a0beb856ef, type: 3}
+  - Id: MANECTITE
+    Name: Manectite
+    Sprite: {fileID: 21300000, guid: 1da9bc16c6733a44d8d6b6348597d429, type: 3}
+  - Id: SHARPEDONITE
+    Name: Sharpedonite
+    Sprite: {fileID: 21300000, guid: 04976e6564fdb9d4482242c0375e5cb2, type: 3}
+  - Id: CAMERUPTITE
+    Name: Cameruptite
+    Sprite: {fileID: 21300000, guid: 1a1662f969bd4c14289a57272f8fb526, type: 3}
+  - Id: ALTARIANITE
+    Name: Altarianite
+    Sprite: {fileID: 21300000, guid: 6d2c3db1af6c83646928dc90382c21db, type: 3}
+  - Id: BANETTITE
+    Name: Banettite
+    Sprite: {fileID: 21300000, guid: 0b02169c24ee9ba4bb09b0b2e2d1a448, type: 3}
+  - Id: ABSOLITE
+    Name: Absolite
+    Sprite: {fileID: 21300000, guid: 1cbf2bc85172cd947a9a450f1a8fedce, type: 3}
+  - Id: GLALITITE
+    Name: Glalitite
+    Sprite: {fileID: 21300000, guid: 88e9e734bd99e7b4ba39a83ee3833933, type: 3}
+  - Id: SALAMENCITE
+    Name: Salamencite
+    Sprite: {fileID: 21300000, guid: e46f3f152c4ad604db100d437ded19de, type: 3}
+  - Id: METAGROSSITE
+    Name: Metagrossite
+    Sprite: {fileID: 21300000, guid: 5f7181ad52b2d734e8aed506d1d19745, type: 3}
+  - Id: LATIASITE
+    Name: Latiasite
+    Sprite: {fileID: 21300000, guid: 71abd72a15c3de647a938f8c7ac7f770, type: 3}
+  - Id: LATIOSITE
+    Name: Latiosite
+    Sprite: {fileID: 21300000, guid: cfd263e9d3fa2b6469f70af07272def5, type: 3}
+  - Id: LOPUNNITE
+    Name: Lopunnite
+    Sprite: {fileID: 21300000, guid: 134fe0c5fcb581349a1dba1665937e8a, type: 3}
+  - Id: GARCHOMPITE
+    Name: Garchompite
+    Sprite: {fileID: 21300000, guid: faa52d65d13027545878cf848f887295, type: 3}
+  - Id: LUCARIONITE
+    Name: Lucarionite
+    Sprite: {fileID: 21300000, guid: 767f975151ac23d44b8b0266a727ee48, type: 3}
+  - Id: ABOMASITE
+    Name: Abomasite
+    Sprite: {fileID: 21300000, guid: ffa2bbef6bde6cb4990d867d6f962b3f, type: 3}
+  - Id: GALLADITE
+    Name: Galladite
+    Sprite: {fileID: 21300000, guid: 4a976339958ea1b44a804c2a3fb2fb42, type: 3}
+  - Id: AUDINITE
+    Name: Audinite
+    Sprite: {fileID: 21300000, guid: a23404641b89d654a9ac4e55897b35bc, type: 3}
+  - Id: DIANCITE
+    Name: Diancite
+    Sprite: {fileID: 21300000, guid: 7b61f1548fa16d149afc61928891632f, type: 3}
+  - Id: REDORB
+    Name: Red Orb
+    Sprite: {fileID: 21300000, guid: 7a0f91160646f944cbaec42791cfc443, type: 3}
+  - Id: BLUEORB
+    Name: Blue Orb
+    Sprite: {fileID: 21300000, guid: c0c1f21c240c59f43be6fbe244d315cf, type: 3}
+  - Id: POTION
+    Name: Potion
+    Sprite: {fileID: 21300000, guid: d1e0d309b3cf454428e41ce38e91826f, type: 3}
+  - Id: SUPERPOTION
+    Name: Super Potion
+    Sprite: {fileID: 21300000, guid: d24b37d0d49ccbe4abaf034d8611f1c5, type: 3}
+  - Id: HYPERPOTION
+    Name: Hyper Potion
+    Sprite: {fileID: 21300000, guid: 8fa8750a77038484e93097a30f682965, type: 3}
+  - Id: MAXPOTION
+    Name: Max Potion
+    Sprite: {fileID: 21300000, guid: 11be32511280365449905997b8a0d936, type: 3}
+  - Id: FULLRESTORE
+    Name: Full Restore
+    Sprite: {fileID: 21300000, guid: 284342975b2c9774ab220240dffe28ef, type: 3}
+  - Id: SACREDASH
+    Name: Sacred Ash
+    Sprite: {fileID: 21300000, guid: d68b9fb3f738a7a49bfa61a7a56ea978, type: 3}
+  - Id: AWAKENING
+    Name: Awakening
+    Sprite: {fileID: 21300000, guid: a216afdf5b1a8084abaaa30b612d8654, type: 3}
+  - Id: ANTIDOTE
+    Name: Antidote
+    Sprite: {fileID: 21300000, guid: 421742ef70e6a064b85180530af897cd, type: 3}
+  - Id: BURNHEAL
+    Name: Burn Heal
+    Sprite: {fileID: 21300000, guid: 5cbfadca8d2a3cd46a0457acfa671151, type: 3}
+  - Id: PARALYZEHEAL
+    Name: Paralyze Heal
+    Sprite: {fileID: 21300000, guid: 5590655e0590a9848bda3516e0e7daa0, type: 3}
+  - Id: ICEHEAL
+    Name: Ice Heal
+    Sprite: {fileID: 21300000, guid: a8c8d26442706464a888a7041493c856, type: 3}
+  - Id: FULLHEAL
+    Name: Full Heal
+    Sprite: {fileID: 21300000, guid: bd24ea16292c1574697f59e92b54eb2d, type: 3}
+  - Id: PEWTERCRUNCHIES
+    Name: Pewter Crunchies
+    Sprite: {fileID: 21300000, guid: e0a41b06f6ddb4e42907cf48348bc7bd, type: 3}
+  - Id: RAGECANDYBAR
+    Name: Rage Candy Bar
+    Sprite: {fileID: 21300000, guid: 3e942a3515168194194d393e4d74f67a, type: 3}
+  - Id: LAVACOOKIE
+    Name: Lava Cookie
+    Sprite: {fileID: 21300000, guid: 3a9006a9921f0b649841ab3c681320eb, type: 3}
+  - Id: OLDGATEAU
+    Name: Old Gateau
+    Sprite: {fileID: 21300000, guid: 7d0759725253a534884508baa34b5144, type: 3}
+  - Id: CASTELIACONE
+    Name: Casteliacone
+    Sprite: {fileID: 21300000, guid: 8b9ac59ba2d24574a92f70e468acfd2d, type: 3}
+  - Id: LUMIOSEGALETTE
+    Name: Lumiose Galette
+    Sprite: {fileID: 21300000, guid: 6f171f541bc83334383450f4c10d873c, type: 3}
+  - Id: SHALOURSABLE
+    Name: Shalour Sable
+    Sprite: {fileID: 21300000, guid: 5eb9e5e398084bf42987d6398a857a8c, type: 3}
+  - Id: BIGMALASADA
+    Name: Big Malasada
+    Sprite: {fileID: 21300000, guid: 841fa409363bd914fa09fda0a8f306de, type: 3}
+  - Id: REVIVE
+    Name: Revive
+    Sprite: {fileID: 21300000, guid: 710a7179baa675c40ba4cbde93a17970, type: 3}
+  - Id: MAXREVIVE
+    Name: Max Revive
+    Sprite: {fileID: 21300000, guid: 3b76572b69fa24c4094d7565fee93d1c, type: 3}
+  - Id: BERRYJUICE
+    Name: Berry Juice
+    Sprite: {fileID: 21300000, guid: 1dbcb8de2a88bab48b139cf31c626934, type: 3}
+  - Id: SWEETHEART
+    Name: Sweet Heart
+    Sprite: {fileID: 21300000, guid: 1bbbf65f7e1b24d4ca76b3c6dad850ee, type: 3}
+  - Id: FRESHWATER
+    Name: Fresh Water
+    Sprite: {fileID: 21300000, guid: f12cb4f6d52bb05429fc26efcb2c4418, type: 3}
+  - Id: SODAPOP
+    Name: Soda Pop
+    Sprite: {fileID: 21300000, guid: 7311099bd339f5943bc59d64eb8cdda4, type: 3}
+  - Id: LEMONADE
+    Name: Lemonade
+    Sprite: {fileID: 21300000, guid: 358b1693fae3ac14c83901d1d1f911fe, type: 3}
+  - Id: MOOMOOMILK
+    Name: Moomoo Milk
+    Sprite: {fileID: 21300000, guid: 8f6befcc37dd1be44807378bbc987417, type: 3}
+  - Id: ENERGYPOWDER
+    Name: Energy Powder
+    Sprite: {fileID: 21300000, guid: abb828a5eaca8434db770c09b434656f, type: 3}
+  - Id: ENERGYROOT
+    Name: Energy Root
+    Sprite: {fileID: 21300000, guid: e837a485fedf32d4791e87bb77f9cd2d, type: 3}
+  - Id: HEALPOWDER
+    Name: Heal Powder
+    Sprite: {fileID: 21300000, guid: 26cd97e0ddd38f24f94d0048708252b9, type: 3}
+  - Id: REVIVALHERB
+    Name: Revival Herb
+    Sprite: {fileID: 21300000, guid: e70ff9a1d9f24c64b9840d23adfe2696, type: 3}
+  - Id: MAXHONEY
+    Name: Max Honey
+    Sprite: {fileID: 21300000, guid: a676b4ad3163c0e45b1f6f68fa0b9a97, type: 3}
+  - Id: ETHER
+    Name: Ether
+    Sprite: {fileID: 21300000, guid: a1fa25afeea7a1c4298620d8952b7a23, type: 3}
+  - Id: MAXETHER
+    Name: Max Ether
+    Sprite: {fileID: 21300000, guid: 08bfd55db3f32554a970a1c05e0e3311, type: 3}
+  - Id: ELIXIR
+    Name: Elixir
+    Sprite: {fileID: 21300000, guid: f3a940bc324851549aa7e24f3803c0ef, type: 3}
+  - Id: MAXELIXIR
+    Name: Max Elixir
+    Sprite: {fileID: 21300000, guid: 7a43115f89e07ba4dae8b88b0e9c2493, type: 3}
+  - Id: PPUP
+    Name: PP Up
+    Sprite: {fileID: 21300000, guid: 253568365858c764f8563c4a3881cb76, type: 3}
+  - Id: PPMAX
+    Name: PP Max
+    Sprite: {fileID: 21300000, guid: 9c8c311aa34eb8d429f3afbc25e41d61, type: 3}
+  - Id: HPUP
+    Name: HP Up
+    Sprite: {fileID: 21300000, guid: 8cad5f9f6c4f88449b08f112c00a3e2f, type: 3}
+  - Id: PROTEIN
+    Name: Protein
+    Sprite: {fileID: 21300000, guid: e902d4e935dbf6243be470c1c8cef2e8, type: 3}
+  - Id: IRON
+    Name: Iron
+    Sprite: {fileID: 21300000, guid: e129d7db1c9643b4b8dc13053c8f83b0, type: 3}
+  - Id: CALCIUM
+    Name: Calcium
+    Sprite: {fileID: 21300000, guid: bfd65452bb2781d428b6170f489dad1f, type: 3}
+  - Id: ZINC
+    Name: Zinc
+    Sprite: {fileID: 21300000, guid: 2dc749548f0792442b0a507a06d518ed, type: 3}
+  - Id: CARBOS
+    Name: Carbos
+    Sprite: {fileID: 21300000, guid: 69a78f544dc370445aaf17d1f957d4c0, type: 3}
+  - Id: HEALTHFEATHER
+    Name: Health Feather
+    Sprite: {fileID: 0}
+  - Id: MUSCLEFEATHER
+    Name: Muscle Feather
+    Sprite: {fileID: 0}
+  - Id: RESISTFEATHER
+    Name: Resist Feather
+    Sprite: {fileID: 0}
+  - Id: GENIUSFEATHER
+    Name: Genius Feather
+    Sprite: {fileID: 0}
+  - Id: CLEVERFEATHER
+    Name: Clever Feather
+    Sprite: {fileID: 0}
+  - Id: SWIFTFEATHER
+    Name: Swift Feather
+    Sprite: {fileID: 0}
+  - Id: LONELYMINT
+    Name: Lonely Mint
+    Sprite: {fileID: 21300000, guid: 1351d1d5a377da74797cf2b320059b5d, type: 3}
+  - Id: ADAMANTMINT
+    Name: Adamant Mint
+    Sprite: {fileID: 21300000, guid: a0248d1b46c7d7244b894445aedde18f, type: 3}
+  - Id: NAUGHTYMINT
+    Name: Naughty Mint
+    Sprite: {fileID: 21300000, guid: 4a23267aa5cb2f944826f11b975f5a46, type: 3}
+  - Id: BRAVEMINT
+    Name: Brave Mint
+    Sprite: {fileID: 21300000, guid: f9a3ba9a034dd1146967cfce0bd4b986, type: 3}
+  - Id: BOLDMINT
+    Name: Bold Mint
+    Sprite: {fileID: 21300000, guid: a88b006472b2f73469eea04ffc4ca595, type: 3}
+  - Id: IMPISHMINT
+    Name: Impish Mint
+    Sprite: {fileID: 21300000, guid: 9182452e3dce9a0479f95e2a69b5c6c5, type: 3}
+  - Id: LAXMINT
+    Name: Lax Mint
+    Sprite: {fileID: 21300000, guid: 24d987f604e62d247a75694df7206b09, type: 3}
+  - Id: RELAXEDMINT
+    Name: Relaxed Mint
+    Sprite: {fileID: 21300000, guid: 5c2fae898572e3944862eb08815f0f07, type: 3}
+  - Id: MODESTMINT
+    Name: Modest Mint
+    Sprite: {fileID: 21300000, guid: cc0a52c56f34d00478543ce78e67f8a2, type: 3}
+  - Id: MILDMINT
+    Name: Mild Mint
+    Sprite: {fileID: 21300000, guid: a6968f48f5587eb4bbda01afc7aa9c5f, type: 3}
+  - Id: RASHMINT
+    Name: Rash Mint
+    Sprite: {fileID: 21300000, guid: a3d0892d98d874348bcea2879e241ef5, type: 3}
+  - Id: QUIETMINT
+    Name: Quiet Mint
+    Sprite: {fileID: 21300000, guid: 23a2794123058204682ec850653eed31, type: 3}
+  - Id: CALMMINT
+    Name: Calm Mint
+    Sprite: {fileID: 21300000, guid: 91bbc6b3d1ef2a8418fe4cfdaf3152b6, type: 3}
+  - Id: GENTLEMINT
+    Name: Gentle Mint
+    Sprite: {fileID: 21300000, guid: 5caeccebaf2fe37449b93eabef2c2e3b, type: 3}
+  - Id: CAREFULMINT
+    Name: Careful Mint
+    Sprite: {fileID: 21300000, guid: 6c35c69097796c24bafa7a467facd921, type: 3}
+  - Id: SASSYMINT
+    Name: Sassy Mint
+    Sprite: {fileID: 21300000, guid: d5334e4940393db4cbfd0ab2a876c508, type: 3}
+  - Id: TIMIDMINT
+    Name: Timid Mint
+    Sprite: {fileID: 21300000, guid: 4ca830f5877bf494d9772cb04c5a69ae, type: 3}
+  - Id: HASTYMINT
+    Name: Hasty Mint
+    Sprite: {fileID: 21300000, guid: 63ec74f588378eb4fabe58ae26c1920f, type: 3}
+  - Id: JOLLYMINT
+    Name: Jolly Mint
+    Sprite: {fileID: 21300000, guid: 10a49a47feeb1c547bc89c008d8b3bbd, type: 3}
+  - Id: NAIVEMINT
+    Name: Naive Mint
+    Sprite: {fileID: 21300000, guid: 2f5b089571a9d3b41b0b441b641bd929, type: 3}
+  - Id: SERIOUSMINT
+    Name: Serious Mint
+    Sprite: {fileID: 21300000, guid: cfce8e22b34f921489a9c0647144d99f, type: 3}
+  - Id: ABILITYCAPSULE
+    Name: Ability Capsule
+    Sprite: {fileID: 21300000, guid: 465f5215cb329cd42abbbb8ce7c47b61, type: 3}
+  - Id: ABILITYPATCH
+    Name: Ability Patch
+    Sprite: {fileID: 21300000, guid: 5d4806b083b32e940a4cb44acf43a922, type: 3}
+  - Id: EXPCANDYXS
+    Name: Exp. Candy XS
+    Sprite: {fileID: 21300000, guid: 649ac557478a08841b6d9ae56f8c3f9f, type: 3}
+  - Id: EXPCANDYS
+    Name: Exp. Candy S
+    Sprite: {fileID: 21300000, guid: 8e38f5061d48cb347aacc09600f46c82, type: 3}
+  - Id: EXPCANDYM
+    Name: Exp. Candy M
+    Sprite: {fileID: 21300000, guid: 111bd8e863e9f6846861733ef086445f, type: 3}
+  - Id: EXPCANDYL
+    Name: Exp. Candy L
+    Sprite: {fileID: 21300000, guid: 5f889d440e37aad469bcbafccc8952dd, type: 3}
+  - Id: EXPCANDYXL
+    Name: Exp. Candy XL
+    Sprite: {fileID: 21300000, guid: e96b359e1c54b544088859afb108f7bb, type: 3}
+  - Id: RARECANDY
+    Name: Rare Candy
+    Sprite: {fileID: 21300000, guid: 8c32000be4cb37e47a08291654f4467c, type: 3}
+  - Id: MASTERBALL
+    Name: Master Ball
+    Sprite: {fileID: 21300000, guid: 386bc077488a1b741ba576bb2a4a2bcb, type: 3}
+  - Id: ULTRABALL
+    Name: Ultra Ball
+    Sprite: {fileID: 21300000, guid: 5ada0f395ac08454aa71972a714f31dd, type: 3}
+  - Id: GREATBALL
+    Name: Great Ball
+    Sprite: {fileID: 21300000, guid: ca33c63cee479ae4ab4281f886920156, type: 3}
+  - Id: POKEBALL
+    Name: "Pok\xE9 Ball"
+    Sprite: {fileID: 21300000, guid: b2f6c68d63ca25e45a427c3b0e02a309, type: 3}
+  - Id: SAFARIBALL
+    Name: Safari Ball
+    Sprite: {fileID: 21300000, guid: f48429818c3e7e94687b9d1ba7fce367, type: 3}
+  - Id: SPORTBALL
+    Name: Sport Ball
+    Sprite: {fileID: 21300000, guid: af26365212a687b4dae30b5e226bda4b, type: 3}
+  - Id: NETBALL
+    Name: Net Ball
+    Sprite: {fileID: 21300000, guid: ab2fa02d585bd7849a5d2d82c7a9348b, type: 3}
+  - Id: DIVEBALL
+    Name: Dive Ball
+    Sprite: {fileID: 21300000, guid: ba58dbe17341cbc41aca16be8984bf4f, type: 3}
+  - Id: NESTBALL
+    Name: Nest Ball
+    Sprite: {fileID: 21300000, guid: e3ce83567c0adc848bf3643a92d3ba94, type: 3}
+  - Id: REPEATBALL
+    Name: Repeat Ball
+    Sprite: {fileID: 21300000, guid: 5c1c36ab78782634e9fff5c7330d8662, type: 3}
+  - Id: TIMERBALL
+    Name: Timer Ball
+    Sprite: {fileID: 21300000, guid: 9f1f648d4a31e304ca140be855ebc888, type: 3}
+  - Id: LUXURYBALL
+    Name: Luxury Ball
+    Sprite: {fileID: 21300000, guid: e94cd7effc44ce64c8c7c005dac0b03a, type: 3}
+  - Id: PREMIERBALL
+    Name: Premier Ball
+    Sprite: {fileID: 21300000, guid: f22a291839cc7db4185c87a59c592a86, type: 3}
+  - Id: DUSKBALL
+    Name: Dusk Ball
+    Sprite: {fileID: 21300000, guid: c671132adea5b1543bf923c346564db7, type: 3}
+  - Id: HEALBALL
+    Name: Heal Ball
+    Sprite: {fileID: 21300000, guid: eac4528a6bd9d5a43b10879b006dd85f, type: 3}
+  - Id: QUICKBALL
+    Name: Quick Ball
+    Sprite: {fileID: 21300000, guid: d50a594ed835d3a4c9981ef4950f55e3, type: 3}
+  - Id: CHERISHBALL
+    Name: Cherish Ball
+    Sprite: {fileID: 21300000, guid: f511e981ad5578a4ca2316b89138b119, type: 3}
+  - Id: FASTBALL
+    Name: Fast Ball
+    Sprite: {fileID: 21300000, guid: 1f96a5c776bc0bf4996524c20821883b, type: 3}
+  - Id: LEVELBALL
+    Name: Level Ball
+    Sprite: {fileID: 21300000, guid: 6100c28a432524645b13b46e777f49f0, type: 3}
+  - Id: LUREBALL
+    Name: Lure Ball
+    Sprite: {fileID: 21300000, guid: 2c119ee131972b544be897c141aa4004, type: 3}
+  - Id: HEAVYBALL
+    Name: Heavy Ball
+    Sprite: {fileID: 21300000, guid: 84907836c8e498148a178f72d4822204, type: 3}
+  - Id: LOVEBALL
+    Name: Love Ball
+    Sprite: {fileID: 21300000, guid: 2b6cad836613a6741afbe089deca19d7, type: 3}
+  - Id: FRIENDBALL
+    Name: Friend Ball
+    Sprite: {fileID: 21300000, guid: e750a5e4123d0b449b8c7bf8d79dbda5, type: 3}
+  - Id: MOONBALL
+    Name: Moon Ball
+    Sprite: {fileID: 21300000, guid: 144a036cd853a234da6eb2bdd7dbe8b6, type: 3}
+  - Id: DREAMBALL
+    Name: Dream Ball
+    Sprite: {fileID: 21300000, guid: 9c92d9f2ba81667459abc77f7e298dd4, type: 3}
+  - Id: BEASTBALL
+    Name: Beast Ball
+    Sprite: {fileID: 21300000, guid: 380d596b3ef91184f8579cfc4c9ada03, type: 3}
+  - Id: TM01
+    Name: TM01
+    Sprite: {fileID: 0}
+  - Id: TM02
+    Name: TM02
+    Sprite: {fileID: 0}
+  - Id: TM03
+    Name: TM03
+    Sprite: {fileID: 0}
+  - Id: TM04
+    Name: TM04
+    Sprite: {fileID: 0}
+  - Id: TM05
+    Name: TM05
+    Sprite: {fileID: 0}
+  - Id: TM06
+    Name: TM06
+    Sprite: {fileID: 0}
+  - Id: TM07
+    Name: TM07
+    Sprite: {fileID: 0}
+  - Id: TM08
+    Name: TM08
+    Sprite: {fileID: 0}
+  - Id: TM09
+    Name: TM09
+    Sprite: {fileID: 0}
+  - Id: TM10
+    Name: TM10
+    Sprite: {fileID: 0}
+  - Id: TM11
+    Name: TM11
+    Sprite: {fileID: 0}
+  - Id: TM12
+    Name: TM12
+    Sprite: {fileID: 0}
+  - Id: TM13
+    Name: TM13
+    Sprite: {fileID: 0}
+  - Id: TM14
+    Name: TM14
+    Sprite: {fileID: 0}
+  - Id: TM15
+    Name: TM15
+    Sprite: {fileID: 0}
+  - Id: TM16
+    Name: TM16
+    Sprite: {fileID: 0}
+  - Id: TM17
+    Name: TM17
+    Sprite: {fileID: 0}
+  - Id: TM18
+    Name: TM18
+    Sprite: {fileID: 0}
+  - Id: TM19
+    Name: TM19
+    Sprite: {fileID: 0}
+  - Id: TM20
+    Name: TM20
+    Sprite: {fileID: 0}
+  - Id: TM21
+    Name: TM21
+    Sprite: {fileID: 0}
+  - Id: TM22
+    Name: TM22
+    Sprite: {fileID: 0}
+  - Id: TM23
+    Name: TM23
+    Sprite: {fileID: 0}
+  - Id: TM24
+    Name: TM24
+    Sprite: {fileID: 0}
+  - Id: TM25
+    Name: TM25
+    Sprite: {fileID: 0}
+  - Id: TM26
+    Name: TM26
+    Sprite: {fileID: 0}
+  - Id: TM27
+    Name: TM27
+    Sprite: {fileID: 0}
+  - Id: TM28
+    Name: TM28
+    Sprite: {fileID: 0}
+  - Id: TM29
+    Name: TM29
+    Sprite: {fileID: 0}
+  - Id: TM30
+    Name: TM30
+    Sprite: {fileID: 0}
+  - Id: TM31
+    Name: TM31
+    Sprite: {fileID: 0}
+  - Id: TM32
+    Name: TM32
+    Sprite: {fileID: 0}
+  - Id: TM33
+    Name: TM33
+    Sprite: {fileID: 0}
+  - Id: TM34
+    Name: TM34
+    Sprite: {fileID: 0}
+  - Id: TM35
+    Name: TM35
+    Sprite: {fileID: 0}
+  - Id: TM36
+    Name: TM36
+    Sprite: {fileID: 0}
+  - Id: TM37
+    Name: TM37
+    Sprite: {fileID: 0}
+  - Id: TM38
+    Name: TM38
+    Sprite: {fileID: 0}
+  - Id: TM39
+    Name: TM39
+    Sprite: {fileID: 0}
+  - Id: TM40
+    Name: TM40
+    Sprite: {fileID: 0}
+  - Id: TM41
+    Name: TM41
+    Sprite: {fileID: 0}
+  - Id: TM42
+    Name: TM42
+    Sprite: {fileID: 0}
+  - Id: TM43
+    Name: TM43
+    Sprite: {fileID: 0}
+  - Id: TM44
+    Name: TM44
+    Sprite: {fileID: 0}
+  - Id: TM45
+    Name: TM45
+    Sprite: {fileID: 0}
+  - Id: TM46
+    Name: TM46
+    Sprite: {fileID: 0}
+  - Id: TM47
+    Name: TM47
+    Sprite: {fileID: 0}
+  - Id: TM48
+    Name: TM48
+    Sprite: {fileID: 0}
+  - Id: TM49
+    Name: TM49
+    Sprite: {fileID: 0}
+  - Id: TM50
+    Name: TM50
+    Sprite: {fileID: 0}
+  - Id: TM51
+    Name: TM51
+    Sprite: {fileID: 0}
+  - Id: TM52
+    Name: TM52
+    Sprite: {fileID: 0}
+  - Id: TM53
+    Name: TM53
+    Sprite: {fileID: 0}
+  - Id: TM54
+    Name: TM54
+    Sprite: {fileID: 0}
+  - Id: TM55
+    Name: TM55
+    Sprite: {fileID: 0}
+  - Id: TM56
+    Name: TM56
+    Sprite: {fileID: 0}
+  - Id: TM57
+    Name: TM57
+    Sprite: {fileID: 0}
+  - Id: TM58
+    Name: TM58
+    Sprite: {fileID: 0}
+  - Id: TM59
+    Name: TM59
+    Sprite: {fileID: 0}
+  - Id: TM60
+    Name: TM60
+    Sprite: {fileID: 0}
+  - Id: TM61
+    Name: TM61
+    Sprite: {fileID: 0}
+  - Id: TM62
+    Name: TM62
+    Sprite: {fileID: 0}
+  - Id: TM63
+    Name: TM63
+    Sprite: {fileID: 0}
+  - Id: TM64
+    Name: TM64
+    Sprite: {fileID: 0}
+  - Id: TM65
+    Name: TM65
+    Sprite: {fileID: 0}
+  - Id: TM66
+    Name: TM66
+    Sprite: {fileID: 0}
+  - Id: TM67
+    Name: TM67
+    Sprite: {fileID: 0}
+  - Id: TM68
+    Name: TM68
+    Sprite: {fileID: 0}
+  - Id: TM69
+    Name: TM69
+    Sprite: {fileID: 0}
+  - Id: TM70
+    Name: TM70
+    Sprite: {fileID: 0}
+  - Id: TM71
+    Name: TM71
+    Sprite: {fileID: 0}
+  - Id: TM72
+    Name: TM72
+    Sprite: {fileID: 0}
+  - Id: TM73
+    Name: TM73
+    Sprite: {fileID: 0}
+  - Id: TM74
+    Name: TM74
+    Sprite: {fileID: 0}
+  - Id: TM75
+    Name: TM75
+    Sprite: {fileID: 0}
+  - Id: TM76
+    Name: TM76
+    Sprite: {fileID: 0}
+  - Id: TM77
+    Name: TM77
+    Sprite: {fileID: 0}
+  - Id: TM78
+    Name: TM78
+    Sprite: {fileID: 0}
+  - Id: TM79
+    Name: TM79
+    Sprite: {fileID: 0}
+  - Id: TM80
+    Name: TM80
+    Sprite: {fileID: 0}
+  - Id: TM81
+    Name: TM81
+    Sprite: {fileID: 0}
+  - Id: TM82
+    Name: TM82
+    Sprite: {fileID: 0}
+  - Id: TM83
+    Name: TM83
+    Sprite: {fileID: 0}
+  - Id: TM84
+    Name: TM84
+    Sprite: {fileID: 0}
+  - Id: TM85
+    Name: TM85
+    Sprite: {fileID: 0}
+  - Id: TM86
+    Name: TM86
+    Sprite: {fileID: 0}
+  - Id: TM87
+    Name: TM87
+    Sprite: {fileID: 0}
+  - Id: TM88
+    Name: TM88
+    Sprite: {fileID: 0}
+  - Id: TM89
+    Name: TM89
+    Sprite: {fileID: 0}
+  - Id: TM90
+    Name: TM90
+    Sprite: {fileID: 0}
+  - Id: TM91
+    Name: TM91
+    Sprite: {fileID: 0}
+  - Id: TM92
+    Name: TM92
+    Sprite: {fileID: 0}
+  - Id: TM93
+    Name: TM93
+    Sprite: {fileID: 0}
+  - Id: TM94
+    Name: TM94
+    Sprite: {fileID: 0}
+  - Id: TM95
+    Name: TM95
+    Sprite: {fileID: 0}
+  - Id: TM96
+    Name: TM96
+    Sprite: {fileID: 0}
+  - Id: TM97
+    Name: TM97
+    Sprite: {fileID: 0}
+  - Id: TM98
+    Name: TM98
+    Sprite: {fileID: 0}
+  - Id: TM99
+    Name: TM99
+    Sprite: {fileID: 0}
+  - Id: TM100
+    Name: TM100
+    Sprite: {fileID: 0}
+  - Id: HM01
+    Name: HM01
+    Sprite: {fileID: 0}
+  - Id: HM02
+    Name: HM02
+    Sprite: {fileID: 0}
+  - Id: HM03
+    Name: HM03
+    Sprite: {fileID: 0}
+  - Id: HM04
+    Name: HM04
+    Sprite: {fileID: 0}
+  - Id: HM05
+    Name: HM05
+    Sprite: {fileID: 0}
+  - Id: HM06
+    Name: HM06
+    Sprite: {fileID: 0}
+  - Id: CHERIBERRY
+    Name: Cheri Berry
+    Sprite: {fileID: 21300000, guid: f6b30913255685c4fbf25082f1854ffb, type: 3}
+  - Id: CHESTOBERRY
+    Name: Chesto Berry
+    Sprite: {fileID: 21300000, guid: 48d62d7a3ead06c4085751d312458aea, type: 3}
+  - Id: PECHABERRY
+    Name: Pecha Berry
+    Sprite: {fileID: 21300000, guid: bd4b64942cbab7d428f9c752e221eb0b, type: 3}
+  - Id: RAWSTBERRY
+    Name: Rawst Berry
+    Sprite: {fileID: 21300000, guid: 10a1c859d1ccd97438649c76d300563f, type: 3}
+  - Id: ASPEARBERRY
+    Name: Aspear Berry
+    Sprite: {fileID: 21300000, guid: 57f77512ab37b904eaaa35ad5601b0a3, type: 3}
+  - Id: LEPPABERRY
+    Name: Leppa Berry
+    Sprite: {fileID: 21300000, guid: ec3ef5259fb68194d849019dd25a2a4a, type: 3}
+  - Id: ORANBERRY
+    Name: Oran Berry
+    Sprite: {fileID: 21300000, guid: 82e4342523a18464d907f52547a99b69, type: 3}
+  - Id: PERSIMBERRY
+    Name: Persim Berry
+    Sprite: {fileID: 21300000, guid: f489747eb0a22f5428795421f918c566, type: 3}
+  - Id: LUMBERRY
+    Name: Lum Berry
+    Sprite: {fileID: 21300000, guid: cdb9d3a4814c31449b1286ca16b01014, type: 3}
+  - Id: SITRUSBERRY
+    Name: Sitrus Berry
+    Sprite: {fileID: 21300000, guid: 59e0bca87b7d0c442b2db3ddc421e80d, type: 3}
+  - Id: FIGYBERRY
+    Name: Figy Berry
+    Sprite: {fileID: 21300000, guid: 65aa5f7546a1ae848815c3ad467096f5, type: 3}
+  - Id: WIKIBERRY
+    Name: Wiki Berry
+    Sprite: {fileID: 21300000, guid: 9a5247ddd33e9114f83e37e5352a0575, type: 3}
+  - Id: MAGOBERRY
+    Name: Mago Berry
+    Sprite: {fileID: 21300000, guid: 3bd4122354c593047bd2b50f86c7264e, type: 3}
+  - Id: AGUAVBERRY
+    Name: Aguav Berry
+    Sprite: {fileID: 21300000, guid: c252b6cd3745dc44a9a8a2d5d03eacf9, type: 3}
+  - Id: IAPAPABERRY
+    Name: Iapapa Berry
+    Sprite: {fileID: 21300000, guid: e69638e1fe48a13478ba923c42149270, type: 3}
+  - Id: RAZZBERRY
+    Name: Razz Berry
+    Sprite: {fileID: 21300000, guid: 766a0cfec9a7ed14d8740f35ebfef7e7, type: 3}
+  - Id: BLUKBERRY
+    Name: Bluk Berry
+    Sprite: {fileID: 21300000, guid: 71b347c30593085469d5528eabe9a7d7, type: 3}
+  - Id: NANABBERRY
+    Name: Nanab Berry
+    Sprite: {fileID: 21300000, guid: 371fb0689c0cd704881b403c2fe17c4d, type: 3}
+  - Id: WEPEARBERRY
+    Name: Wepear Berry
+    Sprite: {fileID: 21300000, guid: 165b0f42b3b173c459492ebc929d8c10, type: 3}
+  - Id: PINAPBERRY
+    Name: Pinap Berry
+    Sprite: {fileID: 21300000, guid: 0850597e3dec24244888baa4e9da46fa, type: 3}
+  - Id: POMEGBERRY
+    Name: Pomeg Berry
+    Sprite: {fileID: 21300000, guid: 6bb277a8bfb467d46ab055e93a4a3f15, type: 3}
+  - Id: KELPSYBERRY
+    Name: Kelpsy Berry
+    Sprite: {fileID: 21300000, guid: b73f48c8fa8950e4da29d8f5af8e2464, type: 3}
+  - Id: QUALOTBERRY
+    Name: Qualot Berry
+    Sprite: {fileID: 21300000, guid: a2409e83182308145b38d89a1e33fba7, type: 3}
+  - Id: HONDEWBERRY
+    Name: Hondew Berry
+    Sprite: {fileID: 21300000, guid: 36cc2457303d8514a92182e8845308f2, type: 3}
+  - Id: GREPABERRY
+    Name: Grepa Berry
+    Sprite: {fileID: 21300000, guid: 6cab155756a912949825f9dd50b0a932, type: 3}
+  - Id: TAMATOBERRY
+    Name: Tamato Berry
+    Sprite: {fileID: 21300000, guid: 44523f1ee6275aa4fada95b40763e4ac, type: 3}
+  - Id: CORNNBERRY
+    Name: Cornn Berry
+    Sprite: {fileID: 21300000, guid: 7a2473090ba03794db34272a6c3e7e5d, type: 3}
+  - Id: MAGOSTBERRY
+    Name: Magost Berry
+    Sprite: {fileID: 21300000, guid: ea18469bac0d93644ab88e51e0b36ddf, type: 3}
+  - Id: RABUTABERRY
+    Name: Rabuta Berry
+    Sprite: {fileID: 21300000, guid: ec051f684751a374f83f48c60a732297, type: 3}
+  - Id: NOMELBERRY
+    Name: Nomel Berry
+    Sprite: {fileID: 21300000, guid: 7b546fd3dfd3946428c1fce2aa1893d6, type: 3}
+  - Id: SPELONBERRY
+    Name: Spelon Berry
+    Sprite: {fileID: 21300000, guid: 1b036b0ab79e99542939369b38899f31, type: 3}
+  - Id: PAMTREBERRY
+    Name: Pamtre Berry
+    Sprite: {fileID: 21300000, guid: 8f8fef0ce3477a845b23493580ca9948, type: 3}
+  - Id: WATMELBERRY
+    Name: Watmel Berry
+    Sprite: {fileID: 21300000, guid: 65744fe865e420145a86097b9e32df63, type: 3}
+  - Id: DURINBERRY
+    Name: Durin Berry
+    Sprite: {fileID: 21300000, guid: 26aec88044d87f94c94cb4fd7e29f64c, type: 3}
+  - Id: BELUEBERRY
+    Name: Belue Berry
+    Sprite: {fileID: 21300000, guid: 01c3c9090255b2c4c8733e8008a238b9, type: 3}
+  - Id: OCCABERRY
+    Name: Occa Berry
+    Sprite: {fileID: 21300000, guid: 4fa7ae7469d49a640921d0c2e505eb9b, type: 3}
+  - Id: PASSHOBERRY
+    Name: Passho Berry
+    Sprite: {fileID: 21300000, guid: 2dcacc17ddef4f34f9a62b58ca047ce3, type: 3}
+  - Id: WACANBERRY
+    Name: Wacan Berry
+    Sprite: {fileID: 21300000, guid: 75b38fbd2b117c04e9afd94a55b254e3, type: 3}
+  - Id: RINDOBERRY
+    Name: Rindo Berry
+    Sprite: {fileID: 21300000, guid: 01b25e7a339421b48824421383dc4e88, type: 3}
+  - Id: YACHEBERRY
+    Name: Yache Berry
+    Sprite: {fileID: 21300000, guid: 51db91a8b5bfceb4e83856bb5fdcec0f, type: 3}
+  - Id: CHOPLEBERRY
+    Name: Chople Berry
+    Sprite: {fileID: 21300000, guid: 349ed1ffcc2c49d4390da12330b17cc8, type: 3}
+  - Id: KEBIABERRY
+    Name: Kebia Berry
+    Sprite: {fileID: 21300000, guid: bfeb1eeefbfcef142b9ea972745710a5, type: 3}
+  - Id: SHUCABERRY
+    Name: Shuca Berry
+    Sprite: {fileID: 21300000, guid: 6946f1061bee028459bcd61aff249129, type: 3}
+  - Id: COBABERRY
+    Name: Coba Berry
+    Sprite: {fileID: 21300000, guid: 18675202e2c1d0844b7ae1075650e74e, type: 3}
+  - Id: PAYAPABERRY
+    Name: Payapa Berry
+    Sprite: {fileID: 21300000, guid: 761a716bc5467c844b83392d4636133a, type: 3}
+  - Id: TANGABERRY
+    Name: Tanga Berry
+    Sprite: {fileID: 21300000, guid: 418b4906b638129448cce2c60fe7f7d6, type: 3}
+  - Id: CHARTIBERRY
+    Name: Charti Berry
+    Sprite: {fileID: 21300000, guid: 26e6d198babd2e3498a2fa97925afed4, type: 3}
+  - Id: KASIBBERRY
+    Name: Kasib Berry
+    Sprite: {fileID: 21300000, guid: 467a49b951ba31c4e998482386fc3926, type: 3}
+  - Id: HABANBERRY
+    Name: Haban Berry
+    Sprite: {fileID: 21300000, guid: bce8f76904dca4b47aad0cf0c66dbacb, type: 3}
+  - Id: COLBURBERRY
+    Name: Colbur Berry
+    Sprite: {fileID: 21300000, guid: 92bae8a41409a1c4189006f48b53fadb, type: 3}
+  - Id: BABIRIBERRY
+    Name: Babiri Berry
+    Sprite: {fileID: 21300000, guid: 324209fb14e6a3d41bbc0696d11b1760, type: 3}
+  - Id: ROSELIBERRY
+    Name: Roseli Berry
+    Sprite: {fileID: 21300000, guid: 7f54e90c5b19b5147a601491d08e396a, type: 3}
+  - Id: CHILANBERRY
+    Name: Chilan Berry
+    Sprite: {fileID: 21300000, guid: 6d5e7c35708a3a7478cb4c5719aa1f14, type: 3}
+  - Id: LIECHIBERRY
+    Name: Liechi Berry
+    Sprite: {fileID: 21300000, guid: f34a1e5461f52444bbd7a9003f481dfe, type: 3}
+  - Id: GANLONBERRY
+    Name: Ganlon Berry
+    Sprite: {fileID: 21300000, guid: 1b27fb497dade264eb70cd0fee1a0154, type: 3}
+  - Id: SALACBERRY
+    Name: Salac Berry
+    Sprite: {fileID: 21300000, guid: fbdd1256414737744b708cde25427708, type: 3}
+  - Id: PETAYABERRY
+    Name: Petaya Berry
+    Sprite: {fileID: 21300000, guid: 9d1ac5cbdf63aa749b48b5a95d601fc9, type: 3}
+  - Id: APICOTBERRY
+    Name: Apicot Berry
+    Sprite: {fileID: 21300000, guid: d88474df559d1364ba0a8244a2ed214a, type: 3}
+  - Id: LANSATBERRY
+    Name: Lansat Berry
+    Sprite: {fileID: 21300000, guid: d67b07714b1808c43b4637f5ecc17b94, type: 3}
+  - Id: STARFBERRY
+    Name: Starf Berry
+    Sprite: {fileID: 21300000, guid: 08937350fae735b47965b00cb44ec701, type: 3}
+  - Id: ENIGMABERRY
+    Name: Enigma Berry
+    Sprite: {fileID: 21300000, guid: bb8f9436308e38e4795ccc294b3ee083, type: 3}
+  - Id: MICLEBERRY
+    Name: Micle Berry
+    Sprite: {fileID: 21300000, guid: a99ab395a9cf7d04fbbc3f213e665075, type: 3}
+  - Id: CUSTAPBERRY
+    Name: Custap Berry
+    Sprite: {fileID: 21300000, guid: 37a8077212010f14b89147490cb5b9fe, type: 3}
+  - Id: JABOCABERRY
+    Name: Jaboca Berry
+    Sprite: {fileID: 21300000, guid: ba952de6a37fbcd4496fc58788b4e969, type: 3}
+  - Id: ROWAPBERRY
+    Name: Rowap Berry
+    Sprite: {fileID: 21300000, guid: d795423e08f34e44588837b25ab2a66d, type: 3}
+  - Id: KEEBERRY
+    Name: Kee Berry
+    Sprite: {fileID: 21300000, guid: 295d1bffd4381d749b3c80b627dd7184, type: 3}
+  - Id: MARANGABERRY
+    Name: Maranga Berry
+    Sprite: {fileID: 21300000, guid: 16bce8b12b318a542b05993184ecf55f, type: 3}
+  - Id: GRASSMAIL
+    Name: Grass Mail
+    Sprite: {fileID: 21300000, guid: b6d2da78a3ed1e5459f5218fb0d1d1cd, type: 3}
+  - Id: FLAMEMAIL
+    Name: Flame Mail
+    Sprite: {fileID: 21300000, guid: e632aea2e85dc364490657b041ea7bdb, type: 3}
+  - Id: BUBBLEMAIL
+    Name: Bubble Mail
+    Sprite: {fileID: 21300000, guid: 66b94f9e2210c9941a1a3e919a59fecf, type: 3}
+  - Id: BLOOMMAIL
+    Name: Bloom Mail
+    Sprite: {fileID: 21300000, guid: 119a01735df1e5f45bbeccdfe2459e12, type: 3}
+  - Id: TUNNELMAIL
+    Name: Tunnel Mail
+    Sprite: {fileID: 21300000, guid: 7844cdc3d27346447bd89a8357a49561, type: 3}
+  - Id: STEELMAIL
+    Name: Steel Mail
+    Sprite: {fileID: 21300000, guid: f1a45115ba0b2cf4dbeea55c7351a94d, type: 3}
+  - Id: HEARTMAIL
+    Name: Heart Mail
+    Sprite: {fileID: 21300000, guid: 598e9803060dbf74a9a3a0ccf1738fdf, type: 3}
+  - Id: SNOWMAIL
+    Name: Snow Mail
+    Sprite: {fileID: 21300000, guid: f03067101d38af94d843b44e6888aeab, type: 3}
+  - Id: SPACEMAIL
+    Name: Space Mail
+    Sprite: {fileID: 21300000, guid: beb4d09310db32548998bbe8fa1ed31d, type: 3}
+  - Id: AIRMAIL
+    Name: Air Mail
+    Sprite: {fileID: 21300000, guid: 643f1e832f9abc241afea967c1ee8152, type: 3}
+  - Id: MOSAICMAIL
+    Name: Mosaic Mail
+    Sprite: {fileID: 21300000, guid: 712d4acf9609ab34499eaffe5e4ef114, type: 3}
+  - Id: BRICKMAIL
+    Name: Brick Mail
+    Sprite: {fileID: 21300000, guid: 5770c001ac215d640ab4912cb4c1a690, type: 3}
+  - Id: XATTACK
+    Name: X Attack
+    Sprite: {fileID: 21300000, guid: 57fdcd7927cf60e44aca8fcbc8c66f6c, type: 3}
+  - Id: XATTACK2
+    Name: X Attack 2
+    Sprite: {fileID: 21300000, guid: a5e532eb78191d240be31df9dd0f8e93, type: 3}
+  - Id: XATTACK3
+    Name: X Attack 3
+    Sprite: {fileID: 21300000, guid: 5e2995f75ba31a24b877c59b3150d2d9, type: 3}
+  - Id: XATTACK6
+    Name: X Attack 6
+    Sprite: {fileID: 21300000, guid: 770cedef85a957d4793f4b52e42c764f, type: 3}
+  - Id: XDEFENSE
+    Name: X Defense
+    Sprite: {fileID: 21300000, guid: 49d3c6dc98f303a4fac9ec9bebffc42b, type: 3}
+  - Id: XDEFENSE2
+    Name: X Defense 2
+    Sprite: {fileID: 21300000, guid: 6a900c828a111244aa9b6cf0c11626ea, type: 3}
+  - Id: XDEFENSE3
+    Name: X Defense 3
+    Sprite: {fileID: 21300000, guid: 6ff73e6acd5bf074189d80c7f1f1fd87, type: 3}
+  - Id: XDEFENSE6
+    Name: X Defense 6
+    Sprite: {fileID: 21300000, guid: 810ee6a28080304478a63096c33de31e, type: 3}
+  - Id: XSPATK
+    Name: X Sp. Atk
+    Sprite: {fileID: 21300000, guid: 75c0c7835a21d91459d0d19c8cf3730a, type: 3}
+  - Id: XSPATK2
+    Name: X Sp. Atk 2
+    Sprite: {fileID: 21300000, guid: e52828b830ffc6b46a51a65fc38f03b6, type: 3}
+  - Id: XSPATK3
+    Name: X Sp. Atk 3
+    Sprite: {fileID: 21300000, guid: 1c84434cd65aa3144b53b0f647816f45, type: 3}
+  - Id: XSPATK6
+    Name: X Sp. Atk 6
+    Sprite: {fileID: 21300000, guid: 0f5d6fbe5b02d1d4ba7abebf80adb343, type: 3}
+  - Id: XSPDEF
+    Name: X Sp. Def
+    Sprite: {fileID: 21300000, guid: 76a9d38c31b52814fb8410637f1ce64c, type: 3}
+  - Id: XSPDEF2
+    Name: X Sp. Def 2
+    Sprite: {fileID: 21300000, guid: 57648eddb492d3645980c54c1133dfcb, type: 3}
+  - Id: XSPDEF3
+    Name: X Sp. Def 3
+    Sprite: {fileID: 21300000, guid: 2348f60aa9736724d83e9f75b1c02b0b, type: 3}
+  - Id: XSPDEF6
+    Name: X Sp. Def 6
+    Sprite: {fileID: 21300000, guid: b6c961c7143539641ab7ce7705150a6d, type: 3}
+  - Id: XSPEED
+    Name: X Speed
+    Sprite: {fileID: 21300000, guid: d286c4c3c1e92c74bb22881de7143181, type: 3}
+  - Id: XSPEED2
+    Name: X Speed 2
+    Sprite: {fileID: 21300000, guid: f966d6ad8ed013346bc73ddfcebf628b, type: 3}
+  - Id: XSPEED3
+    Name: X Speed 3
+    Sprite: {fileID: 21300000, guid: 5b4e9cd66ea1971468d48ac8504c5f24, type: 3}
+  - Id: XSPEED6
+    Name: X Speed 6
+    Sprite: {fileID: 21300000, guid: 58628eb7ba533bd4886bbf70abeeaf8d, type: 3}
+  - Id: XACCURACY
+    Name: X Accuracy
+    Sprite: {fileID: 21300000, guid: 9edfcd0a229aa3d4faaccc6dd7ef0aa5, type: 3}
+  - Id: XACCURACY2
+    Name: X Accuracy 2
+    Sprite: {fileID: 21300000, guid: b1109b88d715e6c40af306cbbb1b4c48, type: 3}
+  - Id: XACCURACY3
+    Name: X Accuracy 3
+    Sprite: {fileID: 21300000, guid: d76ff1f872b21b54cb9ac6689cc2a43a, type: 3}
+  - Id: XACCURACY6
+    Name: X Accuracy 6
+    Sprite: {fileID: 21300000, guid: dd79e04f6ef7db549bf254858323f32f, type: 3}
+  - Id: MAXMUSHROOMS
+    Name: Max Mushrooms
+    Sprite: {fileID: 21300000, guid: ba6a5ca1f990aeb4bab2504be1bcf22d, type: 3}
+  - Id: DIREHIT
+    Name: Dire Hit
+    Sprite: {fileID: 21300000, guid: 83d635a886c10ee4d866b8b9f21c7403, type: 3}
+  - Id: DIREHIT2
+    Name: Dire Hit 2
+    Sprite: {fileID: 21300000, guid: e3c58bf6d85b3e642a8ec5536d8b933f, type: 3}
+  - Id: DIREHIT3
+    Name: Dire Hit 3
+    Sprite: {fileID: 21300000, guid: 9dbaf8c55e59f41498caa20a404dd753, type: 3}
+  - Id: GUARDSPEC
+    Name: Guard Spec.
+    Sprite: {fileID: 21300000, guid: e468368c5fd4e1c4486d05d33228b082, type: 3}
+  - Id: RESETURGE
+    Name: Reset Urge
+    Sprite: {fileID: 21300000, guid: 437f1e75cb26b1240a17398ecaa23366, type: 3}
+  - Id: ABILITYURGE
+    Name: Ability Urge
+    Sprite: {fileID: 21300000, guid: 4ad6602452eb6224ebf3e0f48d11a889, type: 3}
+  - Id: ITEMURGE
+    Name: Item Urge
+    Sprite: {fileID: 21300000, guid: 7471b0011201bc54b9456af4d75d5129, type: 3}
+  - Id: ITEMDROP
+    Name: Item Drop
+    Sprite: {fileID: 21300000, guid: 8d06125d9bb8575468d73d2e5cb8e5c4, type: 3}
+  - Id: BLUEFLUTE
+    Name: Blue Flute
+    Sprite: {fileID: 21300000, guid: bcc5e1d1d6ec13c4989effdfd486615f, type: 3}
+  - Id: YELLOWFLUTE
+    Name: Yellow Flute
+    Sprite: {fileID: 21300000, guid: 02d1559e25fb2dd42b6a72aae37f0dc1, type: 3}
+  - Id: REDFLUTE
+    Name: Red Flute
+    Sprite: {fileID: 21300000, guid: 650aa2e672ae8ac40a8ec2cf2b3c1d8b, type: 3}
+  - Id: POKEDOLL
+    Name: "Pok\xE9 Doll"
+    Sprite: {fileID: 21300000, guid: 9e6edad1f804a6443bd5f4ddea51e351, type: 3}
+  - Id: FLUFFYTAIL
+    Name: Fluffy Tail
+    Sprite: {fileID: 21300000, guid: fdc13b9d5283f6f42be4a405829f33fc, type: 3}
+  - Id: POKETOY
+    Name: "Pok\xE9 Toy"
+    Sprite: {fileID: 21300000, guid: 5f4045265531c18468deba2a3d09a7bf, type: 3}
+  - Id: BICYCLE
+    Name: Bicycle
+    Sprite: {fileID: 21300000, guid: 2962eade682e1e948becd29c39834eac, type: 3}
+  - Id: OLDROD
+    Name: Old Rod
+    Sprite: {fileID: 21300000, guid: 83e4db8a55a60224484f2e35ba6498e2, type: 3}
+  - Id: GOODROD
+    Name: Good Rod
+    Sprite: {fileID: 21300000, guid: 6758b5d64a8312540a031673fd4d7352, type: 3}
+  - Id: SUPERROD
+    Name: Super Rod
+    Sprite: {fileID: 21300000, guid: eb055d9e5f5afbc48a4c0ab1ac5f3349, type: 3}
+  - Id: ITEMFINDER
+    Name: Itemfinder
+    Sprite: {fileID: 21300000, guid: ec79afc339733db439a8d8d19454a881, type: 3}
+  - Id: DOWSINGMACHINE
+    Name: Dowsing Machine
+    Sprite: {fileID: 21300000, guid: b4d65f2ddca96e3498b02613c47ceee5, type: 3}
+  - Id: POKERADAR
+    Name: "Pok\xE9 Radar"
+    Sprite: {fileID: 21300000, guid: ffdcf6b617998754d90cd9481f38310c, type: 3}
+  - Id: TOWNMAP
+    Name: Town Map
+    Sprite: {fileID: 21300000, guid: 519fe6f7b21ade04388a25dffedbd320, type: 3}
+  - Id: ESCAPEROPE
+    Name: Escape Rope
+    Sprite: {fileID: 21300000, guid: 838b0b6c3e2bf0142aee96274887dd38, type: 3}
+  - Id: COINCASE
+    Name: Coin Case
+    Sprite: {fileID: 21300000, guid: a478088e7ee5d2c4694d692c2c760e44, type: 3}
+  - Id: POKEFLUTE
+    Name: "Pok\xE9 Flute"
+    Sprite: {fileID: 21300000, guid: 38940ad69a8591d47adaba5ade29a35d, type: 3}
+  - Id: SOOTSACK
+    Name: Soot Sack
+    Sprite: {fileID: 21300000, guid: db124248eb8b0e54bb6227aa95f07e07, type: 3}
+  - Id: SILPHSCOPE
+    Name: Silph Scope
+    Sprite: {fileID: 21300000, guid: 54b6423b59726fa45b1f9da0674ec538, type: 3}
+  - Id: DEVONSCOPE
+    Name: Devon Scope
+    Sprite: {fileID: 21300000, guid: 593b1f4485c18b14692d8d8f1032bf9d, type: 3}
+  - Id: SQUIRTBOTTLE
+    Name: Squirt Bottle
+    Sprite: {fileID: 21300000, guid: 9d31dee25a1f53c498aa7ab96e296f4b, type: 3}
+  - Id: SPRAYDUCK
+    Name: Sprayduck
+    Sprite: {fileID: 21300000, guid: bbb1c4e7b9823b44d95b0f77c6a3effe, type: 3}
+  - Id: WAILMERPAIL
+    Name: Wailmer Pail
+    Sprite: {fileID: 21300000, guid: 5ae3f288cf2708e468643e675fa592cb, type: 3}
+  - Id: SPRINKLOTAD
+    Name: Sprinklotad
+    Sprite: {fileID: 21300000, guid: 37ab3f00fd5cd4149927d2890ff153d6, type: 3}
+  - Id: GRACIDEA
+    Name: Gracidea
+    Sprite: {fileID: 21300000, guid: b3c7bcb2ac428bc4c811530dd9777d02, type: 3}
+  - Id: REVEALGLASS
+    Name: Reveal Glass
+    Sprite: {fileID: 21300000, guid: c4ad4ed2743ca234e9573c266cd21a0a, type: 3}
+  - Id: PRISONBOTTLE
+    Name: Prison Bottle
+    Sprite: {fileID: 21300000, guid: d7f357bd05c63834b9b18b4bec9076b7, type: 3}
+  - Id: ROTOMCATALOG
+    Name: Rotom Catalog
+    Sprite: {fileID: 21300000, guid: 4a5497abea0de0a41aa4d87a804c32d8, type: 3}
+  - Id: ZYGARDECUBE
+    Name: Zygarde Cube
+    Sprite: {fileID: 21300000, guid: 16fec986331cfea49b3f53f2616b5a00, type: 3}
+  - Id: DNASPLICERS
+    Name: DNA Splicers
+    Sprite: {fileID: 21300000, guid: 92309d2c5ee9fc14abb58756dd64ea7a, type: 3}
+  - Id: DNASPLICERSUSED
+    Name: DNA Splicers
+    Sprite: {fileID: 0}
+  - Id: NSOLARIZER
+    Name: N-Solarizer
+    Sprite: {fileID: 21300000, guid: 9e1d2275d79036d49801958e3b56cdc5, type: 3}
+  - Id: NSOLARIZERUSED
+    Name: N-Solarizer
+    Sprite: {fileID: 0}
+  - Id: NLUNARIZER
+    Name: N-Lunarizer
+    Sprite: {fileID: 21300000, guid: def6e9939ed200e4bb6da77fbb89f66d, type: 3}
+  - Id: NLUNARIZERUSED
+    Name: N-Lunarizer
+    Sprite: {fileID: 0}
+  - Id: REINSOFUNITY
+    Name: Reins of Unity
+    Sprite: {fileID: 21300000, guid: ce4555e298787434194ddc4310d0d0e2, type: 3}
+  - Id: REINSOFUNITYUSED
+    Name: Reins of Unity
+    Sprite: {fileID: 0}
+  - Id: OVALCHARM
+    Name: Oval Charm
+    Sprite: {fileID: 21300000, guid: 5df4e638efad94a45ace07aedca9e639, type: 3}
+  - Id: SHINYCHARM
+    Name: Shiny Charm
+    Sprite: {fileID: 21300000, guid: 2a39e39a384c50e4b9593367b72bf104, type: 3}
+  - Id: CATCHINGCHARM
+    Name: Catching Charm
+    Sprite: {fileID: 21300000, guid: 6610f788da80d8d4a82403bf17221b40, type: 3}
+  - Id: EXPCHARM
+    Name: Exp. Charm
+    Sprite: {fileID: 21300000, guid: 0532ac4fc2b20c34eb30645cddaf2c18, type: 3}
+  - Id: MEGARING
+    Name: Mega Ring
+    Sprite: {fileID: 21300000, guid: 81d293735068d1040b855529623050ce, type: 3}
+  - Id: POKEMONBOXLINK
+    Name: "Pok\xE9mon Box Link"
+    Sprite: {fileID: 21300000, guid: 191ed663179a6744cb556b3400bea2c8, type: 3}
+  - Id: AURORATICKET
+    Name: Aurora Ticket
+    Sprite: {fileID: 21300000, guid: 0e52aacb431e86d4d94881ed88d9f11c, type: 3}
+  - Id: OLDSEAMAP
+    Name: Old Sea Map
+    Sprite: {fileID: 21300000, guid: be4b45b3aa3010d40837a6b8fefd1608, type: 3}
+  - Id: BLACKAUGURITE
+    Name: Black Augurite
+    Sprite: {fileID: 21300000, guid: fd2a4842ef6634b4fb1a47d7385d6caf, type: 3}
+  - Id: PEATBLOCK
+    Name: Peat Block
+    Sprite: {fileID: 21300000, guid: 5d317bf7237cc30459e86aa12a32348c, type: 3}
+  - Id: LINKINGCORD
+    Name: Linking Cord
+    Sprite: {fileID: 21300000, guid: f42246fe139cee3479c21222700a676a, type: 3}
+  - Id: ADAMANTCRYSTAL
+    Name: Adamant Crystal
+    Sprite: {fileID: 21300000, guid: 2ca37a8187778a54eae83b9771af8bb4, type: 3}
+  - Id: LUSTROUSGLOBE
+    Name: Lustrous Globe
+    Sprite: {fileID: 21300000, guid: 698479501c835df42831abd4c8fe137c, type: 3}
+  - Id: LEGENDPLATE
+    Name: Legend Plate
+    Sprite: {fileID: 21300000, guid: 81b31e9e82b0a3145ba8cc813ce1430d, type: 3}
+  - Id: BLANKPLATE
+    Name: Blank Plate
+    Sprite: {fileID: 21300000, guid: b0cfe6fa37d6df14b86e7292323a480a, type: 3}
+  - Id: HOPOBERRY
+    Name: Hopo Berry
+    Sprite: {fileID: 21300000, guid: 9dc4142899ada3449a08efbbe6a1cc4a, type: 3}
+  - Id: GRISEOUSCORE
+    Name: Griseous Core
+    Sprite: {fileID: 21300000, guid: 96031fa4e000d624dbd59880fd7935e9, type: 3}
+  - Id: HISUIANPOKEBALL
+    Name: "Pok\xE9 Ball"
+    Sprite: {fileID: 21300000, guid: b8a13afad5412454a82b3b810d4090cf, type: 3}
+  - Id: HISUIANGREATBALL
+    Name: Great Ball
+    Sprite: {fileID: 21300000, guid: 210ffe00815d21c49aceb9f7e6b7bc9b, type: 3}
+  - Id: HISUIANULTRABALL
+    Name: Ultra Ball
+    Sprite: {fileID: 21300000, guid: eeca744a1473b93488616e9685162d6e, type: 3}
+  - Id: FEATHERBALL
+    Name: Feather Ball
+    Sprite: {fileID: 21300000, guid: f2b30c67c4569a84f8ffc786f674b738, type: 3}
+  - Id: WINGBALL
+    Name: Wing Ball
+    Sprite: {fileID: 21300000, guid: 9fb5135fdae6e7540b097e9ac849768e, type: 3}
+  - Id: JETBALL
+    Name: Jet Ball
+    Sprite: {fileID: 21300000, guid: ada5b6d05cc40df4bb062f87eb57dde7, type: 3}
+  - Id: HISUIANHEAVYBALL
+    Name: Heavy Ball
+    Sprite: {fileID: 21300000, guid: 5ea1c25d67542ae43a752a67d1df0c5b, type: 3}
+  - Id: LEADENBALL
+    Name: Leaden Ball
+    Sprite: {fileID: 21300000, guid: a24e2c4261cda604c96f0af1d4dbefb4, type: 3}
+  - Id: GIGATONBALL
+    Name: Gigaton Ball
+    Sprite: {fileID: 21300000, guid: 4e732ff35b1ae7c4ca6762b671ab15e8, type: 3}
+  - Id: ORIGINBALL
+    Name: Origin Ball
+    Sprite: {fileID: 21300000, guid: c79fed804bd21944ea03a0070536f84e, type: 3}
+  - Id: STRANGEBALL
+    Name: Strange Ball
+    Sprite: {fileID: 21300000, guid: 6af0ae38bd791c44f9dba10f90d78fc5, type: 3}
+  - Id: AUSPICIOUSARMOR
+    Name: Auspicious Armor
+    Sprite: {fileID: 21300000, guid: 5c71f21b62e51944d9fccf586617c1d4, type: 3}
+  - Id: MALICIOUSARMOR
+    Name: Malicious Armor
+    Sprite: {fileID: 21300000, guid: 64b23b413132e2343be662af3db847bb, type: 3}
+  - Id: SCROLLOFDARKNESS
+    Name: Scroll of Darkness
+    Sprite: {fileID: 21300000, guid: 4f84bd83eca7f92489aed05deaacca98, type: 3}
+  - Id: SCROLLOFWATERS
+    Name: Scroll of Waters
+    Sprite: {fileID: 21300000, guid: 7dc3835a19f756d4d9940d91ef88248c, type: 3}
+  - Id: LEADERSCREST
+    Name: Leader's Crest
+    Sprite: {fileID: 21300000, guid: 1f413f217fe320f45b2ae4762f881884, type: 3}
+  - Id: BOOSTERENERGY
+    Name: Booster Energy
+    Sprite: {fileID: 21300000, guid: f8858362fbe29484da2323141488e708, type: 3}
+  - Id: ABILITYSHIELD
+    Name: Ability Shield
+    Sprite: {fileID: 21300000, guid: f4668d152c4f03c47be356dd4a00a4eb, type: 3}
+  - Id: CLEARAMULET
+    Name: Clear Amulet
+    Sprite: {fileID: 21300000, guid: f0edc149b185af04984078ce87698f4e, type: 3}
+  - Id: MIRRORHERB
+    Name: Mirror Herb
+    Sprite: {fileID: 21300000, guid: def68f0d7e2480940a6b3af6c25a9810, type: 3}
+  - Id: PUNCHINGGLOVE
+    Name: Punching Glove
+    Sprite: {fileID: 21300000, guid: 043bbf5091e7ab2498298079d82a4b6f, type: 3}
+  - Id: COVERTCLOAK
+    Name: Covert Cloak
+    Sprite: {fileID: 21300000, guid: 667b7a307cc333e4da740dfdc62e3d3c, type: 3}
+  - Id: LOADEDDICE
+    Name: Loaded Dice
+    Sprite: {fileID: 21300000, guid: 9b0ad8e99ef8d7a459d286ad4085e204, type: 3}
+  - Id: GIMMIGHOULCOIN
+    Name: Gimmighoul Coin
+    Sprite: {fileID: 21300000, guid: b29ece249036df14199f50360471f2e7, type: 3}
+  - Id: TINYBAMBOOSHOOT
+    Name: Tiny Bamboo Shoot
+    Sprite: {fileID: 21300000, guid: b6b776ca2eb801b4382f641299281440, type: 3}
+  - Id: BIGBAMBOOSHOOT
+    Name: Big Bamboo Shoot
+    Sprite: {fileID: 21300000, guid: 028d8a224928cad45b326210b6d0df28, type: 3}
+  - Id: ROTOMPHONE
+    Name: Rotom Phone
+    Sprite: {fileID: 21300000, guid: 0b76ac7bde5a37b44a55c0a3e78d0fec, type: 3}
+  - Id: SCARLETBOOK
+    Name: Scarlet Book
+    Sprite: {fileID: 21300000, guid: 9e44cbeea0ca290428480b8febbb4ac1, type: 3}
+  - Id: VIOLETBOOK
+    Name: Violet Book
+    Sprite: {fileID: 21300000, guid: d24ed8810aae5f6438fb314e41d34f38, type: 3}
+  - Id: HEALTHMOCHI
+    Name: Health Mochi
+    Sprite: {fileID: 21300000, guid: 2038496c2cf0c3447887efd7203af7bd, type: 3}
+  - Id: MUSCLEMOCHI
+    Name: Muscle Mochi
+    Sprite: {fileID: 21300000, guid: b572cdc577cfbea4aa49d29a024275e9, type: 3}
+  - Id: RESISTMOCHI
+    Name: Resist Mochi
+    Sprite: {fileID: 21300000, guid: 8a2c017951675794581bcdb6322f2671, type: 3}
+  - Id: GENIUSMOCHI
+    Name: Genius Mochi
+    Sprite: {fileID: 21300000, guid: 028b074afe733ee429a14b848892cd13, type: 3}
+  - Id: CLEVERMOCHI
+    Name: Clever Mochi
+    Sprite: {fileID: 21300000, guid: 9989dfa7ac3a60240b9c7f3bb74152d8, type: 3}
+  - Id: SWIFTMOCHI
+    Name: Swift Mochi
+    Sprite: {fileID: 21300000, guid: 8930ef6a1bb59d345aa3f406f991a7e3, type: 3}
+  - Id: FRESHSTARTMOCHI
+    Name: Fresh-Start Mochi
+    Sprite: {fileID: 21300000, guid: ff369309c76ff04498a5296dc08ce45d, type: 3}
+  - Id: FAIRYFEATHER
+    Name: Fairy Feather
+    Sprite: {fileID: 21300000, guid: c0a6b90e4f654a346a5fd11695aed1ff, type: 3}
+  - Id: SYRUPYAPPLE
+    Name: Syrupy Apple
+    Sprite: {fileID: 21300000, guid: 4d8357dcd922a7240a9b7fd983c29ff3, type: 3}
+  - Id: UNREMARKABLETEACUP
+    Name: Unremarkable Teacup
+    Sprite: {fileID: 21300000, guid: 98819a10b36f3c74d8031518c6035a23, type: 3}
+  - Id: MASTERPIECETEACUP
+    Name: Masterpiece Teacup
+    Sprite: {fileID: 21300000, guid: 43349917119d72d488460aab6f34e67e, type: 3}
+  - Id: WELLSPRINGMASK
+    Name: Wellspring Mask
+    Sprite: {fileID: 21300000, guid: ec7c1f2bb03a5a148ba30ec93bf91555, type: 3}
+  - Id: HEARTHFLAMEMASK
+    Name: Hearthflame Mask
+    Sprite: {fileID: 21300000, guid: 7181c9c49de5b854a95e5b079c077bf8, type: 3}
+  - Id: CORNERSTONEMASK
+    Name: Cornerstone Mask
+    Sprite: {fileID: 21300000, guid: 9ed88b5f17fcef04fa81747a82324471, type: 3}
+  - Id: TEALMASK
+    Name: Teal Mask
+    Sprite: {fileID: 21300000, guid: e3247d71609c3834bbf8e207313bb398, type: 3}
+  - Id: METALALLOY
+    Name: Metal Alloy
+    Sprite: {fileID: 21300000, guid: 71caac0c8498d5447b7227b898cf3490, type: 3}
+  - Id: INDIGODISK
+    Name: Indigo Disk
+    Sprite: {fileID: 21300000, guid: e62ff631c66c323408d2f2c4cbc049be, type: 3}
+  - Id: MYTHICALPECHABERRY
+    Name: Mythical Pecha Berry
+    Sprite: {fileID: 21300000, guid: 896aea85141d431488d9d8422f2cc4c7, type: 3}
+  - Id: SYNCHROMACHINE
+    Name: Synchro Machine
+    Sprite: {fileID: 21300000, guid: 37a864fee00672745945ded87ef3ddd7, type: 3}
+  - Id: METEORITE
+    Name: Meteorite
+    Sprite: {fileID: 21300000, guid: efdb9ca8fa8e5884891bd6d4954c7028, type: 3}
+  - Id: BRIARSBOOK
+    Name: Briar's Book
+    Sprite: {fileID: 21300000, guid: 61b98d92ad72d9c479b9557aac0e9a4e, type: 3}

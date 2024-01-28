@@ -24,6 +24,7 @@ namespace TowerDefense
         public bool isShiny;
         public int experience;
         public List<MoveData> moves;
+        public ItemData item;
 
         [Header("State Data")] public bool inBox;
         public int damageTaken;

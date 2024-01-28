@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -9,6 +10,7 @@ namespace TowerDefense
 {
     public class WaveController : MonoBehaviour
     {
+        public ItemDatabase itemDatabase;
         public LaneDefinition[] lanes;
         public GameObject rewardUI;
         public int starterLevel = 10;
@@ -60,7 +62,7 @@ namespace TowerDefense
 
         private IEnumerator DoReward(int waveNum)
         {
-            Debug.Log($"Granting reward for wave {waveNum}");
+            Debug.Log($"Granting reward for wave {waveNum + 1}");
 
             foreach (var p in PokemonInstance.AllPokemon) p.damageTaken = 0;
 
@@ -69,23 +71,32 @@ namespace TowerDefense
             for (var i = 0; i < slots.Length; i++)
             {
                 var slot = slots[i];
-                var reward = Instantiate(friendlyPrefab);
-                SetReward(reward.pokemon, waveNum, i);
-                reward.pokemon.MoveToSlot(slot);
-                slot.Set(reward);
+                SetReward(slot, waveNum, i);
             }
 
-            while (slots.All(s => s.InSlot != null)) yield return null;
+            while (slots.All(s => s.AnyInSlot)) yield return null;
 
             foreach (var slot in slots)
+            {
                 if (slot.InSlot != null)
                     Destroy(slot.InSlot.gameObject);
+                if (slot.ItemInSlot != null)
+                    slot.Set((ItemData)null);
+            }
 
             rewardUI.SetActive(false);
         }
 
-        private void SetReward(PokemonInstance pokemon, int waveNum, int num)
+        private void SetReward(Slot slot, int waveNum, int num)
         {
+            if (waveNum == 0)
+            {
+                slot.Set(itemDatabase.Get("LEFTOVERS"));
+                return;
+            }
+
+            var reward = Instantiate(friendlyPrefab);
+
             if (waveNum == -1)
             {
                 var starterList = num switch
@@ -106,13 +117,16 @@ namespace TowerDefense
                     },
                     _ => throw new ArgumentOutOfRangeException(nameof(num), num, null)
                 };
-                pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
+                reward.pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
             }
             else
             {
                 var randomEncounter = encounters[Random.Range(0, encounters.Count)];
-                pokemon.ResetTo(randomEncounter.id, randomEncounter.level);
+                reward.pokemon.ResetTo(randomEncounter.id, randomEncounter.level);
             }
+
+            reward.pokemon.MoveToSlot(slot);
+            slot.Set(reward);
         }
     }
 }

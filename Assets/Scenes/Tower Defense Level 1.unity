@@ -168,6 +168,7 @@ MonoBehaviour:
   cryAudioSource: {fileID: 35455767}
   slotSelectionRadius: 0.5
   dragging: {fileID: 0}
+  draggingItem: {fileID: 0}
   selected: {fileID: 0}
 --- !u!82 &35455767
 AudioSource:
@@ -3787,6 +3788,10 @@ PrefabInstance:
       propertyPath: rewardUI
       value: 
       objectReference: {fileID: 365044306}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: itemDatabase
+      value: 
+      objectReference: {fileID: 11400000, guid: 1a75e1867961f3a41b03c57620d15be9, type: 2}
     - target: {fileID: 6206986853650254635, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.77
@@ -3925,6 +3930,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isBox: 0
   isTrash: 0
+  acceptsItems: 0
+  itemSprite: {fileID: 0}
 --- !u!1 &952740112
 GameObject:
   m_ObjectHideFlags: 0

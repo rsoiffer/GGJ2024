@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Data;
 using Helpers;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -10,10 +11,25 @@ namespace TowerDefense
     public class Slot : MonoBehaviour
     {
         private static readonly HashSet<Slot> AllSlots = new();
+
         public bool isBox;
         public bool isTrash;
+        public bool acceptsItems = true;
+        public SpriteRenderer itemSprite;
 
         [CanBeNull] public FriendlyAI InSlot { get; private set; }
+        [CanBeNull] public ItemData ItemInSlot { get; private set; }
+
+        public bool AnyInSlot => InSlot != null || ItemInSlot != null;
+
+        private void LateUpdate()
+        {
+            if (itemSprite != null)
+            {
+                itemSprite.enabled = ItemInSlot != null;
+                if (ItemInSlot != null) itemSprite.sprite = ItemInSlot.Sprite;
+            }
+        }
 
         private void OnEnable()
         {
@@ -29,6 +45,11 @@ namespace TowerDefense
         {
             if (pokemon != null && GetSlot(pokemon) != null) Debug.LogError("Oh no");
             InSlot = pokemon;
+        }
+
+        public void Set(ItemData item)
+        {
+            ItemInSlot = item;
         }
 
         [CanBeNull]
