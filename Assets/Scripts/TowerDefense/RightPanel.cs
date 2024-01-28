@@ -31,6 +31,7 @@ namespace TowerDefense
         public ShadowText itemName;
 
         public SpriteRenderer[] moveTypes;
+        public Transform[] moveCooldowns;
         public ShadowText[] moves;
 
         public ShadowText[] stats;
@@ -70,6 +71,12 @@ namespace TowerDefense
             {
                 moveTypes[i].enabled = s.attacks[i].Active;
                 if (s.attacks[i].Active) moveTypes[i].sprite = typeSprites[(int)s.attacks[i].move.Type];
+
+                moveCooldowns[i].gameObject.SetActive(s.attacks[i].Active);
+                if (s.attacks[i].Active)
+                    moveCooldowns[i].transform.localScale = new Vector3(4 * s.attacks[i].CooldownRemaining(),
+                        moveCooldowns[i].transform.localScale.y, 1);
+
                 moves[i].gameObject.SetActive(s.attacks[i].Active);
                 if (s.attacks[i].Active) moves[i].SetText(s.attacks[i].move.Name);
             }

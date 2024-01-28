@@ -14,7 +14,7 @@ namespace TowerDefense
         [Header("Instance Data")] public PokemonInstance pokemon;
         public MoveData move;
 
-        [Header("State Data")] public float lastAttackTime;
+        [Header("State Data")] private float _lastAttackTime = -100;
 
         public bool Active => move != null && !string.IsNullOrEmpty(move.Id);
 
@@ -22,12 +22,12 @@ namespace TowerDefense
         {
             if (!Active) return;
 
-            if (Time.time > lastAttackTime + Cooldown())
+            if (CooldownRemaining() == 0)
             {
                 var nearestOther = pokemon.GetTarget(Range());
                 if (nearestOther != null)
                 {
-                    lastAttackTime = Time.time;
+                    _lastAttackTime = Time.time;
                     DoAttack(nearestOther);
                 }
             }
@@ -44,6 +44,11 @@ namespace TowerDefense
             sprite.enabled = true;
             sprite.color = TypeHelpers.TypeColor(move.Type).WithA(.4f);
             sprite.transform.localScale = .3f * Range() * Vector3.one;
+        }
+
+        public float CooldownRemaining()
+        {
+            return Mathf.Clamp01(1 - (Time.time - _lastAttackTime) / Cooldown());
         }
 
         private void DoAttack(PokemonInstance target)
