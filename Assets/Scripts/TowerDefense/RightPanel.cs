@@ -88,7 +88,7 @@ namespace TowerDefense
             if (s.moves.Count > 2) move3.SetText(s.moves[2].Name);
 
             moveType4.enabled = s.moves.Count > 3;
-            if (s.moves.Count > 3) moveType4.sprite = typeSprites[(int)s.moves[1].Type];
+            if (s.moves.Count > 3) moveType4.sprite = typeSprites[(int)s.moves[3].Type];
             move4.gameObject.SetActive(s.moves.Count > 3);
             if (s.moves.Count > 3) move4.SetText(s.moves[3].Name);
 
