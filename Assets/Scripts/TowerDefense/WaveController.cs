@@ -40,14 +40,15 @@ namespace TowerDefense
             var levelBonus = 0;
             if (waveNum >= waves.Length) levelBonus = waveNum - waves.Length + 1;
 
-            for (var j = 0; j < wave.numEnemies; j++)
+            for (var j = 0; j < wave.numEnemies + levelBonus; j++)
             {
                 var lane = lanes[Random.Range(0, lanes.Length)];
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
                 enemy.pokemon.ResetTo(wave.RandomEnemy(), wave.baseLevel + levelBonus);
                 encounters.Add((enemy.pokemon.data.Id, enemy.pokemon.level));
-                yield return new WaitForSeconds(wave.enemySpawnDelay);
+                yield return new WaitForSeconds(wave.enemySpawnDelay * wave.numEnemies /
+                                                (wave.numEnemies + levelBonus));
             }
 
             while (PokemonInstance.AllPokemon.Any(p => !p.isFriendly)) yield return null;

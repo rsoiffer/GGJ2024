@@ -33,7 +33,8 @@ namespace TowerDefense
                 if (dragging != null)
                 {
                     var oldSlot = Slot.GetSlot(dragging);
-                    var newSlot = Slot.GetSlot(mousePos, slotSelectionRadius, _ => true);
+                    var newSlot = Slot.GetSlot(mousePos, slotSelectionRadius,
+                        s => s.InSlot == null || s.InSlot == dragging);
 
                     if (newSlot != null && newSlot != oldSlot && newSlot.InSlot == null)
                     {

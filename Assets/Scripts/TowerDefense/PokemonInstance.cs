@@ -39,7 +39,8 @@ namespace TowerDefense
         {
             if (inBox) return;
 
-            for (var i = 0; i < attacks.Length; i++) attacks[i].move = i < moves.Count ? moves[i] : null;
+            for (var i = 0; i < attacks.Length; i++)
+                attacks[i].move = i < moves.Count ? moves[moves.Count - 1 - i] : null;
 
             if (damageTaken >= GetStat(Stat.HP))
             {
