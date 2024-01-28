@@ -130,7 +130,7 @@ namespace TowerDefense
 
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
-            var particles = attackFXPrefab.GetComponent<ParticleSystem>();
+            var particles = attackFX.GetComponent<ParticleSystem>();
             var main = particles.main;
             main.startColor = TypeHelpers.TypeColor(move.Type);
         }

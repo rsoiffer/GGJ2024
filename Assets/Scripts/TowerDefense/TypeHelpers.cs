@@ -66,7 +66,6 @@ namespace TowerDefense
         private static Color ToColor(string s)
         {
             ColorUtility.TryParseHtmlString(s, out var color);
-            Debug.Log($"Color {s} parsed to {color}");
             return color;
         }
 
