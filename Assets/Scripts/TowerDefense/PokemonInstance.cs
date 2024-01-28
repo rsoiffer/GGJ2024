@@ -180,7 +180,7 @@ namespace TowerDefense
             inBox = slot.isBox;
             if (slot.isBox)
             {
-                transform.position = slot.transform.position;
+                transform.position = (Vector2)slot.transform.position;
                 sprite.SetToIcon();
             }
             else
