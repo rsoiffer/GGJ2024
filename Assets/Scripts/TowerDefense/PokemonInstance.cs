@@ -63,8 +63,8 @@ namespace TowerDefense
                         GameObject.Find("Wave Controller"); // GameObject.Find every frame is REALLY bad practice
                     if (controller)
                     {
-                        var expManager = controller.GetComponent<EXPManager>();
-                        expManager.addExp(data.BaseExp, level);
+                        var expManager = controller.GetComponent<ExpManager>();
+                        expManager.AddExp(data.BaseExp, level);
                     }
                 }
 
@@ -134,6 +134,15 @@ namespace TowerDefense
         public void LevelUp()
         {
             level++;
+
+            for (var i = 0; i < data.Moves.Length; i++)
+                if (data.MoveLearnLevels[i] == level)
+                {
+                    var move = moveDatabase.Get(data.Moves[i]);
+                    if (move.IsValid())
+                        moves.Add(move);
+                }
+
             var fanfare = Instantiate(fanfarePrefab);
             fanfare.transform.position = transform.position;
         }
