@@ -17,11 +17,13 @@ namespace TowerDefense
         public MoveDatabase moveDatabase;
         public SpriteController sprite;
         public GameObject attackFXPrefab;
+        public GameObject fanfarePrefab;
 
         [Header("Instance Data")] public bool isFriendly;
         public int level;
         public PokemonData data;
         public bool isShiny;
+        public float experience;
         public List<MoveData> moves;
 
         [Header("State Data")] public bool inBox;
@@ -53,7 +55,21 @@ namespace TowerDefense
                 }
             }
 
-            if (damageTaken >= GetStat(Stat.HP)) Destroy(gameObject);
+            if (damageTaken >= GetStat(Stat.HP))
+            {
+                if (!isFriendly)
+                {
+                    var controller =
+                        GameObject.Find("Wave Controller"); // GameObject.Find every frame is REALLY bad practice
+                    if (controller)
+                    {
+                        var expManager = controller.GetComponent<EXPManager>();
+                        expManager.addExp(data.BaseExp, level);
+                    }
+                }
+
+                Destroy(gameObject);
+            }
         }
 
         private void OnEnable()
@@ -111,6 +127,18 @@ namespace TowerDefense
 
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
+        }
+
+        public void LevelUp()
+        {
+            level++;
+            var fanfare = Instantiate(fanfarePrefab);
+            fanfare.transform.position = transform.position;
+        }
+
+        public GrowthRate GetGrowthRate()
+        {
+            return data.GrowthRate;
         }
 
         public void ResetTo(string id, int level)

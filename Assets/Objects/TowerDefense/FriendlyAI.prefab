@@ -66,6 +66,7 @@ MonoBehaviour:
   moveDatabase: {fileID: 11400000, guid: fb3e0aa429e07ca4e96f5dc71f84bd95, type: 2}
   sprite: {fileID: 7956360473118265446}
   attackFXPrefab: {fileID: 7076545157764386722, guid: d7d545b5840739f4796d1e7ff30878fe, type: 3}
+  fanfarePrefab: {fileID: 7076545157764386722, guid: 449eb8356878f494999c040d86152e9a, type: 3}
   isFriendly: 1
   level: 1
   data:
@@ -111,6 +112,7 @@ MonoBehaviour:
       icons: []
     cry: {fileID: 0}
   isShiny: 0
+  experience: 0
   moves: []
   inBox: 0
   damageTaken: 0

@@ -12,13 +12,16 @@ namespace TowerDefense
         public GameObject rewardUI;
         public int starterLevel = 10;
 
-        public FriendlyAI rewardPrefab;
         public EnemyAI enemyPrefab;
+        public FriendlyAI friendlyPrefab;
+        public Wave[] waves;
+        public MoneyManager moneyManager;
 
         public IEnumerator Start()
         {
-            yield return DoReward(0);
-            for (var i = 1; i <= 100; i++)
+            yield return DoReward(-1);
+
+            for (var i = 0; i <= waves.Length; i++)
             {
                 yield return DoWave(i);
                 yield return DoReward(i);
@@ -27,20 +30,22 @@ namespace TowerDefense
 
         private IEnumerator DoWave(int waveNum)
         {
-            Debug.Log($"Starting Wave {waveNum}");
+            Debug.Log($"Starting Wave {waveNum + 1}");
 
             for (var j = 0; j < 10; j++)
             {
                 var lane = lanes[Random.Range(0, lanes.Length)];
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
-                enemy.pokemon.ResetTo("BIDOOF", waveNum);
-                yield return new WaitForSeconds(1);
+                enemy.pokemon.ResetTo(waves[waveNum].randomEnemy(), waves[waveNum].baseLevel);
+                yield return new WaitForSeconds(waves[waveNum].enemySpawnDelay);
             }
 
             while (PokemonInstance.AllPokemon.Any(p => !p.isFriendly)) yield return null;
 
             yield return new WaitForSeconds(2);
+
+            moneyManager.addMoney(100 * (waveNum + 1));
         }
 
         private IEnumerator DoReward(int waveNum)
@@ -54,7 +59,7 @@ namespace TowerDefense
             for (var i = 0; i < slots.Length; i++)
             {
                 var slot = slots[i];
-                var reward = Instantiate(rewardPrefab);
+                var reward = Instantiate(friendlyPrefab);
                 SetReward(reward.pokemon, waveNum, i);
                 reward.pokemon.MoveToSlot(slot);
                 slot.Set(reward);
@@ -71,7 +76,7 @@ namespace TowerDefense
 
         private void SetReward(PokemonInstance pokemon, int waveNum, int num)
         {
-            if (waveNum == 0)
+            if (waveNum == -1)
             {
                 var starterList = num switch
                 {

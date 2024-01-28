@@ -1,0 +1,52 @@
+
+Wave 1: (town outskirts) (normal/flying)
+Birds and rats
+gen 1: pidgey, ratatta (rare: abra)
+gen 2: hoothoot, scentret (rare: togepi)
+gen 3: zigzagoon, poochyena (rare: slakoth)
+gen 4: starley, bidoof (rare: shinx)
+gen 5: patrat, lillipup (rare: audino)
+gen 6: bunnelby, flechling (rare: hawlucha?)
+gen 7: pikipek, yungoos (rare: stufful)
+gen 8: rookidee, wooloo (rare: mr. rime)
+gen 9: lechonk, wattrel (rare: tandemaus)
+
+boss: eevee
+
+
+
+wave 2: (forest) (grass/bug)
+gen 1: caterpie, weedil (rare: pikachu)
+gen 2: ledyba, hoppip (rare: aipom)
+gen 3: shroomish, wurmple, seedot  (rare: ralts)
+gen 4: budew, combee, cherubi (rare: munchlax)
+gen 5: pansage, pansear, panpour (rare: munna) 
+
+boss: scizor
+
+wave 3: (cave) (rock/ground)
+gen 1: geodude, zubat, onyx (rare: nidoran)
+gen 2: 
+gen 3: machuita, wishmur, nincada
+gen 4:
+gen 5: roggenrola, woobat, drillbur 
+
+boss: metang
+
+wave 4: (water)
+
+boss: gyarados
+
+
+wave 5: (factory) (electric/steel)
+
+gen 3: skarmory
+
+wave 6: graveyard (ghost/poison)
+gen 1: gastly, grimer, ekans
+gen 2: misdreavus, crobat, 
+gen 3: 
+
+wave 6: (mountain) (fire/dragon)
+
+
