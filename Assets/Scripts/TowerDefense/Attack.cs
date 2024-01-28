@@ -16,6 +16,7 @@ namespace TowerDefense
         public MoveData move;
 
         [Header("State Data")] private float _lastAttackTime = -100;
+        public float LastCritTime { get; private set; } = -100;
 
         public bool Active => move != null && !string.IsNullOrEmpty(move.Id);
 
@@ -69,7 +70,15 @@ namespace TowerDefense
             if (pokemon.data.Types.Contains(move.Type)) damage *= 1.5f;
             foreach (var type in target.data.Types)
                 damage *= TypeHelpers.GetTypeEffectiveness(move.Type, type);
-            damage *= .25f;
+
+            var isCrit = Random.value < 1 / 24f;
+            if (isCrit)
+            {
+                damage *= 1.5f;
+                LastCritTime = Time.time;
+            }
+
+            damage *= .25f; // GLOBAL DAMAGE MULTIPLIER
 
             if (Random.Range(0, 100f) < move.Accuracy) target.damageTaken += Mathf.FloorToInt(damage);
 

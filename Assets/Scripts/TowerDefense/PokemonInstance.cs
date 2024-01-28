@@ -103,10 +103,14 @@ namespace TowerDefense
             var baseStat = data.BaseStats[(int)stat];
             var iv = 15;
 
-            if (stat == Stat.HP)
-                return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + level + 10;
+            var multiplier = 1f;
+            if (item?.Id == "QUICKCLAW" && stat == Stat.SPEED && attacks.Any(a => a.LastCritTime > Time.time - 2))
+                multiplier += 1;
 
-            return Mathf.FloorToInt((2 * baseStat + iv) * level / 100f) + 5;
+            if (stat == Stat.HP)
+                return Mathf.FloorToInt(multiplier * ((2 * baseStat + iv) * level / 100f + level + 10));
+
+            return Mathf.FloorToInt(multiplier * ((2 * baseStat + iv) * level / 100f + 5));
 
             // Arceus formula
             /*
