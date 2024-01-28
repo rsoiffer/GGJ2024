@@ -175,12 +175,7 @@ MonoBehaviour:
     Name: 
     FormName: 
     Types: 
-    BaseHp: 0
-    BaseAtk: 0
-    BaseDef: 0
-    BaseSpeed: 0
-    BaseSpAtk: 0
-    BaseSpDef: 0
+    BaseStats: 
     GenderRatio: 0
     GrowthRate: 0
     BaseExp: 0

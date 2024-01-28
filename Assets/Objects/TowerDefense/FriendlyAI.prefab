@@ -115,8 +115,6 @@ MonoBehaviour:
   inBox: 0
   damageTaken: 0
   currentStats: 
-  lastPhysicalAttackTime: 0
-  lastSpecialAttackTime: 0
 --- !u!114 &7956360473118265446
 MonoBehaviour:
   m_ObjectHideFlags: 0
