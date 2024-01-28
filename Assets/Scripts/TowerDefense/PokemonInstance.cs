@@ -125,11 +125,14 @@ namespace TowerDefense
             damage *= Random.Range(.85f, 1f);
             if (data.Types.Contains(move.Type)) damage *= 1.5f;
             foreach (var type in target.data.Types)
-                damage *= TypeEffectiveness.GetTypeEffectiveness(move.Type, type);
+                damage *= TypeHelpers.GetTypeEffectiveness(move.Type, type);
             target.damageTaken += Mathf.CeilToInt(damage);
 
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
+            var particles = attackFXPrefab.GetComponent<ParticleSystem>();
+            var main = particles.main;
+            main.startColor = TypeHelpers.TypeColor(move.Type);
         }
 
         public void LevelUp()

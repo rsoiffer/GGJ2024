@@ -68,7 +68,7 @@ MonoBehaviour:
   pokeDatabase: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
   moveDatabase: {fileID: 11400000, guid: fb3e0aa429e07ca4e96f5dc71f84bd95, type: 2}
   sprite: {fileID: 7956360473118265446}
-  attackFXPrefab: {fileID: 7076545157764386722, guid: d7d545b5840739f4796d1e7ff30878fe, type: 3}
+  attackFXPrefab: {fileID: 7076545157764386722, guid: 907b009877e58e84792b92dd87dfc059, type: 3}
   fanfarePrefab: {fileID: 7076545157764386722, guid: 449eb8356878f494999c040d86152e9a, type: 3}
   isFriendly: 1
   level: 1
