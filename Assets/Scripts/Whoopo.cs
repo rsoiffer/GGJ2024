@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Whoopo : MonoBehaviour
 {
+    public PokemonDatabase pokeDatabase;
+
     public Enemy enemyPrefab;
     public float enemySpawnRate = 1;
     public float enemySpawnRateScaling = .1f;
@@ -16,8 +18,6 @@ public class Whoopo : MonoBehaviour
 
     private IEnumerator Start()
     {
-        var database = PbsDatabase.LoadDatabase("pokemon_base");
-
         var startTime = Time.time;
         while (true)
         {
@@ -28,7 +28,7 @@ public class Whoopo : MonoBehaviour
             var newEnemy = Instantiate(enemyPrefab);
             newEnemy.transform.position = new Vector2(Random.Range(spawnPosMin.x, spawnPosMax.x),
                 Random.Range(spawnPosMin.y, spawnPosMax.y));
-            newEnemy.pokemon = new PokemonData(database.Entries[spawnId]);
+            newEnemy.pokemon = pokeDatabase.Get(spawnId);
         }
     }
 }
