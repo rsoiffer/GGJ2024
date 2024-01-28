@@ -20,9 +20,9 @@ namespace TowerDefense
         {
             if (move == null || string.IsNullOrEmpty(move.Id)) return;
 
-            if (Time.time > lastAttackTime + move.Cooldown())
+            if (Time.time > lastAttackTime + Cooldown())
             {
-                var nearestOther = pokemon.GetTarget(move.Range());
+                var nearestOther = pokemon.GetTarget(Range());
                 if (nearestOther != null)
                 {
                     lastAttackTime = Time.time;
@@ -40,8 +40,8 @@ namespace TowerDefense
             }
 
             sprite.enabled = true;
-            sprite.color = TypeHelpers.TypeColor(move.Type).WithA(.2f);
-            sprite.transform.localScale = 2.3f * move.Range() * Vector3.one;
+            sprite.color = TypeHelpers.TypeColor(move.Type).WithA(.4f);
+            sprite.transform.localScale = .3f * Range() * Vector3.one;
         }
 
         private void DoAttack(PokemonInstance target)
@@ -64,6 +64,21 @@ namespace TowerDefense
             var particles = attackFX.GetComponent<ParticleSystem>();
             var main = particles.main;
             main.startColor = TypeHelpers.TypeColor(move.Type);
+        }
+
+        private float Cooldown()
+        {
+            return (move.Category == MoveCategory.Physical ? 1 : 2) * PowerScale(.5f);
+        }
+
+        private float Range()
+        {
+            return (move.Category == MoveCategory.Physical ? .75f : 2.5f) * PowerScale(.5f);
+        }
+
+        private float PowerScale(float exp)
+        {
+            return Mathf.Pow(20f / move.TotalPP, exp);
         }
     }
 }

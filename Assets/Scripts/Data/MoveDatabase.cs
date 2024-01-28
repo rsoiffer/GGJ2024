@@ -90,15 +90,5 @@ namespace Data
             if (Category == MoveCategory.Status) return false;
             return true;
         }
-
-        public float Cooldown()
-        {
-            return Category == MoveCategory.Physical ? 1 : 2;
-        }
-
-        public float Range()
-        {
-            return Category == MoveCategory.Physical ? .75f : 2.5f;
-        }
     }
 }
