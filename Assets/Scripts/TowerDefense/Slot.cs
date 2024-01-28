@@ -11,6 +11,7 @@ namespace TowerDefense
     {
         private static readonly HashSet<Slot> AllSlots = new();
         public bool isBox;
+        public bool isTrash;
 
         [CanBeNull] public FriendlyAI InSlot { get; private set; }
 

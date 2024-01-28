@@ -42,6 +42,8 @@ namespace TowerDefense
                             oldSlot.Set(null);
                         dragging.pokemon.MoveToSlot(newSlot);
                         newSlot.Set(dragging);
+
+                        if (newSlot.isTrash) Destroy(dragging.gameObject);
                     }
                 }
 
