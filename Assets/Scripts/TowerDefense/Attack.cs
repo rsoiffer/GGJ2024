@@ -68,13 +68,13 @@ namespace TowerDefense
         private float Cooldown()
         {
             return (move.Category == MoveCategory.Physical ? 1 : 2) * PowerScale(.5f) *
-                   Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, -.25f);
+                   Mathf.Pow((pokemon.GetStat(Stat.SPEED) + 20f) / 50f, -1);
         }
 
         private float Range()
         {
             return (move.Category == MoveCategory.Physical ? .75f : 2.5f) * PowerScale(.5f) *
-                   Mathf.Pow((Atk() + 20f) / 50f, .25f);
+                   Mathf.Pow((Atk() + 20f) / 50f, .5f);
         }
 
         private float PowerScale(float exp)
