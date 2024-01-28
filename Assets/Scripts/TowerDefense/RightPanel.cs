@@ -67,6 +67,10 @@ namespace TowerDefense
             ability3.gameObject.SetActive(s.data.HiddenAbilities.Length > 1);
             if (s.data.HiddenAbilities.Length > 1) ability3.SetText(s.data.HiddenAbilities![1]);
 
+            item.enabled = s.item != null;
+            if (s.item != null) item.sprite = s.item.Sprite;
+            itemName.SetText(s.item?.Name ?? "None");
+
             for (var i = 0; i < 4; i++)
             {
                 moveTypes[i].enabled = s.attacks[i].Active;
