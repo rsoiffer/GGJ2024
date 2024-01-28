@@ -17,12 +17,28 @@ namespace TowerDefense
         public SpriteController sprite;
         public GameObject attackFXPrefab;
         public GameObject fanfarePrefab;
+		public GameObject[] statusPrefabs;
 
         [Header("Instance Data")] public bool isFriendly;
         public int level;
         public PokemonData data;
         public bool isShiny;
         public float experience;
+		[System.Serializable]
+		public enum Status{
+			Normal,
+			Burn,
+			Poison,
+			Sleep,
+			Paralysis,
+			Confusion
+		};
+		
+		public Status status=Status.Confusion;
+		public int sleeptimer=0;
+		public float statusTime;
+		
+		private GameObject statusParticle;
 
         [Header("State Data")] public bool inBox;
         public int damageTaken;
@@ -38,6 +54,11 @@ namespace TowerDefense
 
         private void FixedUpdate()
         {
+			if (sleeptimer>0){
+				sleeptimer--;
+				if (sleeptimer>0) return;
+				status=Status.Normal;
+			}
             if (inBox) return;
 
             if (Time.time > lastPhysicalAttackTime + 1)
@@ -46,7 +67,14 @@ namespace TowerDefense
                 if (nearestOther != null)
                 {
                     lastPhysicalAttackTime = Time.time;
-                    Attack(nearestOther, false);
+                    
+					if (status==Status.Confusion){
+						Attack(this, false);
+					}
+					else{
+						Attack(nearestOther, false);
+					}
+					
                 }
             }
 
@@ -59,6 +87,80 @@ namespace TowerDefense
                     Attack(nearestOther, true);
                 }
             }
+			
+				EnemyAI ai=GetComponent<EnemyAI>();
+			
+			//Pokemon can only have 1 status at a time.
+			//with the exception of sleep and confusion, statuses are permanant
+			SpriteController sr=GetComponent<SpriteController>();
+			
+			switch (status){
+				
+				
+				case Status.Normal:
+				if (statusParticle){
+					Destroy(statusParticle);
+				}
+					sr.sprite.color=Color.white;
+					if (ai){
+						ai.speed=1.0f;
+					}
+				break;
+				
+				case Status.Burn:
+				if (Time.time > statusTime + 2){
+						damageTaken+=Math.Max(GetStat(Stat.HP)/16,1);			
+						statusTime=Time.time;
+					}
+					sr.sprite.color=Color.red;
+				if (!statusParticle){
+					statusParticle=Instantiate(statusPrefabs[1]);
+				}
+				break;
+				case Status.Poison:
+				if (!statusParticle){
+					statusParticle=Instantiate(statusPrefabs[2]);
+				}
+					if (Time.time > statusTime + 2){
+						damageTaken+=Math.Max(GetStat(Stat.HP)/8,1);			
+						statusTime=Time.time;
+					}
+					sr.sprite.color=Color.magenta;
+				break;
+				case Status.Sleep:
+				if (ai){
+					ai.speed=0f;
+				}
+				if (!statusParticle){
+					statusParticle=Instantiate(statusPrefabs[3]);
+					
+				}
+				sr.sprite.color=Color.grey;
+				sleeptimer=120;
+				break;
+				case Status.Paralysis:
+				if (!statusParticle){
+					statusParticle=Instantiate(statusPrefabs[4]);
+				//	statusParticle=Instantiate(paralysisPrefab);
+				}
+				if (ai){
+					ai.speed=0.5f;
+				}
+				sr.sprite.color=Color.yellow;
+			
+				break;
+				case Status.Confusion:
+				if (!statusParticle){
+					statusParticle=Instantiate(statusPrefabs[5]);
+				}
+				sr.sprite.color=Color.yellow;
+				//Instantiate(ConfusionPrefab);
+				break;
+				
+			}
+			if (statusParticle){
+					statusParticle.transform.position = transform.position;
+			}
 
             if (damageTaken >= GetStat(Stat.HP))
             {
@@ -76,6 +178,11 @@ namespace TowerDefense
                 Destroy(gameObject);
             }
         }
+		public void OnDestroy(){
+			if (statusParticle){
+				Destroy(statusParticle);
+			}
+		}
 
         private void OnEnable()
         {
@@ -124,14 +231,37 @@ namespace TowerDefense
         private void Attack(PokemonInstance target, bool isSpecial)
         {
             var (atk, def) = isSpecial ? (Stat.SPATK, Stat.SPDEF) : (Stat.ATK, Stat.DEF);
-
-            var power = 100;
+			
+            var power = 1;
             var damage = (2 * level / 5f + 2) * power * GetStat(atk) / target.GetStat(def) / 50 + 2;
+			if (status==Status.Burn && !isSpecial){
+				damage*=0.5f;
+			}
             damage *= Random.Range(.85f, 1f);
             target.damageTaken += Mathf.CeilToInt(damage);
 
             var attackFX = Instantiate(attackFXPrefab);
             attackFX.transform.position = target.transform.position;
+			if (isFriendly){
+				switch (Random.Range(1,6)){
+					case 1:
+					target.status=Status.Burn;
+					break;
+					case 2:
+							target.status=Status.Poison;
+					break;
+					
+					case 3:
+							target.status=Status.Sleep;
+					break;
+					case 4:
+					target.status=Status.Paralysis;
+					break;
+					case 5:
+					target.status=Status.Confusion;
+					break;
+				}
+			}
         }
 
         public void LevelUp()

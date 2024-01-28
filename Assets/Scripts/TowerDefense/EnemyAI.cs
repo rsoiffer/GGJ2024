@@ -7,19 +7,20 @@ namespace TowerDefense
         public LaneDefinition lane;
 
         public PokemonInstance pokemon;
+		public float speed=1;
         //public Wave[] waves;
 
         public float laneProgress;
 
         private void FixedUpdate()
         {
-            laneProgress += Time.fixedDeltaTime;
+            laneProgress += Time.fixedDeltaTime*speed;
             transform.position = lane.Position(laneProgress);
         }
 
         private void LateUpdate()
         {
-            var modProgress = laneProgress + Time.time - Time.fixedTime;
+            var modProgress = laneProgress + (Time.time - Time.fixedTime)*speed;
             pokemon.Move(lane.Position(modProgress));
         }
     }

@@ -50,7 +50,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lane: {fileID: 0}
   pokemon: {fileID: 3069366557594339667}
-  laneProgress: 0
+  speed: 1
+  laneProgress: 2.1
 --- !u!114 &3069366557594339667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +68,13 @@ MonoBehaviour:
   sprite: {fileID: 4912254043681046233}
   attackFXPrefab: {fileID: 7076545157764386722, guid: 907b009877e58e84792b92dd87dfc059, type: 3}
   fanfarePrefab: {fileID: 0}
+  statusPrefabs:
+  - {fileID: 0}
+  - {fileID: 7076545157764386722, guid: 447b5ae55dd26034f9b40eafc5901d58, type: 3}
+  - {fileID: 7076545157764386722, guid: cfac181b8c2fbfa40b5de27485d1b8fc, type: 3}
+  - {fileID: 7076545157764386722, guid: b4928b4584db75049a825a941503547f, type: 3}
+  - {fileID: 7076545157764386722, guid: c55f315c9af24f84995e22a07e9daf6e, type: 3}
+  - {fileID: 7076545157764386722, guid: dba6fefba56828a4db9383706a1b42d2, type: 3}
   isFriendly: 0
   level: 1
   data:
@@ -113,6 +121,9 @@ MonoBehaviour:
     cry: {fileID: 0}
   isShiny: 0
   experience: 0
+  status: 5
+  sleeptimer: 120
+  statusTime: 0
   inBox: 0
   damageTaken: 0
   currentStats: 

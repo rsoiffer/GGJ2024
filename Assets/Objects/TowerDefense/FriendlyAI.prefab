@@ -66,6 +66,13 @@ MonoBehaviour:
   sprite: {fileID: 7956360473118265446}
   attackFXPrefab: {fileID: 7076545157764386722, guid: d7d545b5840739f4796d1e7ff30878fe, type: 3}
   fanfarePrefab: {fileID: 7076545157764386722, guid: 449eb8356878f494999c040d86152e9a, type: 3}
+  statusPrefabs:
+  - {fileID: 0}
+  - {fileID: 7076545157764386722, guid: cfac181b8c2fbfa40b5de27485d1b8fc, type: 3}
+  - {fileID: 7076545157764386722, guid: cfac181b8c2fbfa40b5de27485d1b8fc, type: 3}
+  - {fileID: 7076545157764386722, guid: b4928b4584db75049a825a941503547f, type: 3}
+  - {fileID: 7076545157764386722, guid: c55f315c9af24f84995e22a07e9daf6e, type: 3}
+  - {fileID: 7076545157764386722, guid: dba6fefba56828a4db9383706a1b42d2, type: 3}
   isFriendly: 1
   level: 1
   data:
@@ -112,6 +119,9 @@ MonoBehaviour:
     cry: {fileID: 0}
   isShiny: 0
   experience: 0
+  status: 0
+  sleeptimer: 120
+  statusTime: 0
   inBox: 0
   damageTaken: 0
   currentStats: 
