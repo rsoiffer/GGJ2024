@@ -63,9 +63,10 @@ namespace TowerDefense
             expBar.transform.localScale = new Vector3(currentExpPerc, 1, 1);
 
             ability1.SetText(s.data.Abilities[0]);
-            ability2.SetText(s.data.HiddenAbilities![0]);
+            ability2.gameObject.SetActive(s.data.HiddenAbilities!.Length > 0);
+            if (s.data.HiddenAbilities.Length > 0) ability2.SetText(s.data.HiddenAbilities[0]);
             ability3.gameObject.SetActive(s.data.HiddenAbilities.Length > 1);
-            if (s.data.HiddenAbilities.Length > 1) ability3.SetText(s.data.HiddenAbilities![1]);
+            if (s.data.HiddenAbilities.Length > 1) ability3.SetText(s.data.HiddenAbilities[1]);
 
             item.enabled = s.item != null;
             if (s.item != null) item.sprite = s.item.Sprite;
