@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿#if UNITY_EDITOR
+using UnityEditor;
 
 namespace AssetProcessing
 {
@@ -22,3 +23,4 @@ namespace AssetProcessing
         }
     }
 }
+#endif

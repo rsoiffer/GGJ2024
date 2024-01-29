@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using AssetProcessing;
 using JetBrains.Annotations;
 using UnityEditor;
 using UnityEngine;
+#if UNITY_EDITOR
+using AssetProcessing;
+#endif
 
 namespace Data
 {
@@ -17,11 +19,16 @@ namespace Data
 
         public PokemonData Get(string id)
         {
-            if (_table != null) return _table[id];
+            if (_table == null)
+            {
+                _table = new Dictionary<string, PokemonData>();
+                foreach (var data in database) _table.Add(data.Id, data);
+            }
 
-            _table = new Dictionary<string, PokemonData>();
-            foreach (var move in database) _table.Add(move.Id, move);
-            return _table[id];
+            if (_table.TryGetValue(id, out var p))
+                return p;
+
+            throw new ArgumentException($"Invalid pokemon id: {id}");
         }
 
         public IReadOnlyList<PokemonData> GetAll()
@@ -29,6 +36,7 @@ namespace Data
             return database;
         }
 
+#if UNITY_EDITOR
         [MenuItem("Tools/Build Database")]
         public static void BuildDatabase()
         {
@@ -43,6 +51,7 @@ namespace Data
                 AssetDatabase.SaveAssetIfDirty(pokeDatabase);
             });
         }
+#endif
     }
 
     [Serializable]
@@ -76,13 +85,16 @@ namespace Data
         public string Category;
         public string Pokedex;
         public int Generation;
-        [CanBeNull] public string Evolutions;
+        [CanBeNull] public string[] Evolutions;
         [CanBeNull] public string[] Flags;
 
         public PokemonSpriteSet spriteSet;
         public PokemonSpriteSet spriteSetShiny;
         public AudioClip cry;
 
+        [CanBeNull] public Ability[] CustomAbilities;
+
+#if UNITY_EDITOR
         public PokemonData(PbsEntry pbsEntry)
         {
             try
@@ -114,7 +126,7 @@ namespace Data
                 Category = pbsEntry.Lookup("Category");
                 Pokedex = pbsEntry.Lookup("Pokedex");
                 Generation = int.Parse(pbsEntry.Lookup("Generation")!);
-                Evolutions = pbsEntry.Lookup("Evolutions");
+                Evolutions = pbsEntry.Lookup("Evolutions")?.Split(",");
                 Flags = pbsEntry.Lookup("Flags")?.Split(",");
 
                 spriteSet = new PokemonSpriteSet(Id, false);
@@ -127,6 +139,7 @@ namespace Data
                 Debug.LogException(e);
             }
         }
+#endif
 
         private static (int[], string[]) ParseMoves(string input)
         {
@@ -151,6 +164,7 @@ namespace Data
         public Sprite front;
         public Sprite[] icons;
 
+#if UNITY_EDITOR
         public PokemonSpriteSet(string id, bool shiny)
         {
             if (!shiny)
@@ -173,5 +187,6 @@ namespace Data
                     .OfType<Sprite>().OrderBy(s => s.name).ToArray();
             }
         }
+#endif
     }
 }

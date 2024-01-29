@@ -1,6 +1,8 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
+using Data;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -8,6 +10,9 @@ namespace TowerDefense
 {
     public class WaveController : MonoBehaviour
     {
+        public PokemonDatabase pokeDatabase;
+        public ItemDatabase itemDatabase;
+
         public LaneDefinition[] lanes;
         public GameObject rewardUI;
         public int starterLevel = 10;
@@ -17,11 +22,20 @@ namespace TowerDefense
         public Wave[] waves;
         public MoneyManager moneyManager;
 
+        private readonly List<(string id, int level)> encounters = new();
+
         public IEnumerator Start()
         {
+            foreach (var wave in waves)
+            foreach (var e in wave.enemies)
+            {
+                Debug.Log($"Checking {wave.name}");
+                pokeDatabase.Get(e.species);
+            }
+
             yield return DoReward(-1);
 
-            for (var i = 0; i <= waves.Length; i++)
+            for (var i = 0; i < 100; i++)
             {
                 yield return DoWave(i);
                 yield return DoReward(i);
@@ -31,14 +45,21 @@ namespace TowerDefense
         private IEnumerator DoWave(int waveNum)
         {
             Debug.Log($"Starting Wave {waveNum + 1}");
+            encounters.Clear();
 
-            for (var j = 0; j < 10; j++)
+            var wave = waves[Mathf.Clamp(waveNum, 0, waves.Length - 1)];
+            var levelBonus = 0;
+            if (waveNum >= waves.Length) levelBonus = waveNum - waves.Length + 1;
+
+            for (var j = 0; j < wave.numEnemies + levelBonus; j++)
             {
                 var lane = lanes[Random.Range(0, lanes.Length)];
                 var enemy = Instantiate(enemyPrefab);
                 enemy.lane = lane;
-                enemy.pokemon.ResetTo(waves[waveNum].randomEnemy(), waves[waveNum].baseLevel);
-                yield return new WaitForSeconds(waves[waveNum].enemySpawnDelay);
+                enemy.pokemon.ResetTo(wave.RandomEnemy(), wave.baseLevel + levelBonus);
+                encounters.Add((enemy.pokemon.data.Id, enemy.pokemon.level));
+                yield return new WaitForSeconds(wave.enemySpawnDelay * wave.numEnemies /
+                                                (wave.numEnemies + levelBonus));
             }
 
             while (PokemonInstance.AllPokemon.Any(p => !p.isFriendly)) yield return null;
@@ -50,32 +71,39 @@ namespace TowerDefense
 
         private IEnumerator DoReward(int waveNum)
         {
-            Debug.Log($"Granting reward for wave {waveNum}");
+            Debug.Log($"Granting reward for wave {waveNum + 1}");
 
             foreach (var p in PokemonInstance.AllPokemon) p.damageTaken = 0;
 
             rewardUI.SetActive(true);
             var slots = rewardUI.GetComponentsInChildren<Slot>();
             for (var i = 0; i < slots.Length; i++)
-            {
-                var slot = slots[i];
-                var reward = Instantiate(friendlyPrefab);
-                SetReward(reward.pokemon, waveNum, i);
-                reward.pokemon.MoveToSlot(slot);
-                slot.Set(reward);
-            }
+                SetReward(slots[i], waveNum, i);
 
-            while (slots.All(s => s.InSlot != null)) yield return null;
+            while (slots.All(s => s.AnyInSlot)) yield return null;
 
             foreach (var slot in slots)
+            {
                 if (slot.InSlot != null)
                     Destroy(slot.InSlot.gameObject);
+                if (slot.ItemInSlot != null)
+                    slot.Set((ItemData)null);
+            }
 
             rewardUI.SetActive(false);
         }
 
-        private void SetReward(PokemonInstance pokemon, int waveNum, int num)
+        private void SetReward(Slot slot, int waveNum, int num)
         {
+            if (waveNum % 2 == 0)
+            {
+                var itemList = new[] { "LEFTOVERS", "LUCKYEGG", "QUICKCLAW", "SHELLBELL", "ROCKYHELMET", "IRONBALL" };
+                slot.Set(itemDatabase.Get(itemList[Random.Range(0, itemList.Length)]));
+                return;
+            }
+
+            var reward = Instantiate(friendlyPrefab);
+
             if (waveNum == -1)
             {
                 var starterList = num switch
@@ -96,12 +124,16 @@ namespace TowerDefense
                     },
                     _ => throw new ArgumentOutOfRangeException(nameof(num), num, null)
                 };
-                pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
+                reward.pokemon.ResetTo(starterList[Random.Range(0, starterList.Length)], starterLevel);
             }
             else
             {
-                pokemon.ResetTo("PIKACHU", 50);
+                var randomEncounter = encounters[Random.Range(0, encounters.Count)];
+                reward.pokemon.ResetTo(randomEncounter.id, randomEncounter.level);
             }
+
+            reward.pokemon.MoveToSlot(slot);
+            slot.Set(reward);
         }
     }
 }

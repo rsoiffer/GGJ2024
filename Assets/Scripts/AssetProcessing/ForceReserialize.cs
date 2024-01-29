@@ -1,3 +1,4 @@
+#if UNITY_EDITOR
 using System;
 using UnityEditor;
 
@@ -41,3 +42,4 @@ namespace AssetProcessing
         }
     }
 }
+#endif
