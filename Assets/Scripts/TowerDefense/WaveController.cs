@@ -30,7 +30,7 @@ namespace TowerDefense
             foreach (var e in wave.enemies)
             {
                 Debug.Log($"Checking {wave.name}");
-                //pokeDatabase.Get(e.species);
+                pokeDatabase.Get(e.species);
             }
 
             yield return DoReward(-1);
