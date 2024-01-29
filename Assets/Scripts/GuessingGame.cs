@@ -60,7 +60,7 @@ public class GuessingGame : MonoBehaviour
         var r = new List<PokemonData>();
         while (r.Count < count)
         {
-            var pokemon = pokemonDatabase.database[Random.Range(0, pokemonDatabase.database.Length)];
+            var pokemon = pokemonDatabase.GetAll()[Random.Range(0, pokemonDatabase.GetAll().Count)];
             if (!string.IsNullOrEmpty(pokemon.ParentId) || r.Contains(pokemon)) continue;
             r.Add(pokemon);
         }
