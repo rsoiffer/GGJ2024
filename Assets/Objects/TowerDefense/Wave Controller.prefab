@@ -81,6 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab5cce91837eac44b9aed37a9f45ec5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pokeDatabase: {fileID: 11400000, guid: b2877f214525f9e44b748b0c607ddc5d, type: 2}
+  itemDatabase: {fileID: 11400000, guid: 1a75e1867961f3a41b03c57620d15be9, type: 2}
   lanes:
   - {fileID: 262934618740753463}
   rewardUI: {fileID: 0}
