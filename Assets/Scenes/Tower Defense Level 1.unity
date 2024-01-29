@@ -661,10 +661,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.5248812
-    y: -0.12886599
-    width: 0.4473022
-    height: 0.6511123
+    x: 0.18463811
+    y: 0.034883723
+    width: 0.63023144
+    height: 0.9302325
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -3485,6 +3485,42 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[4].weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[5].weight
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[6].weight
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[4].species
+      value: ZUBAT
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[5].species
+      value: WOOPER
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510154155549674252, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[6].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901326647936612730, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[3].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 1901326647936612730, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[5].species
+      value: MAGIKARP
+      objectReference: {fileID: 0}
     - target: {fileID: 2083331897583929340, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: m_Name
       value: Wave Controller
@@ -3529,10 +3565,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3621743735036441833, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[4].species
+      value: MAGIKARP
+      objectReference: {fileID: 0}
     - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: rewardUI
       value: 
       objectReference: {fileID: 365044306}
+    - target: {fileID: 5664835103140108510, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[0].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506088487636723694, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[3].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 6506088487636723694, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[5].species
+      value: MAGIKARP
+      objectReference: {fileID: 0}
+    - target: {fileID: 8257615911449462695, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[2].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8298235717291466710, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[0].species
+      value: RATTATA
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340727313763546740, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[2].species
+      value: DROWZEE
+      objectReference: {fileID: 0}
+    - target: {fileID: 9086320601595086399, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: enemies.Array.data[0].species
+      value: RATTATA
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
