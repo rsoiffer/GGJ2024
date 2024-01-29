@@ -298,6 +298,62 @@ Transform:
   m_Children: []
   m_Father: {fileID: 912160844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &193190477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 193190478}
+  - component: {fileID: 193190479}
+  m_Layer: 0
+  m_Name: Wave (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193190478
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193190477}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193190479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 193190477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 2
+  enemies:
+  - species: RATTATA
+    weight: 1
+  - species: PIDGEY
+    weight: 1
+  - species: HOOTHOOT
+    weight: 2
+  - species: SENTRET
+    weight: 2
+  numEnemies: 6
+  enemySpawnDelay: 1.5
 --- !u!1 &213047557
 GameObject:
   m_ObjectHideFlags: 0
@@ -601,6 +657,153 @@ Transform:
   - {fileID: 841747421}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &455838838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455838839}
+  - component: {fileID: 455838840}
+  m_Layer: 0
+  m_Name: Wave (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &455838839
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455838838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &455838840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455838838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 6
+  enemies:
+  - species: DIGLETT
+    weight: 3
+  - species: GEODUDE
+    weight: 3
+  - species: ONIX
+    weight: 1
+  - species: ZUBAT
+    weight: 3
+  numEnemies: 15
+  enemySpawnDelay: 1.7
+--- !u!1 &462032793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 462032794}
+  - component: {fileID: 462032795}
+  m_Layer: 0
+  m_Name: Wave (8)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &462032794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462032793}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &462032795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 462032793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 9
+  enemies:
+  - species: PARAS
+    weight: 4
+  - species: WEEDLE
+    weight: 2
+  - species: CATERPIE
+    weight: 2
+  - species: MAREEP
+    weight: 5
+  - species: WINGULL
+    weight: 4
+  - species: SHELLOS
+    weight: 4
+  numEnemies: 8
+  enemySpawnDelay: 1.5
+--- !u!1 &504261699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504261700}
+  m_Layer: 0
+  m_Name: Wave (18)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504261700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504261699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &508109270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -662,6 +865,37 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0faa6e48f632fcd4ea2e8c6dcfa5e1aa, type: 3}
+--- !u!1 &561637367
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 561637368}
+  m_Layer: 0
+  m_Name: Wave (16)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &561637368
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561637367}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &591727493
 GameObject:
   m_ObjectHideFlags: 0
@@ -785,10 +1019,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0
-    y: 0
-    width: 1
-    height: 1
+    x: 0.18463811
+    y: 0.052238803
+    width: 0.63023144
+    height: 0.89552236
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 34
@@ -823,6 +1057,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &616145681
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 616145682}
+  m_Layer: 0
+  m_Name: Wave (17)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &616145682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616145681}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &624050375
 GameObject:
@@ -3632,6 +3897,72 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &782235448
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 782235449}
+  - component: {fileID: 782235450}
+  m_Layer: 0
+  m_Name: Wave (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &782235449
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782235448}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &782235450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782235448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 2
+  enemies:
+  - species: CATERPIE
+    weight: 1
+  - species: WEEDLE
+    weight: 1
+  - species: LEDYBA
+    weight: 1
+  - species: SPINARAK
+    weight: 1
+  - species: WURMPLE
+    weight: 2
+  - species: SILCOON
+    weight: 2
+  - species: CASCOON
+    weight: 2
+  - species: KRICKETOT
+    weight: 2
+  - species: BURMY
+    weight: 2
+  numEnemies: 15
+  enemySpawnDelay: 1.2
 --- !u!1001 &794081425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3720,6 +4051,10 @@ PrefabInstance:
       propertyPath: 'laneMarkers.Array.data[21]'
       value: 
       objectReference: {fileID: 1311766000}
+    - target: {fileID: 1796315056113059037, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2083331897583929340, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: m_Name
       value: Wave Controller
@@ -3792,6 +4127,62 @@ PrefabInstance:
       propertyPath: itemDatabase
       value: 
       objectReference: {fileID: 11400000, guid: 1a75e1867961f3a41b03c57620d15be9, type: 2}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: waves.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2021979447}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[1]'
+      value: 
+      objectReference: {fileID: 193190479}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[2]'
+      value: 
+      objectReference: {fileID: 1771083427}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[3]'
+      value: 
+      objectReference: {fileID: 782235450}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[4]'
+      value: 
+      objectReference: {fileID: 1696783044}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[5]'
+      value: 
+      objectReference: {fileID: 1425461504}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[6]'
+      value: 
+      objectReference: {fileID: 455838840}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[7]'
+      value: 
+      objectReference: {fileID: 462032795}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[8]'
+      value: 
+      objectReference: {fileID: 1267682649}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[9]'
+      value: 
+      objectReference: {fileID: 897535394}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[10]'
+      value: 
+      objectReference: {fileID: 1425461504}
+    - target: {fileID: 5496850074266736537, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5675118544670223799, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6206986853650254635, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.77
@@ -3800,9 +4191,73 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -2.05
       objectReference: {fileID: 0}
+    - target: {fileID: 7374519890242635327, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: expMod
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2021979446}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 193190478}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1771083426}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 782235449}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1696783043}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1425461503}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 455838839}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 462032794}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1267682648}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 897535393}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1718409664}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1356863138}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1053296849}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1459652619}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 973182846}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 561637368}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 616145682}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 504261700}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1331336995}
+    - targetCorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1349170661}
     - targetCorrespondingSourceObject: {fileID: 4131811655409933092, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       insertIndex: -1
       addedObject: {fileID: 397467187}
@@ -3879,6 +4334,60 @@ Transform:
   - {fileID: 915634776}
   m_Father: {fileID: 450362476}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &897535392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 897535393}
+  - component: {fileID: 897535394}
+  m_Layer: 0
+  m_Name: Wave (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &897535393
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897535392}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &897535394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 897535392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 16
+  enemies:
+  - species: MILTANK
+    weight: 1
+  - species: JYNX
+    weight: 1
+  - species: SABLEEYE
+    weight: 1
+  numEnemies: 3
+  enemySpawnDelay: 5
 --- !u!4 &912160844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4131811655409933092, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
@@ -4406,6 +4915,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &973182845
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973182846}
+  - component: {fileID: 973182847}
+  m_Layer: 0
+  m_Name: Wave (15)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973182846
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973182845}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973182847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973182845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 3
+  enemies:
+  - species: MEOWTH
+    weight: 1
+  - species: SLOWBRO
+    weight: 1
+  - species: PINECO
+    weight: 1
+  - species: PLUSLE
+    weight: 1
+  - species: MINUN
+    weight: 2
+  - species: POOCHYENA
+    weight: 2
+  numEnemies: 7
+  enemySpawnDelay: 1.5
 --- !u!1 &997167673
 GameObject:
   m_ObjectHideFlags: 0
@@ -4468,6 +5037,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 912160844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1053296848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1053296849}
+  - component: {fileID: 1053296850}
+  m_Layer: 0
+  m_Name: Wave (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1053296849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053296848}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1053296850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1053296848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 15
+  enemies:
+  - species: EEVEE
+    weight: 5
+  - species: ODDISH
+    weight: 3
+  - species: SUNKERN
+    weight: 3
+  - species: SHROOMISH
+    weight: 3
+  - species: CHERUBI
+    weight: 3
+  - species: TANGELA
+    weight: 3
+  numEnemies: 15
+  enemySpawnDelay: 1.5
 --- !u!1 &1062391001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5312,6 +5941,66 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &1267682647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1267682648}
+  - component: {fileID: 1267682649}
+  m_Layer: 0
+  m_Name: Wave (9)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1267682648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267682647}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1267682649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1267682647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 10
+  enemies:
+  - species: LEDYBA
+    weight: 2
+  - species: SPINARAK
+    weight: 2
+  - species: SPEAROW
+    weight: 4
+  - species: NATU
+    weight: 4
+  - species: TAILLOW
+    weight: 4
+  - species: BUNEARY
+    weight: 5
+  numEnemies: 10
+  enemySpawnDelay: 1.5
 --- !u!1 &1271972846
 GameObject:
   m_ObjectHideFlags: 0
@@ -15195,6 +15884,194 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4211542312105012637, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
   m_PrefabInstance: {fileID: 794081425}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1331336994
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1331336995}
+  m_Layer: 0
+  m_Name: Wave (19)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1331336995
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331336994}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1349170660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349170661}
+  m_Layer: 0
+  m_Name: Wave (20)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349170661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349170660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1356863137
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1356863138}
+  - component: {fileID: 1356863139}
+  m_Layer: 0
+  m_Name: Wave (12)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1356863138
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356863137}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1356863139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1356863137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 14
+  enemies:
+  - species: SANDSHREW
+    weight: 3
+  - species: NIDORAN-F
+    weight: 3
+  - species: NIDORAN-M
+    weight: 3
+  - species: PSYDUCK
+    weight: 3
+  - species: MANKEY
+    weight: 3
+  - species: ABRA
+    weight: 3
+  - species: MACHOP
+    weight: 3
+  - species: SPEAROW
+    weight: 2
+  - species: RATATA
+    weight: 2
+  numEnemies: 17
+  enemySpawnDelay: 1.2
+--- !u!1 &1425461502
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1425461503}
+  - component: {fileID: 1425461504}
+  m_Layer: 0
+  m_Name: Wave (6)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1425461503
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425461502}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1425461504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425461502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 5
+  enemies:
+  - species: SPEAROW
+    weight: 4
+  - species: EKANS
+    weight: 4
+  - species: PICHU
+    weight: 4
+  - species: LOTAD
+    weight: 4
+  - species: SEEDOT
+    weight: 4
+  - species: PACHIRISU
+    weight: 1
+  numEnemies: 7
+  enemySpawnDelay: 1.5
 --- !u!1 &1426580325
 GameObject:
   m_ObjectHideFlags: 0
@@ -15257,6 +16134,68 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1578643702}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1459652618
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1459652619}
+  - component: {fileID: 1459652620}
+  m_Layer: 0
+  m_Name: Wave (14)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1459652619
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459652618}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1459652620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1459652618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 13
+  enemies:
+  - species: GASTLY
+    weight: 5
+  - species: MISDREAVUS
+    weight: 5
+  - species: SHUPPET
+    weight: 5
+  - species: DUSKULL
+    weight: 5
+  - species: DRIFLOON
+    weight: 5
+  - species: SPIRITOMB
+    weight: 1
+  - species: ROTOM
+    weight: 1
+  numEnemies: 20
+  enemySpawnDelay: 1.5
 --- !u!1 &1496952483
 GameObject:
   m_ObjectHideFlags: 0
@@ -18230,6 +19169,66 @@ Transform:
   m_Children: []
   m_Father: {fileID: 912160844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1696783042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1696783043}
+  - component: {fileID: 1696783044}
+  m_Layer: 0
+  m_Name: Wave (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1696783043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696783042}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1696783044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1696783042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 4
+  enemies:
+  - species: BIDOOF
+    weight: 4
+  - species: STARLY
+    weight: 4
+  - species: SHINX
+    weight: 4
+  - species: BUDEW
+    weight: 4
+  - species: COMBEE
+    weight: 1
+  - species: BURMY
+    weight: 2
+  numEnemies: 10
+  enemySpawnDelay: 1.5
 --- !u!1 &1698009418
 GameObject:
   m_ObjectHideFlags: 0
@@ -18292,6 +19291,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 912160844}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1718409663
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1718409664}
+  - component: {fileID: 1718409665}
+  m_Layer: 0
+  m_Name: Wave (11)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1718409664
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718409663}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718409665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1718409663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 14
+  enemies:
+  - species: PICHU
+    weight: 3
+  - species: HAPPINY
+    weight: 4
+  - species: BONSLY
+    weight: 4
+  - species: MIME JR.
+    weight: 4
+  - species: IGGLYBUFF
+    weight: 4
+  - species: MANTYKE
+    weight: 3
+  - species: MUNCHLAX
+    weight: 1
+  - species: TOGEPI
+    weight: 1
+  - species: AZURILL
+    weight: 4
+  numEnemies: 20
+  enemySpawnDelay: 1.5
 --- !u!1 &1750789941
 GameObject:
   m_ObjectHideFlags: 0
@@ -18391,6 +19456,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1771083425
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771083426}
+  - component: {fileID: 1771083427}
+  m_Layer: 0
+  m_Name: Wave (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771083426
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771083425}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1771083427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771083425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 3
+  enemies:
+  - species: CATERPIE
+    weight: 4
+  - species: PIDGEY
+    weight: 4
+  - species: WEEDLE
+    weight: 4
+  - species: LEDYBA
+    weight: 4
+  - species: METAPOD
+    weight: 1
+  - species: KAKUNA
+    weight: 1
+  - species: HOOTHOOT
+    weight: 3
+  - species: SPINARAK
+    weight: 3
+  numEnemies: 7
+  enemySpawnDelay: 1.5
+--- !u!4 &1783894070 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2695488476687236255, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+  m_PrefabInstance: {fileID: 794081425}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1917367642
 GameObject:
   m_ObjectHideFlags: 0
@@ -18506,6 +19640,58 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2021979445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2021979446}
+  - component: {fileID: 2021979447}
+  m_Layer: 0
+  m_Name: Wave (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2021979446
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021979445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1783894070}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2021979447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2021979445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 1
+  enemies:
+  - species: PIDGEY
+    weight: 1
+  - species: SENTRET
+    weight: 1
+  numEnemies: 5
+  enemySpawnDelay: 1.5
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
