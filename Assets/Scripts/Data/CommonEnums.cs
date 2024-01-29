@@ -62,4 +62,32 @@ namespace Data
         Special,
         Status
     }
+
+    public enum Ability
+    {
+        Levitate,
+        ThickFat,
+        ShellArmor,
+        Hustle,
+        CuteCharm,
+        Defiant,
+        Guts,
+        Moxie,
+        Steadfast,
+        Synchronize,
+        Static,
+        FlameBody,
+        PoisonPoint,
+        Intimidate,
+        HugePower,
+        Swarm,
+        Torrent,
+        Blaze,
+        Overgrowth,
+        Technician,
+        Sturdy,
+        BirdUp,
+        LegendaryPower,
+        TheVeryBest
+    }
 }

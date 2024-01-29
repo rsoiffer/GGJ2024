@@ -92,6 +92,8 @@ namespace Data
         public PokemonSpriteSet spriteSetShiny;
         public AudioClip cry;
 
+        [CanBeNull] public Ability[] CustomAbilities;
+
 #if UNITY_EDITOR
         public PokemonData(PbsEntry pbsEntry)
         {
