@@ -7,12 +7,13 @@ namespace TowerDefense
 {
     public class ExpManager : MonoBehaviour
     {
+        public float expMod = 1.0f;
         public void AddExp(int baseExp, int enemyLevel)
         {
             var team = PokemonInstance.AllPokemon.Where(p => p.isFriendly);
             foreach (var mon in team)
             {
-                mon.AddExperience(baseExp * enemyLevel / 7.0f);
+                mon.AddExperience((baseExp * enemyLevel / 7.0f) * expMod);
                 CalcLevelUp(mon);
             }
         }
