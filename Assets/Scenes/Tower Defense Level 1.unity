@@ -701,17 +701,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 6
+  baseLevel: 5
   enemies:
-  - species: DIGLETT
-    weight: 3
   - species: GEODUDE
-    weight: 3
-  - species: ONIX
-    weight: 1
+    weight: 4
   - species: ZUBAT
+    weight: 4
+  - species: DUNSPARCE
+    weight: 1
+  - species: GASTLY
     weight: 3
-  numEnemies: 15
+  numEnemies: 10
   enemySpawnDelay: 1.7
 --- !u!1 &462032793
 GameObject:
@@ -757,22 +757,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 9
+  baseLevel: 5
   enemies:
-  - species: PARAS
-    weight: 4
-  - species: WEEDLE
-    weight: 2
-  - species: CATERPIE
-    weight: 2
   - species: MAREEP
     weight: 5
-  - species: WINGULL
+  - species: HOPPIP
     weight: 4
-  - species: SHELLOS
-    weight: 4
-  numEnemies: 8
-  enemySpawnDelay: 1.5
+  - species: EKANS
+    weight: 3
+  - species: BELLSPROUT
+    weight: 2
+  - species: RATATA
+    weight: 1
+  - species: ZUBAT
+    weight: 2
+  - species: WOOPER
+    weight: 3
+  numEnemies: 21
+  enemySpawnDelay: 1.4
 --- !u!1 &504261699
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +784,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 504261700}
+  - component: {fileID: 504261701}
   m_Layer: 0
   m_Name: Wave (18)
   m_TagString: Untagged
@@ -804,6 +807,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &504261701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504261699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 14
+  enemies:
+  - species: EXEGGCUTE
+    weight: 4
+  - species: SPINARAK
+    weight: 3
+  - species: PINECO
+    weight: 4
+  - species: POLIWAG
+    weight: 2
+  - species: MAGICKARP
+    weight: 1
+  numEnemies: 20
+  enemySpawnDelay: 1.6
 --- !u!1001 &508109270
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -874,6 +903,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 561637368}
+  - component: {fileID: 561637369}
   m_Layer: 0
   m_Name: Wave (16)
   m_TagString: Untagged
@@ -896,6 +926,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &561637369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561637367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 12
+  enemies:
+  - species: NIDORANfE
+    weight: 4
+  - species: NIDORANmA
+    weight: 4
+  - species: PIDGEY
+    weight: 2
+  - species: GROWLITHE
+    weight: 3
+  - species: STANTLER
+    weight: 1
+  - species: VULPIX
+    weight: 3
+  numEnemies: 40
+  enemySpawnDelay: 1
 --- !u!1 &591727493
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,6 +1125,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 616145682}
+  - component: {fileID: 616145683}
   m_Layer: 0
   m_Name: Wave (17)
   m_TagString: Untagged
@@ -1089,6 +1148,32 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616145683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616145681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 14
+  enemies:
+  - species: PIDGEY
+    weight: 2
+  - species: STANTLER
+    weight: 4
+  - species: GROWLITHE
+    weight: 3
+  - species: LEDYBA
+    weight: 2
+  - species: VULPIX
+    weight: 3
+  numEnemies: 35
+  enemySpawnDelay: 1
 --- !u!1 &624050375
 GameObject:
   m_ObjectHideFlags: 0
@@ -3941,28 +4026,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 2
+  baseLevel: 3
   enemies:
   - species: CATERPIE
-    weight: 1
+    weight: 4
+  - species: PIDGEY
+    weight: 4
   - species: WEEDLE
-    weight: 1
+    weight: 4
   - species: LEDYBA
-    weight: 1
+    weight: 4
+  - species: HOOTHOOT
+    weight: 3
   - species: SPINARAK
+    weight: 3
+  - species: KAKUNA
     weight: 1
-  - species: WURMPLE
-    weight: 2
-  - species: SILCOON
-    weight: 2
-  - species: CASCOON
-    weight: 2
-  - species: KRICKETOT
-    weight: 2
-  - species: BURMY
-    weight: 2
-  numEnemies: 15
-  enemySpawnDelay: 1.2
+  - species: METAPOD
+    weight: 1
+  numEnemies: 10
+  enemySpawnDelay: 1.5
 --- !u!1001 &794081425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4129,7 +4212,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1a75e1867961f3a41b03c57620d15be9, type: 2}
     - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: waves.Array.size
-      value: 10
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: 'waves.Array.data[0]'
@@ -4174,7 +4257,43 @@ PrefabInstance:
     - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: 'waves.Array.data[10]'
       value: 
-      objectReference: {fileID: 1425461504}
+      objectReference: {fileID: 1718409665}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[11]'
+      value: 
+      objectReference: {fileID: 1356863139}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[12]'
+      value: 
+      objectReference: {fileID: 1053296850}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[13]'
+      value: 
+      objectReference: {fileID: 1459652620}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[14]'
+      value: 
+      objectReference: {fileID: 973182847}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[15]'
+      value: 
+      objectReference: {fileID: 561637369}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[16]'
+      value: 
+      objectReference: {fileID: 616145683}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[17]'
+      value: 
+      objectReference: {fileID: 504261701}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[18]'
+      value: 
+      objectReference: {fileID: 1331336996}
+    - target: {fileID: 4424207535123861351, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
+      propertyPath: 'waves.Array.data[19]'
+      value: 
+      objectReference: {fileID: 1349170662}
     - target: {fileID: 5496850074266736537, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -4378,16 +4497,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 16
+  baseLevel: 8
   enemies:
-  - species: MILTANK
+  - species: GEODUDE
     weight: 1
-  - species: JYNX
+  - species: SANDSHREW
+    weight: 3
+  - species: ZUBAT
     weight: 1
-  - species: SABLEEYE
+  - species: RATATA
     weight: 1
-  numEnemies: 3
-  enemySpawnDelay: 5
+  - species: ONIX
+    weight: 3
+  - species: MAGICKARP
+    weight: 2
+  - species: GOLDEEN
+    weight: 2
+  numEnemies: 12
+  enemySpawnDelay: 1.6
 --- !u!4 &912160844 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4131811655409933092, guid: f1d8aa2649b6b04438987f37e8736e96, type: 3}
@@ -4959,22 +5086,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 3
+  baseLevel: 11
   enemies:
-  - species: MEOWTH
-    weight: 1
-  - species: SLOWBRO
-    weight: 1
-  - species: PINECO
-    weight: 1
-  - species: PLUSLE
-    weight: 1
-  - species: MINUN
+  - species: NIDORANfE
+    weight: 4
+  - species: NIDORANmA
+    weight: 4
+  - species: DROWSEE
+    weight: 3
+  - species: ABRA
+    weight: 3
+  - species: PIDGEY
     weight: 2
-  - species: POOCHYENA
+  - species: YANMA
+    weight: 1
+  - species: HOOTHOOT
     weight: 2
-  numEnemies: 7
-  enemySpawnDelay: 1.5
+  - species: BIDOOF
+    weight: 0.001
+  numEnemies: 25
+  enemySpawnDelay: 1.3
 --- !u!1 &997167673
 GameObject:
   m_ObjectHideFlags: 0
@@ -5081,22 +5212,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 15
+  baseLevel: 8
   enemies:
-  - species: EEVEE
-    weight: 5
+  - species: PARAS
+    weight: 3
   - species: ODDISH
     weight: 3
-  - species: SUNKERN
-    weight: 3
-  - species: SHROOMISH
-    weight: 3
-  - species: CHERUBI
-    weight: 3
-  - species: TANGELA
-    weight: 3
-  numEnemies: 15
-  enemySpawnDelay: 1.5
+  - species: ZUBAT
+    weight: 2
+  - species: CATERPIE
+    weight: 2
+  - species: WEEDLE
+    weight: 2
+  numEnemies: 33
+  enemySpawnDelay: 1
 --- !u!1 &1062391001
 GameObject:
   m_ObjectHideFlags: 0
@@ -5985,22 +6114,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 10
+  baseLevel: 6
   enemies:
-  - species: LEDYBA
-    weight: 2
-  - species: SPINARAK
-    weight: 2
-  - species: SPEAROW
-    weight: 4
-  - species: NATU
-    weight: 4
-  - species: TAILLOW
-    weight: 4
-  - species: BUNEARY
+  - species: GEODUDE
+    weight: 3
+  - species: SANDSHREW
     weight: 5
-  numEnemies: 10
-  enemySpawnDelay: 1.5
+  - species: ZUBAT
+    weight: 3
+  - species: RATATA
+    weight: 3
+  - species: ONIX
+    weight: 2
+  - species: MAGICKARP
+    weight: 1
+  - species: GOLDEEN
+    weight: 1
+  numEnemies: 23
+  enemySpawnDelay: 1.3
 --- !u!1 &1271972846
 GameObject:
   m_ObjectHideFlags: 0
@@ -15893,6 +16024,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1331336995}
+  - component: {fileID: 1331336996}
   m_Layer: 0
   m_Name: Wave (19)
   m_TagString: Untagged
@@ -15915,6 +16047,30 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1331336996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1331336994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 15
+  enemies:
+  - species: RATATA
+    weight: 1
+  - species: KOFFING
+    weight: 5
+  - species: ZUBAT
+    weight: 2
+  - species: RATICATE
+    weight: 3
+  numEnemies: 28
+  enemySpawnDelay: 1.2
 --- !u!1 &1349170660
 GameObject:
   m_ObjectHideFlags: 0
@@ -15924,6 +16080,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1349170661}
+  - component: {fileID: 1349170662}
   m_Layer: 0
   m_Name: Wave (20)
   m_TagString: Untagged
@@ -15946,6 +16103,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1783894070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1349170662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349170660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseLevel: 16
+  enemies:
+  - species: RATATA
+    weight: 2
+  - species: RATICATE
+    weight: 3
+  - species: MAGNEMITE
+    weight: 5
+  - species: FARFETCHD
+    weight: 4
+  - species: MILTANK
+    weight: 3
+  - species: TAUROS
+    weight: 3
+  - species: SNUBBULL
+    weight: 1
+  numEnemies: 50
+  enemySpawnDelay: 1.1
 --- !u!1 &1356863137
 GameObject:
   m_ObjectHideFlags: 0
@@ -15990,28 +16177,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 14
+  baseLevel: 10
   enemies:
-  - species: SANDSHREW
-    weight: 3
-  - species: NIDORAN-F
-    weight: 3
-  - species: NIDORAN-M
-    weight: 3
-  - species: PSYDUCK
-    weight: 3
-  - species: MANKEY
-    weight: 3
-  - species: ABRA
-    weight: 3
-  - species: MACHOP
-    weight: 3
   - species: SPEAROW
+    weight: 3
+  - species: AIPOM
     weight: 2
-  - species: RATATA
+  - species: HERACROSS
+    weight: 1
+  - species: SLOWPOKE
     weight: 2
-  numEnemies: 17
-  enemySpawnDelay: 1.2
+  numEnemies: 10
+  enemySpawnDelay: 2
 --- !u!1 &1425461502
 GameObject:
   m_ObjectHideFlags: 0
@@ -16056,22 +16233,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 5
+  baseLevel: 4
   enemies:
-  - species: SPEAROW
+  - species: PIDGEY
+    weight: 2
+  - species: LEDYBA
+    weight: 2
+  - species: BELLSPROUT
     weight: 4
-  - species: EKANS
-    weight: 4
-  - species: PICHU
-    weight: 4
-  - species: LOTAD
-    weight: 4
-  - species: SEEDOT
-    weight: 4
-  - species: PACHIRISU
-    weight: 1
-  numEnemies: 7
-  enemySpawnDelay: 1.5
+  - species: METAPOD
+    weight: 5
+  - species: KAKUNA
+    weight: 3
+  numEnemies: 15
+  enemySpawnDelay: 1.3
 --- !u!1 &1426580325
 GameObject:
   m_ObjectHideFlags: 0
@@ -16178,24 +16353,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 13
+  baseLevel: 10
   enemies:
-  - species: GASTLY
-    weight: 5
-  - species: MISDREAVUS
-    weight: 5
-  - species: SHUPPET
-    weight: 5
-  - species: DUSKULL
-    weight: 5
-  - species: DRIFLOON
-    weight: 5
-  - species: SPIRITOMB
-    weight: 1
-  - species: ROTOM
-    weight: 1
+  - species: DROWZEE
+    weight: 3
+  - species: ABRA
+    weight: 3
+  - species: RATATA
+    weight: 2
+  - species: BIDOOF
+    weight: 0.001
   numEnemies: 20
-  enemySpawnDelay: 1.5
+  enemySpawnDelay: 1.3
 --- !u!1 &1496952483
 GameObject:
   m_ObjectHideFlags: 0
@@ -19215,20 +19384,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseLevel: 4
   enemies:
-  - species: BIDOOF
-    weight: 4
-  - species: STARLY
-    weight: 4
-  - species: SHINX
-    weight: 4
-  - species: BUDEW
-    weight: 4
-  - species: COMBEE
-    weight: 1
-  - species: BURMY
+  - species: CATERPIE
     weight: 2
-  numEnemies: 10
-  enemySpawnDelay: 1.5
+  - species: PIDGEY
+    weight: 2
+  - species: WEEDLE
+    weight: 2
+  - species: LEDYBA
+    weight: 2
+  - species: BELLSPROUT
+    weight: 5
+  numEnemies: 15
+  enemySpawnDelay: 1.3
 --- !u!1 &1698009418
 GameObject:
   m_ObjectHideFlags: 0
@@ -19335,28 +19502,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25897201776693b4cb59cb0095aca2af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseLevel: 14
+  baseLevel: 7
   enemies:
-  - species: PICHU
+  - species: RATATA
     weight: 3
-  - species: HAPPINY
+  - species: HOPPIP
     weight: 4
-  - species: BONSLY
+  - species: ZUBAT
     weight: 4
-  - species: MIME JR.
+  - species: EKANS
     weight: 4
-  - species: IGGLYBUFF
-    weight: 4
-  - species: MANTYKE
-    weight: 3
-  - species: MUNCHLAX
-    weight: 1
-  - species: TOGEPI
-    weight: 1
-  - species: AZURILL
+  - species: SPEAROW
     weight: 4
   numEnemies: 20
-  enemySpawnDelay: 1.5
+  enemySpawnDelay: 1.4
 --- !u!1 &1750789941
 GameObject:
   m_ObjectHideFlags: 0
@@ -19510,15 +19669,11 @@ MonoBehaviour:
     weight: 4
   - species: LEDYBA
     weight: 4
-  - species: METAPOD
-    weight: 1
-  - species: KAKUNA
-    weight: 1
   - species: HOOTHOOT
     weight: 3
   - species: SPINARAK
     weight: 3
-  numEnemies: 7
+  numEnemies: 8
   enemySpawnDelay: 1.5
 --- !u!4 &1783894070 stripped
 Transform:
